@@ -4,15 +4,15 @@
 
 Aldo Shoes is having a huge flash sale online. You provide support to the inventory department. They want to react real-time to various inventory problems as they arise.
 
-You adjust the inventory whenever a new sale is completed by pulling data from each store on the pair of shoes that just got sold.
-The return value includes the store, the shoe model and the inventory left for that shoe model in the store.
+You adjust the inventory whenever a new sale is completed. The return value includes the store, the shoe model and the inventory left for that shoe model in the store.
 
     {
       'store' => 'ALDO Ste-Catherine',
-      'RGNK-1456' => 10,
+      'model' => 'ADERI',
+      'inventory' => 10,
     }
 
-`ALDO Ste-Catherine` store sold a pair of shoes from the model `RGNK-1456`. `ALDO Ste-Catherine` now has 10 pairs of `RGNK-1456` left.
+`ALDO Ste-Catherine` store sold a pair of `ADERI` shoes. `ALDO Ste-Catherine` now has 10 pairs of `ADERI` left.
 
 ## Goal
 
