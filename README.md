@@ -56,6 +56,13 @@ Open a console on a non-secured page:
 
 #### Ruby
 
+##### Installation
+
+    gem install faye-websocket
+    gem install eventmachine
+
+##### Example
+
     require 'faye/websocket'
     require 'eventmachine'
     require 'json'
