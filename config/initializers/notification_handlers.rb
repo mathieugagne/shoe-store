@@ -19,7 +19,7 @@ ActiveSupport::Notifications.subscribe('quantity_update') do |_name, _start, _fi
   if payload[:new_quantity] < 5
     message = "Quantity LOW!!"
     severity = :error
-  elsif payload[:old_quantity] - payload[:new_quantity] > 10
+  elsif payload[:old_quantity] && payload[:old_quantity] - payload[:new_quantity] > 10
     message = "Quantity Dropping Quickly!"
     severity = :warn
   else
