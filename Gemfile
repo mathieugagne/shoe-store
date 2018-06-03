@@ -37,6 +37,8 @@ gem 'json'
 
 # Use jquery
 gem 'jquery-rails'
+gem 'chartist-rails' # quick chart lib
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

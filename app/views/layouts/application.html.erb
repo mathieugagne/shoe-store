@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>ShoeStore</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +14,8 @@
   </head>
 
   <body>
+    <%= nav_bar brand: "Aldo Shoes", brand_link: root_path  %>
+
     <%= yield %>
   </body>
 </html>

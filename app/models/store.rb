@@ -1,5 +1,5 @@
 class Store < ApplicationRecord
-  has_many :inventories
+  has_many :inventories, dependent: :destroy
   has_many :skus, through: :inventories
 
   def quantity(sku)

@@ -32,11 +32,17 @@ ActiveSupport::Notifications.subscribe('quantity_update') do |_name, _start, _fi
   # And just for giggles, let's broadcast this to the website using our own ActionCable websocket.
   #  Of course, normally you'd use a view or serializer here to render this as JSON or something nice,
   #  but I'm being quick about it and to be clear what's really happening without the abstractions:
+  inventory = store.inventories.includes(:sku).order('skus.name asc')
   ActionCable.server.broadcast("inventory_updates_channel",
                                 message: message,
                                 store: store.name,
                                 sku: sku.name,
                                 old_quantity: payload[:old_quantity],
                                 new_quantity: payload[:new_quantity],
-                                severity: severity)
+                                severity: severity,
+                                chart_data: {
+                                  store_id: store.id,
+                                  labels: inventory.map { |i| i.sku.name },
+                                  data: inventory.map(&:quantity)
+                                  })
 end

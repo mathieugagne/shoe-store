@@ -17,3 +17,5 @@ jQuery(document).on 'turbolinks:load', ->
     if data['severity'] == 'error' || data['severity'] == 'warn' || data['severity'] == 'restored'
       update_window.append "<div class=#{data['severity']}>#{data['message']}: <ul><li>Store: #{data['store']}</li><li>Model: #{data['sku']}</li><li>Current Inventory: #{data['new_quantity']}</li></ul></div>"
       update_window.scrollTop(update_window.prop("scrollHeight"))
+      if data['chart_data']
+        $('#inventory-chart-' + data['chart_data']['store_id']).get(0).__chartist__.update(labels: data['chart_data']['labels'], series: [data['chart_data']['data']])
