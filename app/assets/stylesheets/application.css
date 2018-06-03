@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+ #update-window {
+   margin-bottom: 2rem;
+   max-height: 20rem;
+   overflow-y: auto;
+ }
+
+#update-window .error {
+  color: red;
+}
+
+#update-window .warn {
+  color: orange;
+}
+
+#update-window .restored {
+  color: green;
+}

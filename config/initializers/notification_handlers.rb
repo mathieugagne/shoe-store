@@ -11,11 +11,32 @@ ActiveSupport::Notifications.subscribe('quantity_update') do |_name, _start, _fi
   #   ruby objects rather than their IDs can suffer data corruption, object instantiation issues, sync problems, and
   #   other difficult-to-track-down bugs which are easily prevented by passing only IDs where the possibility of
   #   queuing the raw data could occur. As a result, I consider it a best practice in notifications as well.
+
+  store = Store.find_by(id: payload[:store])
+  sku = Sku.find_by(id: payload[:sku])
+  detail_string = "#{store.name} | #{sku.name} | #{payload[:old_quantity]} => #{payload[:new_quantity]}"
+
   if payload[:new_quantity] < 5
-    Rails.logger.error "Quantity LOW!! :: #{Store.find_by(id: payload[:store]).name} | #{Sku.find_by(id: payload[:sku]).name} | #{payload[:old_quantity]} => #{payload[:new_quantity]}"
+    message = "Quantity LOW!!"
+    severity = :error
   elsif payload[:old_quantity] - payload[:new_quantity] > 10
-    Rails.logger.warn "Quantity Dropping Quickly! :: #{Store.find_by(id: payload[:store]).name} | #{Sku.find_by(id: payload[:sku]).name} | #{payload[:old_quantity]} => #{payload[:new_quantity]}"
+    message = "Quantity Dropping Quickly!"
+    severity = :warn
   else
-    Rails.logger.info "Quantity Update :: #{Store.find_by(id: payload[:store]).name} | #{Sku.find_by(id: payload[:sku]).name} | #{payload[:old_quantity]} => #{payload[:new_quantity]}"
+    message = "Quantity Update"
+    severity = :info
   end
+
+  Rails.logger.send severity, "#{message} :: #{detail_string}"
+
+  # And just for giggles, let's broadcast this to the website using our own ActionCable websocket.
+  #  Of course, normally you'd use a view or serializer here to render this as JSON or something nice,
+  #  but I'm being quick about it and to be clear what's really happening without the abstractions:
+  ActionCable.server.broadcast("inventory_updates_channel",
+                                message: message,
+                                store: store.name,
+                                sku: sku.name,
+                                old_quantity: payload[:old_quantity],
+                                new_quantity: payload[:new_quantity],
+                                severity: severity)
 end
