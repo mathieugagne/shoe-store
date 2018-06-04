@@ -26,6 +26,8 @@ This works out of the box on a Mac, since the sqlite DB that's included is suffi
 
 If it works, you should see a very basic twitter-bootstrap dashboard page with a little feed on the right displaying alerts, and a series of charts which are progressively filling in with data as the inventory status updates.
 
+*A little note: Yes, I know all the inventory bars are the same colour. If I had more time I'd implement the JS event handling to draw them red, yellow, or green based on stock quantity and direction of last change.*
+
 ## Things to note
 
 * The page will reload with the cached inventory data from the DB if you refresh it, catching up to the last known state.
@@ -54,3 +56,8 @@ If it works, you should see a very basic twitter-bootstrap dashboard page with a
     * A queued runner looking for changed data
     * A redis cache of the data feed and a separate parser process
     * etc. etc.
+* I also didn't break out my GIT commits extremely carefully - these are larger, logical commits. I'm comfortable with both micro-committing atomically when developing, or the squash-rebase method for larger projects too. I left these un-squashed deliberately just to give you a sense of how I did it "off the cuff" while working quickly. These are the actual commits I made while working - I haven't gone back and edited them.
+
+# Last but not least
+
+Thanks so much for this fun project, and I look forward to discussing it further with you. Cheers!
