@@ -18,7 +18,21 @@ You adjust the inventory whenever a new sale is completed. The return value incl
 
 ## Goal
 
-Design an interface that would allow the inventory department to monitor Aldo's stores and shoes inventory.
+**Design an interface that would allow the inventory department to monitor Aldo's stores and shoes inventory.**
+
+Hope you’ll have fun with this little test. I know I had designing it.
+Go wild. It can be anything you want. I’ve seen results printed to console, displayed on a webpage, and even someone who did periodical database dumps.
+
+Here are a few ideas if you need an extra challenge:
+
+- Add some sort of alerting system, e.g. When a shoe model at a store goes too low, or too high.
+- Add a REST JSON API, or GraphQL
+- Suggest shoe transfers from one store to another according to inventory
+- Your own crazy idea!
+
+Share your repository with us when you’re done.
+
+Happy Hacking :)
 
 ## Installation
 
@@ -48,11 +62,13 @@ You now have an active connection to their stores opened on port 8080.
 
 ### Start listening on each event
 
-You can listen and react on each event using a WebSocket client.
+Listen and react on each event using a WebSocket client.
 
 Various implementations are at your disposal. Whatever floats your boat.
 
 They all work the same way. Provide a method or a block to be executed whenever a new event occurs.
+
+Here are two examples for our favorite languages:
 
 #### Javascript
 
