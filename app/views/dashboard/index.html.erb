@@ -1,0 +1,54 @@
+<% content_for :sidebar do %>
+  <div id="updates">
+    <div class="summary">
+      <div class="title">Current updates:</div>
+      <div id="update-window"></div>
+    </div>
+  </div>
+<% end %>
+
+<div class="container-fluid">
+  <div class="row">
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div id="store-charts">
+          <% @stores.each do |store| %>
+            <div class="store-chart" data-name="<%=store.name%>" id="store-chart-<%=store.id%>">
+              <div class="name"><%=store.name%></div>
+              <div class="ct-chart ct-perfect-fourth" id="inventory-chart-<%=store.id%>" />
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Graphs -->
+<script>
+  stores = <%= @stores.map do |store|
+              inv = store.inventories.includes(:sku).order('skus.name asc').map { |i| [i.sku.name, i.quantity] }.to_h
+              {id: store.id, labels: inv.keys, data: inv.values }
+            end.to_json.html_safe %>
+
+  for (var i = 0; i < stores.length; i++) {
+    store = stores[i]
+    console.log("Store: " + store['id'] + " | labels: " + store['labels'] + " | data: " + store['data'])
+
+    new Chartist.Bar("#inventory-chart-" + store['id'], {
+      labels: store['labels'],
+      series: [store['data']]
+    }, {
+      seriesBarDistance: 10,
+      reverseData: true,
+      horizontalBars: true,
+      axisY: {
+        offset: 70
+      }
+    });
+  };
+</script>
+
+
+</body>
