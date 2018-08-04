@@ -9,16 +9,18 @@
     "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
-    "reconnecting-websocket": "^4.0.0-rc5",
     "redux": "^4.0.0",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "robust-websocket": "^0.3.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
+    "test:coverage": "react-app-rewired test --coverage --env=jsdom",
     "start-with-backend": "concurrently -k 'websocketd --port=8080 ruby ../server/inventory.rb' 'react-app-rewired start'"
   },
   "devDependencies": {

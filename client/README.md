@@ -1,22 +1,41 @@
-TODO
--> Color for card header icons
--> Color for individual items
--> Animated text change (numbers)
-  -> Showing at the top (optional), not in the dialog
--> When a store is running low of inventory, global msg
--> when a store is running high on inventory, global msg
--> Get global notification working
-  -> When WS is closed
-  -> When WS is opened
--> Update documentation. All details
--> Get start-with-backend working
--> Write some unit tests
--> Clean up shoe-card.js
+# shoe-store client
 
--> Pre-req
-websocketd. Refer [Server README.md for more details](../server/README.md)
+## Pre-requisite
 
-  - [yarn start](#npm-start)
-  - [yarn test](#npm-test)
-  - [yarn build](#npm-run-build)
-  - [yarn start-with-backend](#npm-run-eject)
+    $ node
+    $ yarn
+    
+    # Refer [Server README.md](../server/README.md) for more details
+    $ websocketd
+
+## Quick video walk through
+--- [TODO] Youtube video link ---
+
+## Code code coverage
+--- [TODO] Show a screenshot ---
+
+## Commands
+
+    # start client server
+    $ yarn start 
+    
+    # start client and server 
+    $ yarn start-with-backend
+
+    # generate production build
+    $ yarn build
+
+    # run test
+    $ yarn test
+
+    # run coverage
+    $ yarn test:coverage
+  
+## Disclaimer
+
+  - There is an issue being actively worked in [material-ui](https://github.com/mui-org/material-ui/issues/12159). You will notice some warning in console. Please ignore them for now.
+
+## Improvement
+
+  - Add more unit tests
+  - Add option to transfer inventory

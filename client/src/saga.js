@@ -1,15 +1,42 @@
 import { take, put, call } from 'redux-saga/effects';
 import { eventChannel } from 'redux-saga';
-import ReconnectingWS from 'reconnecting-websocket';
-import { connectionChangeAction, newDataReceivedAction } from './action';
-import { CONNECTION_OPENED, CONNECTION_CLOSED } from './constant';
+import RobustWebSocket from 'robust-websocket';
+import { newDataReceivedAction , globalMessageAction } from './action';
+import { NOTICE_MESSAGE, WARNING_MESSAGE, ERROR_MESSAGE} from './constant';
 
-const ws = new ReconnectingWS("ws://localhost:8080/");
+const ws = new RobustWebSocket("ws://localhost:8080/", undefined, {
+  shouldReconnect: () => 1000,
+});
+
 function createChannel() {
   return eventChannel(emit => {
-    ws.onopen = () => emit(connectionChangeAction(CONNECTION_OPENED));
-    ws.onmessage = event => emit(newDataReceivedAction(JSON.parse(event.data)));
-    ws.onclose = () => emit(connectionChangeAction(CONNECTION_CLOSED));
+    ws.onopen = () => {
+      emit(globalMessageAction({
+        messageType: NOTICE_MESSAGE,
+        message: 'Connected to server',
+      }));
+    };
+    ws.onmessage = event => {
+      const eventData = JSON.parse(event.data);
+      emit(newDataReceivedAction(eventData));
+      if (eventData.inventory < 10) {
+        emit(globalMessageAction({
+          messageType: WARNING_MESSAGE,
+          message: `${eventData.store} is low on ${eventData.model}`,
+        }));
+      } else if (eventData.inventory > 90) {
+        emit(globalMessageAction({
+          messageType: NOTICE_MESSAGE,
+          message: `${eventData.store} is high on ${eventData.model}`,
+        }));
+      }
+    };
+    ws.onclose = () => {
+      emit(globalMessageAction({
+        messageType: ERROR_MESSAGE,
+        message: 'Disconnected from server',
+      }));
+    };
     return () => {};
   });
 }

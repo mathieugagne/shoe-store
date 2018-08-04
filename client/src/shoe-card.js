@@ -6,28 +6,13 @@ import StoreIcon from '@material-ui/icons/StoreTwoTone';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
-import deepOrange from '@material-ui/core/colors/deepOrange';
-import deepPurple from '@material-ui/core/colors/deepPurple';
-import amber from '@material-ui/core/colors/amber';
-import brown from '@material-ui/core/colors/brown';
-import indigo from '@material-ui/core/colors/indigo';
-import cyan from '@material-ui/core/colors/cyan';
 import MoreIcon from '@material-ui/icons/MoreHoriz';
 import IconButton from '@material-ui/core/IconButton';
 import CardActions from '@material-ui/core/CardActions';
 import Tooltip from '@material-ui/core/Tooltip';
+import green from '@material-ui/core/colors/green';
 import ShoeRow from './shoe-row';
 import Dialog from './dialog';
-import random from 'lodash/random';
-
-const colors = [
-  deepOrange[500],
-  deepPurple[500],
-  amber[500],
-  brown[500],
-  indigo[500],
-  cyan[500],
-];
 
 @withStyles({
   card: {
@@ -41,12 +26,17 @@ const colors = [
     margin: 'auto',
     justifyContent: 'center',
   },
+  greenAvatar: {
+    color: '#fff',
+    backgroundColor: green[500],
+  },
 })
 export default class StoreCard extends PureComponent {
   static propTypes = {
     style: shape(Object),
     title: string,
     data: shape(Object),
+    classes: shape(Object).isRequired,
   };
   static defaultProps = {
     style: {},
@@ -66,13 +56,13 @@ export default class StoreCard extends PureComponent {
     return (
       <Card style={style} className={classes.card}>
         <CardHeader avatar={(
-          <Avatar color={colors[random(0, 6, false)]}>
+          <Avatar className={classes.greenAvatar}>
             <StoreIcon />
           </Avatar>
         )}
         title={title} />
         <CardContent className={classes.cardContent}>
-          <ShoeRow data={data} />
+          <ShoeRow data={data} floatChangesToTop />
         </CardContent>
         {Object.keys(data).length > 2 && (
           <CardActions className={classes.cardActions}>
