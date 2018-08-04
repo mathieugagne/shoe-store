@@ -34,6 +34,7 @@
 ## Disclaimer
 
   - There is an issue being actively worked in [material-ui](https://github.com/mui-org/material-ui/issues/12159). You will notice some warning in console. Please ignore them for now.
+  - Test on MAC + Chrome
 
 ## Improvement
 
