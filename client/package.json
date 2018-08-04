@@ -19,13 +19,17 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "test:watch": "react-app-rewired test --env=jsdom --watch",
     "test": "react-app-rewired test --env=jsdom",
-    "test:coverage": "react-app-rewired test --coverage --env=jsdom",
+    "test:coverage": "react-app-rewired test --coverage --env=jsdom --no-cache --collectCoverageFrom=src/*.js --collectCoverageFrom=!src/registerServiceWorker.js",
     "start-with-backend": "concurrently -k 'websocketd --port=8080 ruby ../server/inventory.rb' 'react-app-rewired start'"
   },
   "devDependencies": {
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "concurrently": "^3.6.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "react-app-rewired": "^1.5.2",
     "react-scripts": "^1.1.4"
   }

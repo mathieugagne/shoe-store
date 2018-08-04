@@ -12,7 +12,7 @@
 --- [TODO] Youtube video link ---
 
 ## Code code coverage
---- [TODO] Show a screenshot ---
+(https://user-images.githubusercontent.com/446864/43681380-39445028-980f-11e8-9788-904c3161985a.png)
 
 ## Commands
 
@@ -37,5 +37,5 @@
 
 ## Improvement
 
-  - Add more unit tests
+  - Increase unit test coverage
   - Add option to transfer inventory

@@ -1,4 +1,6 @@
 import React from 'react';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Dialog from '../dialog';
 
 describe('dialog.js', () => {
@@ -6,11 +8,11 @@ describe('dialog.js', () => {
     const handleClose = jest.fn();
     const wrapper = shallow(<Dialog
       title="Test Title"
-      data={}
+      data={{}}
       handleClose={handleClose}
     />);
     expect(toJson(wrapper)).toMatchSnapshot();
-    wrapper.find('Button').simulate('click');
+    wrapper.find('WithStyles(Button)').simulate('click');
     expect(handleClose).toHaveBeenCalled();
   });
 });

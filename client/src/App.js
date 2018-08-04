@@ -56,6 +56,7 @@ const variantIcon = {
   message: {
     display: 'flex',
     alignItems: 'center',
+    maxWidth: 230,
   },
 }))
 export default class App extends PureComponent {

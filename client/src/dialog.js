@@ -42,10 +42,9 @@ const DialogComponent = ({ title, data, handleClose }) => (
 DialogComponent.propTypes = {
   title: string.isRequired,
   data: shape(Object),
-  handleClose: func,
+  handleClose: func.isRequired,
 };
 DialogComponent.defaultProps = {
-  handleClose: () => {},
   data: {},
 };
 
