@@ -11,8 +11,8 @@
 ## Quick video walk through
 --- [TODO] Youtube video link ---
 
-## Code code coverage
-(https://user-images.githubusercontent.com/446864/43681380-39445028-980f-11e8-9788-904c3161985a.png)
+## Code coverage
+![Code coverage](https://user-images.githubusercontent.com/446864/43681380-39445028-980f-11e8-9788-904c3161985a.png)
 
 ## Commands
 
