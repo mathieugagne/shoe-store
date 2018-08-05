@@ -9,7 +9,7 @@
     $ websocketd
 
 ## Quick video walk through
---- [TODO] Youtube video link ---
+[![Video](https://user-images.githubusercontent.com/446864/43681624-4a80c1f8-9816-11e8-8926-e34fce197487.jpg)](https://youtu.be/fpu6O491Z94)
 
 ## Code coverage
 ![Code coverage](https://user-images.githubusercontent.com/446864/43681380-39445028-980f-11e8-9788-904c3161985a.png)
