@@ -1,0 +1,16 @@
+body {
+  margin: auto;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.shoeRowData-appear, .shoeRowData-enter {
+  opacity: 0.01;
+}
+
+.shoeRowData-appear.shoeRowData-appear-active,
+.shoeRowData-enter.shoeRowData-enter-active {
+  opacity: 1;
+  background-color: burlywood;
+  transition: opacity .5s ease-in;
+}

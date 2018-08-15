@@ -1,0 +1,3115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.js dispatch global msg 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(WithStyles(App))>
+    <WithStyles(App)
+      globalMessage={null}
+      handleGlobalMsgClose={[Function]}
+      storeData={Object {}}
+    >
+      <App
+        classes={
+          Object {
+            "error": "App-error-2",
+            "icon": "App-icon-5",
+            "iconVariant": "App-iconVariant-6",
+            "info": "App-info-3",
+            "message": "App-message-7",
+            "success": "App-success-1",
+            "warning": "App-warning-4",
+          }
+        }
+        globalMessage={null}
+        handleGlobalMsgClose={[Function]}
+        storeData={Object {}}
+      >
+        <WithStyles(AppBar)
+          position="static"
+          style={
+            Object {
+              "marginBottom": 24,
+            }
+          }
+        >
+          <AppBar
+            classes={
+              Object {
+                "colorDefault": "MuiAppBar-colorDefault-13",
+                "colorPrimary": "MuiAppBar-colorPrimary-14",
+                "colorSecondary": "MuiAppBar-colorSecondary-15",
+                "positionAbsolute": "MuiAppBar-positionAbsolute-10",
+                "positionFixed": "MuiAppBar-positionFixed-9",
+                "positionStatic": "MuiAppBar-positionStatic-12",
+                "positionSticky": "MuiAppBar-positionSticky-11",
+                "root": "MuiAppBar-root-8",
+              }
+            }
+            color="primary"
+            position="static"
+            style={
+              Object {
+                "marginBottom": 24,
+              }
+            }
+          >
+            <WithStyles(Paper)
+              className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+              component="header"
+              elevation={4}
+              square={true}
+              style={
+                Object {
+                  "marginBottom": 24,
+                }
+              }
+            >
+              <Paper
+                className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                classes={
+                  Object {
+                    "elevation0": "MuiPaper-elevation0-18",
+                    "elevation1": "MuiPaper-elevation1-19",
+                    "elevation10": "MuiPaper-elevation10-28",
+                    "elevation11": "MuiPaper-elevation11-29",
+                    "elevation12": "MuiPaper-elevation12-30",
+                    "elevation13": "MuiPaper-elevation13-31",
+                    "elevation14": "MuiPaper-elevation14-32",
+                    "elevation15": "MuiPaper-elevation15-33",
+                    "elevation16": "MuiPaper-elevation16-34",
+                    "elevation17": "MuiPaper-elevation17-35",
+                    "elevation18": "MuiPaper-elevation18-36",
+                    "elevation19": "MuiPaper-elevation19-37",
+                    "elevation2": "MuiPaper-elevation2-20",
+                    "elevation20": "MuiPaper-elevation20-38",
+                    "elevation21": "MuiPaper-elevation21-39",
+                    "elevation22": "MuiPaper-elevation22-40",
+                    "elevation23": "MuiPaper-elevation23-41",
+                    "elevation24": "MuiPaper-elevation24-42",
+                    "elevation3": "MuiPaper-elevation3-21",
+                    "elevation4": "MuiPaper-elevation4-22",
+                    "elevation5": "MuiPaper-elevation5-23",
+                    "elevation6": "MuiPaper-elevation6-24",
+                    "elevation7": "MuiPaper-elevation7-25",
+                    "elevation8": "MuiPaper-elevation8-26",
+                    "elevation9": "MuiPaper-elevation9-27",
+                    "root": "MuiPaper-root-16",
+                    "rounded": "MuiPaper-rounded-17",
+                  }
+                }
+                component="header"
+                elevation={4}
+                square={true}
+                style={
+                  Object {
+                    "marginBottom": 24,
+                  }
+                }
+              >
+                <header
+                  className="MuiPaper-root-16 MuiPaper-elevation4-22 MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                  style={
+                    Object {
+                      "marginBottom": 24,
+                    }
+                  }
+                >
+                  <WithStyles(Toolbar)>
+                    <Toolbar
+                      classes={
+                        Object {
+                          "dense": "MuiToolbar-dense-46",
+                          "gutters": "MuiToolbar-gutters-44",
+                          "regular": "MuiToolbar-regular-45",
+                          "root": "MuiToolbar-root-43",
+                        }
+                      }
+                      disableGutters={false}
+                      variant="regular"
+                    >
+                      <div
+                        className="MuiToolbar-root-43 MuiToolbar-regular-45 MuiToolbar-gutters-44"
+                      >
+                        <WithStyles(IconButton)
+                          color="inherit"
+                        >
+                          <IconButton
+                            classes={
+                              Object {
+                                "colorInherit": "MuiIconButton-colorInherit-48",
+                                "colorPrimary": "MuiIconButton-colorPrimary-49",
+                                "colorSecondary": "MuiIconButton-colorSecondary-50",
+                                "disabled": "MuiIconButton-disabled-51",
+                                "label": "MuiIconButton-label-52",
+                                "root": "MuiIconButton-root-47",
+                              }
+                            }
+                            color="inherit"
+                            disabled={false}
+                          >
+                            <WithStyles(ButtonBase)
+                              centerRipple={true}
+                              className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                              disabled={false}
+                              focusRipple={true}
+                            >
+                              <ButtonBase
+                                centerRipple={true}
+                                className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                classes={
+                                  Object {
+                                    "disabled": "MuiButtonBase-disabled-54",
+                                    "focusVisible": "MuiButtonBase-focusVisible-55",
+                                    "root": "MuiButtonBase-root-53",
+                                  }
+                                }
+                                component="button"
+                                disableRipple={false}
+                                disableTouchRipple={false}
+                                disabled={false}
+                                focusRipple={true}
+                                tabIndex="0"
+                                type="button"
+                              >
+                                <button
+                                  className="MuiButtonBase-root-53 MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                  disabled={false}
+                                  onBlur={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  tabIndex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    className="MuiIconButton-label-52"
+                                  >
+                                    <pure(ShoppingCart)>
+                                      <ShoppingCart>
+                                        <WithStyles(SvgIcon)>
+                                          <SvgIcon
+                                            classes={
+                                              Object {
+                                                "colorAction": "MuiSvgIcon-colorAction-59",
+                                                "colorDisabled": "MuiSvgIcon-colorDisabled-61",
+                                                "colorError": "MuiSvgIcon-colorError-60",
+                                                "colorPrimary": "MuiSvgIcon-colorPrimary-57",
+                                                "colorSecondary": "MuiSvgIcon-colorSecondary-58",
+                                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-62",
+                                                "root": "MuiSvgIcon-root-56",
+                                              }
+                                            }
+                                            color="inherit"
+                                            component="svg"
+                                            fontSize="default"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              className="MuiSvgIcon-root-56"
+                                              focusable="false"
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                                              />
+                                              <path
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                              />
+                                            </svg>
+                                          </SvgIcon>
+                                        </WithStyles(SvgIcon)>
+                                      </ShoppingCart>
+                                    </pure(ShoppingCart)>
+                                  </span>
+                                  <WithStyles(TouchRipple)
+                                    center={true}
+                                    innerRef={[Function]}
+                                  >
+                                    <TouchRipple
+                                      center={true}
+                                      classes={
+                                        Object {
+                                          "child": "MuiTouchRipple-child-67",
+                                          "childLeaving": "MuiTouchRipple-childLeaving-68",
+                                          "childPulsate": "MuiTouchRipple-childPulsate-69",
+                                          "ripple": "MuiTouchRipple-ripple-64",
+                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
+                                          "rippleVisible": "MuiTouchRipple-rippleVisible-65",
+                                          "root": "MuiTouchRipple-root-63",
+                                        }
+                                      }
+                                    >
+                                      <TransitionGroup
+                                        childFactory={[Function]}
+                                        className="MuiTouchRipple-root-63"
+                                        component="span"
+                                        enter={true}
+                                        exit={true}
+                                      >
+                                        <span
+                                          className="MuiTouchRipple-root-63"
+                                        />
+                                      </TransitionGroup>
+                                    </TouchRipple>
+                                  </WithStyles(TouchRipple)>
+                                </button>
+                              </ButtonBase>
+                            </WithStyles(ButtonBase)>
+                          </IconButton>
+                        </WithStyles(IconButton)>
+                        <WithStyles(Typography)
+                          color="inherit"
+                          variant="title"
+                        >
+                          <Typography
+                            align="inherit"
+                            classes={
+                              Object {
+                                "alignCenter": "MuiTypography-alignCenter-83",
+                                "alignJustify": "MuiTypography-alignJustify-85",
+                                "alignLeft": "MuiTypography-alignLeft-82",
+                                "alignRight": "MuiTypography-alignRight-84",
+                                "body1": "MuiTypography-body1-79",
+                                "body2": "MuiTypography-body2-78",
+                                "button": "MuiTypography-button-81",
+                                "caption": "MuiTypography-caption-80",
+                                "colorError": "MuiTypography-colorError-94",
+                                "colorInherit": "MuiTypography-colorInherit-89",
+                                "colorPrimary": "MuiTypography-colorPrimary-90",
+                                "colorSecondary": "MuiTypography-colorSecondary-91",
+                                "colorTextPrimary": "MuiTypography-colorTextPrimary-92",
+                                "colorTextSecondary": "MuiTypography-colorTextSecondary-93",
+                                "display1": "MuiTypography-display1-74",
+                                "display2": "MuiTypography-display2-73",
+                                "display3": "MuiTypography-display3-72",
+                                "display4": "MuiTypography-display4-71",
+                                "gutterBottom": "MuiTypography-gutterBottom-87",
+                                "headline": "MuiTypography-headline-75",
+                                "noWrap": "MuiTypography-noWrap-86",
+                                "paragraph": "MuiTypography-paragraph-88",
+                                "root": "MuiTypography-root-70",
+                                "subheading": "MuiTypography-subheading-77",
+                                "title": "MuiTypography-title-76",
+                              }
+                            }
+                            color="inherit"
+                            gutterBottom={false}
+                            headlineMapping={
+                              Object {
+                                "body1": "p",
+                                "body2": "aside",
+                                "display1": "h1",
+                                "display2": "h1",
+                                "display3": "h1",
+                                "display4": "h1",
+                                "headline": "h1",
+                                "subheading": "h3",
+                                "title": "h2",
+                              }
+                            }
+                            noWrap={false}
+                            paragraph={false}
+                            variant="title"
+                          >
+                            <h2
+                              className="MuiTypography-root-70 MuiTypography-title-76 MuiTypography-colorInherit-89"
+                            >
+                              Shoe Stores
+                            </h2>
+                          </Typography>
+                        </WithStyles(Typography)>
+                      </div>
+                    </Toolbar>
+                  </WithStyles(Toolbar)>
+                </header>
+              </Paper>
+            </WithStyles(Paper)>
+          </AppBar>
+        </WithStyles(AppBar)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <Grid
+            alignContent="stretch"
+            alignItems="stretch"
+            classes={
+              Object {
+                "align-content-xs-center": "MuiGrid-align-content-xs-center-107",
+                "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end-109",
+                "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start-108",
+                "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around-111",
+                "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between-110",
+                "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline-106",
+                "align-items-xs-center": "MuiGrid-align-items-xs-center-103",
+                "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end-105",
+                "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start-104",
+                "container": "MuiGrid-container-95",
+                "direction-xs-column": "MuiGrid-direction-xs-column-98",
+                "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse-99",
+                "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse-100",
+                "grid-lg-1": "MuiGrid-grid-lg-1-166",
+                "grid-lg-10": "MuiGrid-grid-lg-10-175",
+                "grid-lg-11": "MuiGrid-grid-lg-11-176",
+                "grid-lg-12": "MuiGrid-grid-lg-12-177",
+                "grid-lg-2": "MuiGrid-grid-lg-2-167",
+                "grid-lg-3": "MuiGrid-grid-lg-3-168",
+                "grid-lg-4": "MuiGrid-grid-lg-4-169",
+                "grid-lg-5": "MuiGrid-grid-lg-5-170",
+                "grid-lg-6": "MuiGrid-grid-lg-6-171",
+                "grid-lg-7": "MuiGrid-grid-lg-7-172",
+                "grid-lg-8": "MuiGrid-grid-lg-8-173",
+                "grid-lg-9": "MuiGrid-grid-lg-9-174",
+                "grid-lg-auto": "MuiGrid-grid-lg-auto-164",
+                "grid-lg-true": "MuiGrid-grid-lg-true-165",
+                "grid-md-1": "MuiGrid-grid-md-1-152",
+                "grid-md-10": "MuiGrid-grid-md-10-161",
+                "grid-md-11": "MuiGrid-grid-md-11-162",
+                "grid-md-12": "MuiGrid-grid-md-12-163",
+                "grid-md-2": "MuiGrid-grid-md-2-153",
+                "grid-md-3": "MuiGrid-grid-md-3-154",
+                "grid-md-4": "MuiGrid-grid-md-4-155",
+                "grid-md-5": "MuiGrid-grid-md-5-156",
+                "grid-md-6": "MuiGrid-grid-md-6-157",
+                "grid-md-7": "MuiGrid-grid-md-7-158",
+                "grid-md-8": "MuiGrid-grid-md-8-159",
+                "grid-md-9": "MuiGrid-grid-md-9-160",
+                "grid-md-auto": "MuiGrid-grid-md-auto-150",
+                "grid-md-true": "MuiGrid-grid-md-true-151",
+                "grid-sm-1": "MuiGrid-grid-sm-1-138",
+                "grid-sm-10": "MuiGrid-grid-sm-10-147",
+                "grid-sm-11": "MuiGrid-grid-sm-11-148",
+                "grid-sm-12": "MuiGrid-grid-sm-12-149",
+                "grid-sm-2": "MuiGrid-grid-sm-2-139",
+                "grid-sm-3": "MuiGrid-grid-sm-3-140",
+                "grid-sm-4": "MuiGrid-grid-sm-4-141",
+                "grid-sm-5": "MuiGrid-grid-sm-5-142",
+                "grid-sm-6": "MuiGrid-grid-sm-6-143",
+                "grid-sm-7": "MuiGrid-grid-sm-7-144",
+                "grid-sm-8": "MuiGrid-grid-sm-8-145",
+                "grid-sm-9": "MuiGrid-grid-sm-9-146",
+                "grid-sm-auto": "MuiGrid-grid-sm-auto-136",
+                "grid-sm-true": "MuiGrid-grid-sm-true-137",
+                "grid-xl-1": "MuiGrid-grid-xl-1-180",
+                "grid-xl-10": "MuiGrid-grid-xl-10-189",
+                "grid-xl-11": "MuiGrid-grid-xl-11-190",
+                "grid-xl-12": "MuiGrid-grid-xl-12-191",
+                "grid-xl-2": "MuiGrid-grid-xl-2-181",
+                "grid-xl-3": "MuiGrid-grid-xl-3-182",
+                "grid-xl-4": "MuiGrid-grid-xl-4-183",
+                "grid-xl-5": "MuiGrid-grid-xl-5-184",
+                "grid-xl-6": "MuiGrid-grid-xl-6-185",
+                "grid-xl-7": "MuiGrid-grid-xl-7-186",
+                "grid-xl-8": "MuiGrid-grid-xl-8-187",
+                "grid-xl-9": "MuiGrid-grid-xl-9-188",
+                "grid-xl-auto": "MuiGrid-grid-xl-auto-178",
+                "grid-xl-true": "MuiGrid-grid-xl-true-179",
+                "grid-xs-1": "MuiGrid-grid-xs-1-124",
+                "grid-xs-10": "MuiGrid-grid-xs-10-133",
+                "grid-xs-11": "MuiGrid-grid-xs-11-134",
+                "grid-xs-12": "MuiGrid-grid-xs-12-135",
+                "grid-xs-2": "MuiGrid-grid-xs-2-125",
+                "grid-xs-3": "MuiGrid-grid-xs-3-126",
+                "grid-xs-4": "MuiGrid-grid-xs-4-127",
+                "grid-xs-5": "MuiGrid-grid-xs-5-128",
+                "grid-xs-6": "MuiGrid-grid-xs-6-129",
+                "grid-xs-7": "MuiGrid-grid-xs-7-130",
+                "grid-xs-8": "MuiGrid-grid-xs-8-131",
+                "grid-xs-9": "MuiGrid-grid-xs-9-132",
+                "grid-xs-auto": "MuiGrid-grid-xs-auto-122",
+                "grid-xs-true": "MuiGrid-grid-xs-true-123",
+                "item": "MuiGrid-item-96",
+                "justify-xs-center": "MuiGrid-justify-xs-center-112",
+                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end-113",
+                "justify-xs-space-around": "MuiGrid-justify-xs-space-around-115",
+                "justify-xs-space-between": "MuiGrid-justify-xs-space-between-114",
+                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly-116",
+                "spacing-xs-16": "MuiGrid-spacing-xs-16-118",
+                "spacing-xs-24": "MuiGrid-spacing-xs-24-119",
+                "spacing-xs-32": "MuiGrid-spacing-xs-32-120",
+                "spacing-xs-40": "MuiGrid-spacing-xs-40-121",
+                "spacing-xs-8": "MuiGrid-spacing-xs-8-117",
+                "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap-101",
+                "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse-102",
+                "zeroMinWidth": "MuiGrid-zeroMinWidth-97",
+              }
+            }
+            component="div"
+            container={true}
+            direction="row"
+            item={false}
+            justify="flex-start"
+            lg={false}
+            md={false}
+            sm={false}
+            spacing={24}
+            wrap="wrap"
+            xl={false}
+            xs={false}
+            zeroMinWidth={false}
+          >
+            <div
+              className="MuiGrid-container-95 MuiGrid-spacing-xs-24-119"
+            />
+          </Grid>
+        </WithStyles(Grid)>
+        <WithStyles(Snackbar)
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          autoHideDuration={6000}
+          onClose={[Function]}
+          open={false}
+        >
+          <Snackbar
+            TransitionComponent={[Function]}
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            autoHideDuration={6000}
+            classes={
+              Object {
+                "anchorOriginBottomCenter": "MuiSnackbar-anchorOriginBottomCenter-194",
+                "anchorOriginBottomLeft": "MuiSnackbar-anchorOriginBottomLeft-198",
+                "anchorOriginBottomRight": "MuiSnackbar-anchorOriginBottomRight-196",
+                "anchorOriginTopCenter": "MuiSnackbar-anchorOriginTopCenter-193",
+                "anchorOriginTopLeft": "MuiSnackbar-anchorOriginTopLeft-197",
+                "anchorOriginTopRight": "MuiSnackbar-anchorOriginTopRight-195",
+                "root": "MuiSnackbar-root-192",
+              }
+            }
+            disableWindowBlurListener={false}
+            onClose={[Function]}
+            open={false}
+            transitionDuration={
+              Object {
+                "enter": 225,
+                "exit": 195,
+              }
+            }
+          />
+        </WithStyles(Snackbar)>
+      </App>
+    </WithStyles(App)>
+  </Connect(WithStyles(App))>
+</Provider>
+`;
+
+exports[`App.js dispatch global msg 2`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(WithStyles(App))>
+    <WithStyles(App)
+      globalMessage={null}
+      handleGlobalMsgClose={[Function]}
+      storeData={Object {}}
+    >
+      <App
+        classes={
+          Object {
+            "error": "App-error-2",
+            "icon": "App-icon-5",
+            "iconVariant": "App-iconVariant-6",
+            "info": "App-info-3",
+            "message": "App-message-7",
+            "success": "App-success-1",
+            "warning": "App-warning-4",
+          }
+        }
+        globalMessage={null}
+        handleGlobalMsgClose={[Function]}
+        storeData={Object {}}
+      >
+        <WithStyles(AppBar)
+          position="static"
+          style={
+            Object {
+              "marginBottom": 24,
+            }
+          }
+        >
+          <AppBar
+            classes={
+              Object {
+                "colorDefault": "MuiAppBar-colorDefault-13",
+                "colorPrimary": "MuiAppBar-colorPrimary-14",
+                "colorSecondary": "MuiAppBar-colorSecondary-15",
+                "positionAbsolute": "MuiAppBar-positionAbsolute-10",
+                "positionFixed": "MuiAppBar-positionFixed-9",
+                "positionStatic": "MuiAppBar-positionStatic-12",
+                "positionSticky": "MuiAppBar-positionSticky-11",
+                "root": "MuiAppBar-root-8",
+              }
+            }
+            color="primary"
+            position="static"
+            style={
+              Object {
+                "marginBottom": 24,
+              }
+            }
+          >
+            <WithStyles(Paper)
+              className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+              component="header"
+              elevation={4}
+              square={true}
+              style={
+                Object {
+                  "marginBottom": 24,
+                }
+              }
+            >
+              <Paper
+                className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                classes={
+                  Object {
+                    "elevation0": "MuiPaper-elevation0-18",
+                    "elevation1": "MuiPaper-elevation1-19",
+                    "elevation10": "MuiPaper-elevation10-28",
+                    "elevation11": "MuiPaper-elevation11-29",
+                    "elevation12": "MuiPaper-elevation12-30",
+                    "elevation13": "MuiPaper-elevation13-31",
+                    "elevation14": "MuiPaper-elevation14-32",
+                    "elevation15": "MuiPaper-elevation15-33",
+                    "elevation16": "MuiPaper-elevation16-34",
+                    "elevation17": "MuiPaper-elevation17-35",
+                    "elevation18": "MuiPaper-elevation18-36",
+                    "elevation19": "MuiPaper-elevation19-37",
+                    "elevation2": "MuiPaper-elevation2-20",
+                    "elevation20": "MuiPaper-elevation20-38",
+                    "elevation21": "MuiPaper-elevation21-39",
+                    "elevation22": "MuiPaper-elevation22-40",
+                    "elevation23": "MuiPaper-elevation23-41",
+                    "elevation24": "MuiPaper-elevation24-42",
+                    "elevation3": "MuiPaper-elevation3-21",
+                    "elevation4": "MuiPaper-elevation4-22",
+                    "elevation5": "MuiPaper-elevation5-23",
+                    "elevation6": "MuiPaper-elevation6-24",
+                    "elevation7": "MuiPaper-elevation7-25",
+                    "elevation8": "MuiPaper-elevation8-26",
+                    "elevation9": "MuiPaper-elevation9-27",
+                    "root": "MuiPaper-root-16",
+                    "rounded": "MuiPaper-rounded-17",
+                  }
+                }
+                component="header"
+                elevation={4}
+                square={true}
+                style={
+                  Object {
+                    "marginBottom": 24,
+                  }
+                }
+              >
+                <header
+                  className="MuiPaper-root-16 MuiPaper-elevation4-22 MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                  style={
+                    Object {
+                      "marginBottom": 24,
+                    }
+                  }
+                >
+                  <WithStyles(Toolbar)>
+                    <Toolbar
+                      classes={
+                        Object {
+                          "dense": "MuiToolbar-dense-46",
+                          "gutters": "MuiToolbar-gutters-44",
+                          "regular": "MuiToolbar-regular-45",
+                          "root": "MuiToolbar-root-43",
+                        }
+                      }
+                      disableGutters={false}
+                      variant="regular"
+                    >
+                      <div
+                        className="MuiToolbar-root-43 MuiToolbar-regular-45 MuiToolbar-gutters-44"
+                      >
+                        <WithStyles(IconButton)
+                          color="inherit"
+                        >
+                          <IconButton
+                            classes={
+                              Object {
+                                "colorInherit": "MuiIconButton-colorInherit-48",
+                                "colorPrimary": "MuiIconButton-colorPrimary-49",
+                                "colorSecondary": "MuiIconButton-colorSecondary-50",
+                                "disabled": "MuiIconButton-disabled-51",
+                                "label": "MuiIconButton-label-52",
+                                "root": "MuiIconButton-root-47",
+                              }
+                            }
+                            color="inherit"
+                            disabled={false}
+                          >
+                            <WithStyles(ButtonBase)
+                              centerRipple={true}
+                              className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                              disabled={false}
+                              focusRipple={true}
+                            >
+                              <ButtonBase
+                                centerRipple={true}
+                                className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                classes={
+                                  Object {
+                                    "disabled": "MuiButtonBase-disabled-54",
+                                    "focusVisible": "MuiButtonBase-focusVisible-55",
+                                    "root": "MuiButtonBase-root-53",
+                                  }
+                                }
+                                component="button"
+                                disableRipple={false}
+                                disableTouchRipple={false}
+                                disabled={false}
+                                focusRipple={true}
+                                tabIndex="0"
+                                type="button"
+                              >
+                                <button
+                                  className="MuiButtonBase-root-53 MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                  disabled={false}
+                                  onBlur={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  tabIndex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    className="MuiIconButton-label-52"
+                                  >
+                                    <pure(ShoppingCart)>
+                                      <ShoppingCart>
+                                        <WithStyles(SvgIcon)>
+                                          <SvgIcon
+                                            classes={
+                                              Object {
+                                                "colorAction": "MuiSvgIcon-colorAction-59",
+                                                "colorDisabled": "MuiSvgIcon-colorDisabled-61",
+                                                "colorError": "MuiSvgIcon-colorError-60",
+                                                "colorPrimary": "MuiSvgIcon-colorPrimary-57",
+                                                "colorSecondary": "MuiSvgIcon-colorSecondary-58",
+                                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-62",
+                                                "root": "MuiSvgIcon-root-56",
+                                              }
+                                            }
+                                            color="inherit"
+                                            component="svg"
+                                            fontSize="default"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              className="MuiSvgIcon-root-56"
+                                              focusable="false"
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                                              />
+                                              <path
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                              />
+                                            </svg>
+                                          </SvgIcon>
+                                        </WithStyles(SvgIcon)>
+                                      </ShoppingCart>
+                                    </pure(ShoppingCart)>
+                                  </span>
+                                  <WithStyles(TouchRipple)
+                                    center={true}
+                                    innerRef={[Function]}
+                                  >
+                                    <TouchRipple
+                                      center={true}
+                                      classes={
+                                        Object {
+                                          "child": "MuiTouchRipple-child-67",
+                                          "childLeaving": "MuiTouchRipple-childLeaving-68",
+                                          "childPulsate": "MuiTouchRipple-childPulsate-69",
+                                          "ripple": "MuiTouchRipple-ripple-64",
+                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
+                                          "rippleVisible": "MuiTouchRipple-rippleVisible-65",
+                                          "root": "MuiTouchRipple-root-63",
+                                        }
+                                      }
+                                    >
+                                      <TransitionGroup
+                                        childFactory={[Function]}
+                                        className="MuiTouchRipple-root-63"
+                                        component="span"
+                                        enter={true}
+                                        exit={true}
+                                      >
+                                        <span
+                                          className="MuiTouchRipple-root-63"
+                                        />
+                                      </TransitionGroup>
+                                    </TouchRipple>
+                                  </WithStyles(TouchRipple)>
+                                </button>
+                              </ButtonBase>
+                            </WithStyles(ButtonBase)>
+                          </IconButton>
+                        </WithStyles(IconButton)>
+                        <WithStyles(Typography)
+                          color="inherit"
+                          variant="title"
+                        >
+                          <Typography
+                            align="inherit"
+                            classes={
+                              Object {
+                                "alignCenter": "MuiTypography-alignCenter-83",
+                                "alignJustify": "MuiTypography-alignJustify-85",
+                                "alignLeft": "MuiTypography-alignLeft-82",
+                                "alignRight": "MuiTypography-alignRight-84",
+                                "body1": "MuiTypography-body1-79",
+                                "body2": "MuiTypography-body2-78",
+                                "button": "MuiTypography-button-81",
+                                "caption": "MuiTypography-caption-80",
+                                "colorError": "MuiTypography-colorError-94",
+                                "colorInherit": "MuiTypography-colorInherit-89",
+                                "colorPrimary": "MuiTypography-colorPrimary-90",
+                                "colorSecondary": "MuiTypography-colorSecondary-91",
+                                "colorTextPrimary": "MuiTypography-colorTextPrimary-92",
+                                "colorTextSecondary": "MuiTypography-colorTextSecondary-93",
+                                "display1": "MuiTypography-display1-74",
+                                "display2": "MuiTypography-display2-73",
+                                "display3": "MuiTypography-display3-72",
+                                "display4": "MuiTypography-display4-71",
+                                "gutterBottom": "MuiTypography-gutterBottom-87",
+                                "headline": "MuiTypography-headline-75",
+                                "noWrap": "MuiTypography-noWrap-86",
+                                "paragraph": "MuiTypography-paragraph-88",
+                                "root": "MuiTypography-root-70",
+                                "subheading": "MuiTypography-subheading-77",
+                                "title": "MuiTypography-title-76",
+                              }
+                            }
+                            color="inherit"
+                            gutterBottom={false}
+                            headlineMapping={
+                              Object {
+                                "body1": "p",
+                                "body2": "aside",
+                                "display1": "h1",
+                                "display2": "h1",
+                                "display3": "h1",
+                                "display4": "h1",
+                                "headline": "h1",
+                                "subheading": "h3",
+                                "title": "h2",
+                              }
+                            }
+                            noWrap={false}
+                            paragraph={false}
+                            variant="title"
+                          >
+                            <h2
+                              className="MuiTypography-root-70 MuiTypography-title-76 MuiTypography-colorInherit-89"
+                            >
+                              Shoe Stores
+                            </h2>
+                          </Typography>
+                        </WithStyles(Typography)>
+                      </div>
+                    </Toolbar>
+                  </WithStyles(Toolbar)>
+                </header>
+              </Paper>
+            </WithStyles(Paper)>
+          </AppBar>
+        </WithStyles(AppBar)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <Grid
+            alignContent="stretch"
+            alignItems="stretch"
+            classes={
+              Object {
+                "align-content-xs-center": "MuiGrid-align-content-xs-center-107",
+                "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end-109",
+                "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start-108",
+                "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around-111",
+                "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between-110",
+                "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline-106",
+                "align-items-xs-center": "MuiGrid-align-items-xs-center-103",
+                "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end-105",
+                "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start-104",
+                "container": "MuiGrid-container-95",
+                "direction-xs-column": "MuiGrid-direction-xs-column-98",
+                "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse-99",
+                "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse-100",
+                "grid-lg-1": "MuiGrid-grid-lg-1-166",
+                "grid-lg-10": "MuiGrid-grid-lg-10-175",
+                "grid-lg-11": "MuiGrid-grid-lg-11-176",
+                "grid-lg-12": "MuiGrid-grid-lg-12-177",
+                "grid-lg-2": "MuiGrid-grid-lg-2-167",
+                "grid-lg-3": "MuiGrid-grid-lg-3-168",
+                "grid-lg-4": "MuiGrid-grid-lg-4-169",
+                "grid-lg-5": "MuiGrid-grid-lg-5-170",
+                "grid-lg-6": "MuiGrid-grid-lg-6-171",
+                "grid-lg-7": "MuiGrid-grid-lg-7-172",
+                "grid-lg-8": "MuiGrid-grid-lg-8-173",
+                "grid-lg-9": "MuiGrid-grid-lg-9-174",
+                "grid-lg-auto": "MuiGrid-grid-lg-auto-164",
+                "grid-lg-true": "MuiGrid-grid-lg-true-165",
+                "grid-md-1": "MuiGrid-grid-md-1-152",
+                "grid-md-10": "MuiGrid-grid-md-10-161",
+                "grid-md-11": "MuiGrid-grid-md-11-162",
+                "grid-md-12": "MuiGrid-grid-md-12-163",
+                "grid-md-2": "MuiGrid-grid-md-2-153",
+                "grid-md-3": "MuiGrid-grid-md-3-154",
+                "grid-md-4": "MuiGrid-grid-md-4-155",
+                "grid-md-5": "MuiGrid-grid-md-5-156",
+                "grid-md-6": "MuiGrid-grid-md-6-157",
+                "grid-md-7": "MuiGrid-grid-md-7-158",
+                "grid-md-8": "MuiGrid-grid-md-8-159",
+                "grid-md-9": "MuiGrid-grid-md-9-160",
+                "grid-md-auto": "MuiGrid-grid-md-auto-150",
+                "grid-md-true": "MuiGrid-grid-md-true-151",
+                "grid-sm-1": "MuiGrid-grid-sm-1-138",
+                "grid-sm-10": "MuiGrid-grid-sm-10-147",
+                "grid-sm-11": "MuiGrid-grid-sm-11-148",
+                "grid-sm-12": "MuiGrid-grid-sm-12-149",
+                "grid-sm-2": "MuiGrid-grid-sm-2-139",
+                "grid-sm-3": "MuiGrid-grid-sm-3-140",
+                "grid-sm-4": "MuiGrid-grid-sm-4-141",
+                "grid-sm-5": "MuiGrid-grid-sm-5-142",
+                "grid-sm-6": "MuiGrid-grid-sm-6-143",
+                "grid-sm-7": "MuiGrid-grid-sm-7-144",
+                "grid-sm-8": "MuiGrid-grid-sm-8-145",
+                "grid-sm-9": "MuiGrid-grid-sm-9-146",
+                "grid-sm-auto": "MuiGrid-grid-sm-auto-136",
+                "grid-sm-true": "MuiGrid-grid-sm-true-137",
+                "grid-xl-1": "MuiGrid-grid-xl-1-180",
+                "grid-xl-10": "MuiGrid-grid-xl-10-189",
+                "grid-xl-11": "MuiGrid-grid-xl-11-190",
+                "grid-xl-12": "MuiGrid-grid-xl-12-191",
+                "grid-xl-2": "MuiGrid-grid-xl-2-181",
+                "grid-xl-3": "MuiGrid-grid-xl-3-182",
+                "grid-xl-4": "MuiGrid-grid-xl-4-183",
+                "grid-xl-5": "MuiGrid-grid-xl-5-184",
+                "grid-xl-6": "MuiGrid-grid-xl-6-185",
+                "grid-xl-7": "MuiGrid-grid-xl-7-186",
+                "grid-xl-8": "MuiGrid-grid-xl-8-187",
+                "grid-xl-9": "MuiGrid-grid-xl-9-188",
+                "grid-xl-auto": "MuiGrid-grid-xl-auto-178",
+                "grid-xl-true": "MuiGrid-grid-xl-true-179",
+                "grid-xs-1": "MuiGrid-grid-xs-1-124",
+                "grid-xs-10": "MuiGrid-grid-xs-10-133",
+                "grid-xs-11": "MuiGrid-grid-xs-11-134",
+                "grid-xs-12": "MuiGrid-grid-xs-12-135",
+                "grid-xs-2": "MuiGrid-grid-xs-2-125",
+                "grid-xs-3": "MuiGrid-grid-xs-3-126",
+                "grid-xs-4": "MuiGrid-grid-xs-4-127",
+                "grid-xs-5": "MuiGrid-grid-xs-5-128",
+                "grid-xs-6": "MuiGrid-grid-xs-6-129",
+                "grid-xs-7": "MuiGrid-grid-xs-7-130",
+                "grid-xs-8": "MuiGrid-grid-xs-8-131",
+                "grid-xs-9": "MuiGrid-grid-xs-9-132",
+                "grid-xs-auto": "MuiGrid-grid-xs-auto-122",
+                "grid-xs-true": "MuiGrid-grid-xs-true-123",
+                "item": "MuiGrid-item-96",
+                "justify-xs-center": "MuiGrid-justify-xs-center-112",
+                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end-113",
+                "justify-xs-space-around": "MuiGrid-justify-xs-space-around-115",
+                "justify-xs-space-between": "MuiGrid-justify-xs-space-between-114",
+                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly-116",
+                "spacing-xs-16": "MuiGrid-spacing-xs-16-118",
+                "spacing-xs-24": "MuiGrid-spacing-xs-24-119",
+                "spacing-xs-32": "MuiGrid-spacing-xs-32-120",
+                "spacing-xs-40": "MuiGrid-spacing-xs-40-121",
+                "spacing-xs-8": "MuiGrid-spacing-xs-8-117",
+                "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap-101",
+                "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse-102",
+                "zeroMinWidth": "MuiGrid-zeroMinWidth-97",
+              }
+            }
+            component="div"
+            container={true}
+            direction="row"
+            item={false}
+            justify="flex-start"
+            lg={false}
+            md={false}
+            sm={false}
+            spacing={24}
+            wrap="wrap"
+            xl={false}
+            xs={false}
+            zeroMinWidth={false}
+          >
+            <div
+              className="MuiGrid-container-95 MuiGrid-spacing-xs-24-119"
+            />
+          </Grid>
+        </WithStyles(Grid)>
+        <WithStyles(Snackbar)
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          autoHideDuration={6000}
+          onClose={[Function]}
+          open={false}
+        >
+          <Snackbar
+            TransitionComponent={[Function]}
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            autoHideDuration={6000}
+            classes={
+              Object {
+                "anchorOriginBottomCenter": "MuiSnackbar-anchorOriginBottomCenter-194",
+                "anchorOriginBottomLeft": "MuiSnackbar-anchorOriginBottomLeft-198",
+                "anchorOriginBottomRight": "MuiSnackbar-anchorOriginBottomRight-196",
+                "anchorOriginTopCenter": "MuiSnackbar-anchorOriginTopCenter-193",
+                "anchorOriginTopLeft": "MuiSnackbar-anchorOriginTopLeft-197",
+                "anchorOriginTopRight": "MuiSnackbar-anchorOriginTopRight-195",
+                "root": "MuiSnackbar-root-192",
+              }
+            }
+            disableWindowBlurListener={false}
+            onClose={[Function]}
+            open={false}
+            transitionDuration={
+              Object {
+                "enter": 225,
+                "exit": 195,
+              }
+            }
+          />
+        </WithStyles(Snackbar)>
+      </App>
+    </WithStyles(App)>
+  </Connect(WithStyles(App))>
+</Provider>
+`;
+
+exports[`App.js dispatch global msg 3`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(WithStyles(App))>
+    <WithStyles(App)
+      globalMessage={null}
+      handleGlobalMsgClose={[Function]}
+      storeData={Object {}}
+    >
+      <App
+        classes={
+          Object {
+            "error": "App-error-2",
+            "icon": "App-icon-5",
+            "iconVariant": "App-iconVariant-6",
+            "info": "App-info-3",
+            "message": "App-message-7",
+            "success": "App-success-1",
+            "warning": "App-warning-4",
+          }
+        }
+        globalMessage={null}
+        handleGlobalMsgClose={[Function]}
+        storeData={Object {}}
+      >
+        <WithStyles(AppBar)
+          position="static"
+          style={
+            Object {
+              "marginBottom": 24,
+            }
+          }
+        >
+          <AppBar
+            classes={
+              Object {
+                "colorDefault": "MuiAppBar-colorDefault-13",
+                "colorPrimary": "MuiAppBar-colorPrimary-14",
+                "colorSecondary": "MuiAppBar-colorSecondary-15",
+                "positionAbsolute": "MuiAppBar-positionAbsolute-10",
+                "positionFixed": "MuiAppBar-positionFixed-9",
+                "positionStatic": "MuiAppBar-positionStatic-12",
+                "positionSticky": "MuiAppBar-positionSticky-11",
+                "root": "MuiAppBar-root-8",
+              }
+            }
+            color="primary"
+            position="static"
+            style={
+              Object {
+                "marginBottom": 24,
+              }
+            }
+          >
+            <WithStyles(Paper)
+              className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+              component="header"
+              elevation={4}
+              square={true}
+              style={
+                Object {
+                  "marginBottom": 24,
+                }
+              }
+            >
+              <Paper
+                className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                classes={
+                  Object {
+                    "elevation0": "MuiPaper-elevation0-18",
+                    "elevation1": "MuiPaper-elevation1-19",
+                    "elevation10": "MuiPaper-elevation10-28",
+                    "elevation11": "MuiPaper-elevation11-29",
+                    "elevation12": "MuiPaper-elevation12-30",
+                    "elevation13": "MuiPaper-elevation13-31",
+                    "elevation14": "MuiPaper-elevation14-32",
+                    "elevation15": "MuiPaper-elevation15-33",
+                    "elevation16": "MuiPaper-elevation16-34",
+                    "elevation17": "MuiPaper-elevation17-35",
+                    "elevation18": "MuiPaper-elevation18-36",
+                    "elevation19": "MuiPaper-elevation19-37",
+                    "elevation2": "MuiPaper-elevation2-20",
+                    "elevation20": "MuiPaper-elevation20-38",
+                    "elevation21": "MuiPaper-elevation21-39",
+                    "elevation22": "MuiPaper-elevation22-40",
+                    "elevation23": "MuiPaper-elevation23-41",
+                    "elevation24": "MuiPaper-elevation24-42",
+                    "elevation3": "MuiPaper-elevation3-21",
+                    "elevation4": "MuiPaper-elevation4-22",
+                    "elevation5": "MuiPaper-elevation5-23",
+                    "elevation6": "MuiPaper-elevation6-24",
+                    "elevation7": "MuiPaper-elevation7-25",
+                    "elevation8": "MuiPaper-elevation8-26",
+                    "elevation9": "MuiPaper-elevation9-27",
+                    "root": "MuiPaper-root-16",
+                    "rounded": "MuiPaper-rounded-17",
+                  }
+                }
+                component="header"
+                elevation={4}
+                square={true}
+                style={
+                  Object {
+                    "marginBottom": 24,
+                  }
+                }
+              >
+                <header
+                  className="MuiPaper-root-16 MuiPaper-elevation4-22 MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                  style={
+                    Object {
+                      "marginBottom": 24,
+                    }
+                  }
+                >
+                  <WithStyles(Toolbar)>
+                    <Toolbar
+                      classes={
+                        Object {
+                          "dense": "MuiToolbar-dense-46",
+                          "gutters": "MuiToolbar-gutters-44",
+                          "regular": "MuiToolbar-regular-45",
+                          "root": "MuiToolbar-root-43",
+                        }
+                      }
+                      disableGutters={false}
+                      variant="regular"
+                    >
+                      <div
+                        className="MuiToolbar-root-43 MuiToolbar-regular-45 MuiToolbar-gutters-44"
+                      >
+                        <WithStyles(IconButton)
+                          color="inherit"
+                        >
+                          <IconButton
+                            classes={
+                              Object {
+                                "colorInherit": "MuiIconButton-colorInherit-48",
+                                "colorPrimary": "MuiIconButton-colorPrimary-49",
+                                "colorSecondary": "MuiIconButton-colorSecondary-50",
+                                "disabled": "MuiIconButton-disabled-51",
+                                "label": "MuiIconButton-label-52",
+                                "root": "MuiIconButton-root-47",
+                              }
+                            }
+                            color="inherit"
+                            disabled={false}
+                          >
+                            <WithStyles(ButtonBase)
+                              centerRipple={true}
+                              className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                              disabled={false}
+                              focusRipple={true}
+                            >
+                              <ButtonBase
+                                centerRipple={true}
+                                className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                classes={
+                                  Object {
+                                    "disabled": "MuiButtonBase-disabled-54",
+                                    "focusVisible": "MuiButtonBase-focusVisible-55",
+                                    "root": "MuiButtonBase-root-53",
+                                  }
+                                }
+                                component="button"
+                                disableRipple={false}
+                                disableTouchRipple={false}
+                                disabled={false}
+                                focusRipple={true}
+                                tabIndex="0"
+                                type="button"
+                              >
+                                <button
+                                  className="MuiButtonBase-root-53 MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                  disabled={false}
+                                  onBlur={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  tabIndex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    className="MuiIconButton-label-52"
+                                  >
+                                    <pure(ShoppingCart)>
+                                      <ShoppingCart>
+                                        <WithStyles(SvgIcon)>
+                                          <SvgIcon
+                                            classes={
+                                              Object {
+                                                "colorAction": "MuiSvgIcon-colorAction-59",
+                                                "colorDisabled": "MuiSvgIcon-colorDisabled-61",
+                                                "colorError": "MuiSvgIcon-colorError-60",
+                                                "colorPrimary": "MuiSvgIcon-colorPrimary-57",
+                                                "colorSecondary": "MuiSvgIcon-colorSecondary-58",
+                                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-62",
+                                                "root": "MuiSvgIcon-root-56",
+                                              }
+                                            }
+                                            color="inherit"
+                                            component="svg"
+                                            fontSize="default"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              className="MuiSvgIcon-root-56"
+                                              focusable="false"
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                                              />
+                                              <path
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                              />
+                                            </svg>
+                                          </SvgIcon>
+                                        </WithStyles(SvgIcon)>
+                                      </ShoppingCart>
+                                    </pure(ShoppingCart)>
+                                  </span>
+                                  <WithStyles(TouchRipple)
+                                    center={true}
+                                    innerRef={[Function]}
+                                  >
+                                    <TouchRipple
+                                      center={true}
+                                      classes={
+                                        Object {
+                                          "child": "MuiTouchRipple-child-67",
+                                          "childLeaving": "MuiTouchRipple-childLeaving-68",
+                                          "childPulsate": "MuiTouchRipple-childPulsate-69",
+                                          "ripple": "MuiTouchRipple-ripple-64",
+                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
+                                          "rippleVisible": "MuiTouchRipple-rippleVisible-65",
+                                          "root": "MuiTouchRipple-root-63",
+                                        }
+                                      }
+                                    >
+                                      <TransitionGroup
+                                        childFactory={[Function]}
+                                        className="MuiTouchRipple-root-63"
+                                        component="span"
+                                        enter={true}
+                                        exit={true}
+                                      >
+                                        <span
+                                          className="MuiTouchRipple-root-63"
+                                        />
+                                      </TransitionGroup>
+                                    </TouchRipple>
+                                  </WithStyles(TouchRipple)>
+                                </button>
+                              </ButtonBase>
+                            </WithStyles(ButtonBase)>
+                          </IconButton>
+                        </WithStyles(IconButton)>
+                        <WithStyles(Typography)
+                          color="inherit"
+                          variant="title"
+                        >
+                          <Typography
+                            align="inherit"
+                            classes={
+                              Object {
+                                "alignCenter": "MuiTypography-alignCenter-83",
+                                "alignJustify": "MuiTypography-alignJustify-85",
+                                "alignLeft": "MuiTypography-alignLeft-82",
+                                "alignRight": "MuiTypography-alignRight-84",
+                                "body1": "MuiTypography-body1-79",
+                                "body2": "MuiTypography-body2-78",
+                                "button": "MuiTypography-button-81",
+                                "caption": "MuiTypography-caption-80",
+                                "colorError": "MuiTypography-colorError-94",
+                                "colorInherit": "MuiTypography-colorInherit-89",
+                                "colorPrimary": "MuiTypography-colorPrimary-90",
+                                "colorSecondary": "MuiTypography-colorSecondary-91",
+                                "colorTextPrimary": "MuiTypography-colorTextPrimary-92",
+                                "colorTextSecondary": "MuiTypography-colorTextSecondary-93",
+                                "display1": "MuiTypography-display1-74",
+                                "display2": "MuiTypography-display2-73",
+                                "display3": "MuiTypography-display3-72",
+                                "display4": "MuiTypography-display4-71",
+                                "gutterBottom": "MuiTypography-gutterBottom-87",
+                                "headline": "MuiTypography-headline-75",
+                                "noWrap": "MuiTypography-noWrap-86",
+                                "paragraph": "MuiTypography-paragraph-88",
+                                "root": "MuiTypography-root-70",
+                                "subheading": "MuiTypography-subheading-77",
+                                "title": "MuiTypography-title-76",
+                              }
+                            }
+                            color="inherit"
+                            gutterBottom={false}
+                            headlineMapping={
+                              Object {
+                                "body1": "p",
+                                "body2": "aside",
+                                "display1": "h1",
+                                "display2": "h1",
+                                "display3": "h1",
+                                "display4": "h1",
+                                "headline": "h1",
+                                "subheading": "h3",
+                                "title": "h2",
+                              }
+                            }
+                            noWrap={false}
+                            paragraph={false}
+                            variant="title"
+                          >
+                            <h2
+                              className="MuiTypography-root-70 MuiTypography-title-76 MuiTypography-colorInherit-89"
+                            >
+                              Shoe Stores
+                            </h2>
+                          </Typography>
+                        </WithStyles(Typography)>
+                      </div>
+                    </Toolbar>
+                  </WithStyles(Toolbar)>
+                </header>
+              </Paper>
+            </WithStyles(Paper)>
+          </AppBar>
+        </WithStyles(AppBar)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <Grid
+            alignContent="stretch"
+            alignItems="stretch"
+            classes={
+              Object {
+                "align-content-xs-center": "MuiGrid-align-content-xs-center-107",
+                "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end-109",
+                "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start-108",
+                "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around-111",
+                "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between-110",
+                "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline-106",
+                "align-items-xs-center": "MuiGrid-align-items-xs-center-103",
+                "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end-105",
+                "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start-104",
+                "container": "MuiGrid-container-95",
+                "direction-xs-column": "MuiGrid-direction-xs-column-98",
+                "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse-99",
+                "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse-100",
+                "grid-lg-1": "MuiGrid-grid-lg-1-166",
+                "grid-lg-10": "MuiGrid-grid-lg-10-175",
+                "grid-lg-11": "MuiGrid-grid-lg-11-176",
+                "grid-lg-12": "MuiGrid-grid-lg-12-177",
+                "grid-lg-2": "MuiGrid-grid-lg-2-167",
+                "grid-lg-3": "MuiGrid-grid-lg-3-168",
+                "grid-lg-4": "MuiGrid-grid-lg-4-169",
+                "grid-lg-5": "MuiGrid-grid-lg-5-170",
+                "grid-lg-6": "MuiGrid-grid-lg-6-171",
+                "grid-lg-7": "MuiGrid-grid-lg-7-172",
+                "grid-lg-8": "MuiGrid-grid-lg-8-173",
+                "grid-lg-9": "MuiGrid-grid-lg-9-174",
+                "grid-lg-auto": "MuiGrid-grid-lg-auto-164",
+                "grid-lg-true": "MuiGrid-grid-lg-true-165",
+                "grid-md-1": "MuiGrid-grid-md-1-152",
+                "grid-md-10": "MuiGrid-grid-md-10-161",
+                "grid-md-11": "MuiGrid-grid-md-11-162",
+                "grid-md-12": "MuiGrid-grid-md-12-163",
+                "grid-md-2": "MuiGrid-grid-md-2-153",
+                "grid-md-3": "MuiGrid-grid-md-3-154",
+                "grid-md-4": "MuiGrid-grid-md-4-155",
+                "grid-md-5": "MuiGrid-grid-md-5-156",
+                "grid-md-6": "MuiGrid-grid-md-6-157",
+                "grid-md-7": "MuiGrid-grid-md-7-158",
+                "grid-md-8": "MuiGrid-grid-md-8-159",
+                "grid-md-9": "MuiGrid-grid-md-9-160",
+                "grid-md-auto": "MuiGrid-grid-md-auto-150",
+                "grid-md-true": "MuiGrid-grid-md-true-151",
+                "grid-sm-1": "MuiGrid-grid-sm-1-138",
+                "grid-sm-10": "MuiGrid-grid-sm-10-147",
+                "grid-sm-11": "MuiGrid-grid-sm-11-148",
+                "grid-sm-12": "MuiGrid-grid-sm-12-149",
+                "grid-sm-2": "MuiGrid-grid-sm-2-139",
+                "grid-sm-3": "MuiGrid-grid-sm-3-140",
+                "grid-sm-4": "MuiGrid-grid-sm-4-141",
+                "grid-sm-5": "MuiGrid-grid-sm-5-142",
+                "grid-sm-6": "MuiGrid-grid-sm-6-143",
+                "grid-sm-7": "MuiGrid-grid-sm-7-144",
+                "grid-sm-8": "MuiGrid-grid-sm-8-145",
+                "grid-sm-9": "MuiGrid-grid-sm-9-146",
+                "grid-sm-auto": "MuiGrid-grid-sm-auto-136",
+                "grid-sm-true": "MuiGrid-grid-sm-true-137",
+                "grid-xl-1": "MuiGrid-grid-xl-1-180",
+                "grid-xl-10": "MuiGrid-grid-xl-10-189",
+                "grid-xl-11": "MuiGrid-grid-xl-11-190",
+                "grid-xl-12": "MuiGrid-grid-xl-12-191",
+                "grid-xl-2": "MuiGrid-grid-xl-2-181",
+                "grid-xl-3": "MuiGrid-grid-xl-3-182",
+                "grid-xl-4": "MuiGrid-grid-xl-4-183",
+                "grid-xl-5": "MuiGrid-grid-xl-5-184",
+                "grid-xl-6": "MuiGrid-grid-xl-6-185",
+                "grid-xl-7": "MuiGrid-grid-xl-7-186",
+                "grid-xl-8": "MuiGrid-grid-xl-8-187",
+                "grid-xl-9": "MuiGrid-grid-xl-9-188",
+                "grid-xl-auto": "MuiGrid-grid-xl-auto-178",
+                "grid-xl-true": "MuiGrid-grid-xl-true-179",
+                "grid-xs-1": "MuiGrid-grid-xs-1-124",
+                "grid-xs-10": "MuiGrid-grid-xs-10-133",
+                "grid-xs-11": "MuiGrid-grid-xs-11-134",
+                "grid-xs-12": "MuiGrid-grid-xs-12-135",
+                "grid-xs-2": "MuiGrid-grid-xs-2-125",
+                "grid-xs-3": "MuiGrid-grid-xs-3-126",
+                "grid-xs-4": "MuiGrid-grid-xs-4-127",
+                "grid-xs-5": "MuiGrid-grid-xs-5-128",
+                "grid-xs-6": "MuiGrid-grid-xs-6-129",
+                "grid-xs-7": "MuiGrid-grid-xs-7-130",
+                "grid-xs-8": "MuiGrid-grid-xs-8-131",
+                "grid-xs-9": "MuiGrid-grid-xs-9-132",
+                "grid-xs-auto": "MuiGrid-grid-xs-auto-122",
+                "grid-xs-true": "MuiGrid-grid-xs-true-123",
+                "item": "MuiGrid-item-96",
+                "justify-xs-center": "MuiGrid-justify-xs-center-112",
+                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end-113",
+                "justify-xs-space-around": "MuiGrid-justify-xs-space-around-115",
+                "justify-xs-space-between": "MuiGrid-justify-xs-space-between-114",
+                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly-116",
+                "spacing-xs-16": "MuiGrid-spacing-xs-16-118",
+                "spacing-xs-24": "MuiGrid-spacing-xs-24-119",
+                "spacing-xs-32": "MuiGrid-spacing-xs-32-120",
+                "spacing-xs-40": "MuiGrid-spacing-xs-40-121",
+                "spacing-xs-8": "MuiGrid-spacing-xs-8-117",
+                "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap-101",
+                "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse-102",
+                "zeroMinWidth": "MuiGrid-zeroMinWidth-97",
+              }
+            }
+            component="div"
+            container={true}
+            direction="row"
+            item={false}
+            justify="flex-start"
+            lg={false}
+            md={false}
+            sm={false}
+            spacing={24}
+            wrap="wrap"
+            xl={false}
+            xs={false}
+            zeroMinWidth={false}
+          >
+            <div
+              className="MuiGrid-container-95 MuiGrid-spacing-xs-24-119"
+            />
+          </Grid>
+        </WithStyles(Grid)>
+        <WithStyles(Snackbar)
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          autoHideDuration={6000}
+          onClose={[Function]}
+          open={false}
+        >
+          <Snackbar
+            TransitionComponent={[Function]}
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            autoHideDuration={6000}
+            classes={
+              Object {
+                "anchorOriginBottomCenter": "MuiSnackbar-anchorOriginBottomCenter-194",
+                "anchorOriginBottomLeft": "MuiSnackbar-anchorOriginBottomLeft-198",
+                "anchorOriginBottomRight": "MuiSnackbar-anchorOriginBottomRight-196",
+                "anchorOriginTopCenter": "MuiSnackbar-anchorOriginTopCenter-193",
+                "anchorOriginTopLeft": "MuiSnackbar-anchorOriginTopLeft-197",
+                "anchorOriginTopRight": "MuiSnackbar-anchorOriginTopRight-195",
+                "root": "MuiSnackbar-root-192",
+              }
+            }
+            disableWindowBlurListener={false}
+            onClose={[Function]}
+            open={false}
+            transitionDuration={
+              Object {
+                "enter": 225,
+                "exit": 195,
+              }
+            }
+          />
+        </WithStyles(Snackbar)>
+      </App>
+    </WithStyles(App)>
+  </Connect(WithStyles(App))>
+</Provider>
+`;
+
+exports[`App.js dispatch global msg 4`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(WithStyles(App))>
+    <WithStyles(App)
+      globalMessage={null}
+      handleGlobalMsgClose={[Function]}
+      storeData={Object {}}
+    >
+      <App
+        classes={
+          Object {
+            "error": "App-error-2",
+            "icon": "App-icon-5",
+            "iconVariant": "App-iconVariant-6",
+            "info": "App-info-3",
+            "message": "App-message-7",
+            "success": "App-success-1",
+            "warning": "App-warning-4",
+          }
+        }
+        globalMessage={null}
+        handleGlobalMsgClose={[Function]}
+        storeData={Object {}}
+      >
+        <WithStyles(AppBar)
+          position="static"
+          style={
+            Object {
+              "marginBottom": 24,
+            }
+          }
+        >
+          <AppBar
+            classes={
+              Object {
+                "colorDefault": "MuiAppBar-colorDefault-13",
+                "colorPrimary": "MuiAppBar-colorPrimary-14",
+                "colorSecondary": "MuiAppBar-colorSecondary-15",
+                "positionAbsolute": "MuiAppBar-positionAbsolute-10",
+                "positionFixed": "MuiAppBar-positionFixed-9",
+                "positionStatic": "MuiAppBar-positionStatic-12",
+                "positionSticky": "MuiAppBar-positionSticky-11",
+                "root": "MuiAppBar-root-8",
+              }
+            }
+            color="primary"
+            position="static"
+            style={
+              Object {
+                "marginBottom": 24,
+              }
+            }
+          >
+            <WithStyles(Paper)
+              className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+              component="header"
+              elevation={4}
+              square={true}
+              style={
+                Object {
+                  "marginBottom": 24,
+                }
+              }
+            >
+              <Paper
+                className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                classes={
+                  Object {
+                    "elevation0": "MuiPaper-elevation0-18",
+                    "elevation1": "MuiPaper-elevation1-19",
+                    "elevation10": "MuiPaper-elevation10-28",
+                    "elevation11": "MuiPaper-elevation11-29",
+                    "elevation12": "MuiPaper-elevation12-30",
+                    "elevation13": "MuiPaper-elevation13-31",
+                    "elevation14": "MuiPaper-elevation14-32",
+                    "elevation15": "MuiPaper-elevation15-33",
+                    "elevation16": "MuiPaper-elevation16-34",
+                    "elevation17": "MuiPaper-elevation17-35",
+                    "elevation18": "MuiPaper-elevation18-36",
+                    "elevation19": "MuiPaper-elevation19-37",
+                    "elevation2": "MuiPaper-elevation2-20",
+                    "elevation20": "MuiPaper-elevation20-38",
+                    "elevation21": "MuiPaper-elevation21-39",
+                    "elevation22": "MuiPaper-elevation22-40",
+                    "elevation23": "MuiPaper-elevation23-41",
+                    "elevation24": "MuiPaper-elevation24-42",
+                    "elevation3": "MuiPaper-elevation3-21",
+                    "elevation4": "MuiPaper-elevation4-22",
+                    "elevation5": "MuiPaper-elevation5-23",
+                    "elevation6": "MuiPaper-elevation6-24",
+                    "elevation7": "MuiPaper-elevation7-25",
+                    "elevation8": "MuiPaper-elevation8-26",
+                    "elevation9": "MuiPaper-elevation9-27",
+                    "root": "MuiPaper-root-16",
+                    "rounded": "MuiPaper-rounded-17",
+                  }
+                }
+                component="header"
+                elevation={4}
+                square={true}
+                style={
+                  Object {
+                    "marginBottom": 24,
+                  }
+                }
+              >
+                <header
+                  className="MuiPaper-root-16 MuiPaper-elevation4-22 MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                  style={
+                    Object {
+                      "marginBottom": 24,
+                    }
+                  }
+                >
+                  <WithStyles(Toolbar)>
+                    <Toolbar
+                      classes={
+                        Object {
+                          "dense": "MuiToolbar-dense-46",
+                          "gutters": "MuiToolbar-gutters-44",
+                          "regular": "MuiToolbar-regular-45",
+                          "root": "MuiToolbar-root-43",
+                        }
+                      }
+                      disableGutters={false}
+                      variant="regular"
+                    >
+                      <div
+                        className="MuiToolbar-root-43 MuiToolbar-regular-45 MuiToolbar-gutters-44"
+                      >
+                        <WithStyles(IconButton)
+                          color="inherit"
+                        >
+                          <IconButton
+                            classes={
+                              Object {
+                                "colorInherit": "MuiIconButton-colorInherit-48",
+                                "colorPrimary": "MuiIconButton-colorPrimary-49",
+                                "colorSecondary": "MuiIconButton-colorSecondary-50",
+                                "disabled": "MuiIconButton-disabled-51",
+                                "label": "MuiIconButton-label-52",
+                                "root": "MuiIconButton-root-47",
+                              }
+                            }
+                            color="inherit"
+                            disabled={false}
+                          >
+                            <WithStyles(ButtonBase)
+                              centerRipple={true}
+                              className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                              disabled={false}
+                              focusRipple={true}
+                            >
+                              <ButtonBase
+                                centerRipple={true}
+                                className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                classes={
+                                  Object {
+                                    "disabled": "MuiButtonBase-disabled-54",
+                                    "focusVisible": "MuiButtonBase-focusVisible-55",
+                                    "root": "MuiButtonBase-root-53",
+                                  }
+                                }
+                                component="button"
+                                disableRipple={false}
+                                disableTouchRipple={false}
+                                disabled={false}
+                                focusRipple={true}
+                                tabIndex="0"
+                                type="button"
+                              >
+                                <button
+                                  className="MuiButtonBase-root-53 MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                  disabled={false}
+                                  onBlur={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  tabIndex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    className="MuiIconButton-label-52"
+                                  >
+                                    <pure(ShoppingCart)>
+                                      <ShoppingCart>
+                                        <WithStyles(SvgIcon)>
+                                          <SvgIcon
+                                            classes={
+                                              Object {
+                                                "colorAction": "MuiSvgIcon-colorAction-59",
+                                                "colorDisabled": "MuiSvgIcon-colorDisabled-61",
+                                                "colorError": "MuiSvgIcon-colorError-60",
+                                                "colorPrimary": "MuiSvgIcon-colorPrimary-57",
+                                                "colorSecondary": "MuiSvgIcon-colorSecondary-58",
+                                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-62",
+                                                "root": "MuiSvgIcon-root-56",
+                                              }
+                                            }
+                                            color="inherit"
+                                            component="svg"
+                                            fontSize="default"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              className="MuiSvgIcon-root-56"
+                                              focusable="false"
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                                              />
+                                              <path
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                              />
+                                            </svg>
+                                          </SvgIcon>
+                                        </WithStyles(SvgIcon)>
+                                      </ShoppingCart>
+                                    </pure(ShoppingCart)>
+                                  </span>
+                                  <WithStyles(TouchRipple)
+                                    center={true}
+                                    innerRef={[Function]}
+                                  >
+                                    <TouchRipple
+                                      center={true}
+                                      classes={
+                                        Object {
+                                          "child": "MuiTouchRipple-child-67",
+                                          "childLeaving": "MuiTouchRipple-childLeaving-68",
+                                          "childPulsate": "MuiTouchRipple-childPulsate-69",
+                                          "ripple": "MuiTouchRipple-ripple-64",
+                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
+                                          "rippleVisible": "MuiTouchRipple-rippleVisible-65",
+                                          "root": "MuiTouchRipple-root-63",
+                                        }
+                                      }
+                                    >
+                                      <TransitionGroup
+                                        childFactory={[Function]}
+                                        className="MuiTouchRipple-root-63"
+                                        component="span"
+                                        enter={true}
+                                        exit={true}
+                                      >
+                                        <span
+                                          className="MuiTouchRipple-root-63"
+                                        />
+                                      </TransitionGroup>
+                                    </TouchRipple>
+                                  </WithStyles(TouchRipple)>
+                                </button>
+                              </ButtonBase>
+                            </WithStyles(ButtonBase)>
+                          </IconButton>
+                        </WithStyles(IconButton)>
+                        <WithStyles(Typography)
+                          color="inherit"
+                          variant="title"
+                        >
+                          <Typography
+                            align="inherit"
+                            classes={
+                              Object {
+                                "alignCenter": "MuiTypography-alignCenter-83",
+                                "alignJustify": "MuiTypography-alignJustify-85",
+                                "alignLeft": "MuiTypography-alignLeft-82",
+                                "alignRight": "MuiTypography-alignRight-84",
+                                "body1": "MuiTypography-body1-79",
+                                "body2": "MuiTypography-body2-78",
+                                "button": "MuiTypography-button-81",
+                                "caption": "MuiTypography-caption-80",
+                                "colorError": "MuiTypography-colorError-94",
+                                "colorInherit": "MuiTypography-colorInherit-89",
+                                "colorPrimary": "MuiTypography-colorPrimary-90",
+                                "colorSecondary": "MuiTypography-colorSecondary-91",
+                                "colorTextPrimary": "MuiTypography-colorTextPrimary-92",
+                                "colorTextSecondary": "MuiTypography-colorTextSecondary-93",
+                                "display1": "MuiTypography-display1-74",
+                                "display2": "MuiTypography-display2-73",
+                                "display3": "MuiTypography-display3-72",
+                                "display4": "MuiTypography-display4-71",
+                                "gutterBottom": "MuiTypography-gutterBottom-87",
+                                "headline": "MuiTypography-headline-75",
+                                "noWrap": "MuiTypography-noWrap-86",
+                                "paragraph": "MuiTypography-paragraph-88",
+                                "root": "MuiTypography-root-70",
+                                "subheading": "MuiTypography-subheading-77",
+                                "title": "MuiTypography-title-76",
+                              }
+                            }
+                            color="inherit"
+                            gutterBottom={false}
+                            headlineMapping={
+                              Object {
+                                "body1": "p",
+                                "body2": "aside",
+                                "display1": "h1",
+                                "display2": "h1",
+                                "display3": "h1",
+                                "display4": "h1",
+                                "headline": "h1",
+                                "subheading": "h3",
+                                "title": "h2",
+                              }
+                            }
+                            noWrap={false}
+                            paragraph={false}
+                            variant="title"
+                          >
+                            <h2
+                              className="MuiTypography-root-70 MuiTypography-title-76 MuiTypography-colorInherit-89"
+                            >
+                              Shoe Stores
+                            </h2>
+                          </Typography>
+                        </WithStyles(Typography)>
+                      </div>
+                    </Toolbar>
+                  </WithStyles(Toolbar)>
+                </header>
+              </Paper>
+            </WithStyles(Paper)>
+          </AppBar>
+        </WithStyles(AppBar)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <Grid
+            alignContent="stretch"
+            alignItems="stretch"
+            classes={
+              Object {
+                "align-content-xs-center": "MuiGrid-align-content-xs-center-107",
+                "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end-109",
+                "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start-108",
+                "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around-111",
+                "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between-110",
+                "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline-106",
+                "align-items-xs-center": "MuiGrid-align-items-xs-center-103",
+                "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end-105",
+                "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start-104",
+                "container": "MuiGrid-container-95",
+                "direction-xs-column": "MuiGrid-direction-xs-column-98",
+                "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse-99",
+                "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse-100",
+                "grid-lg-1": "MuiGrid-grid-lg-1-166",
+                "grid-lg-10": "MuiGrid-grid-lg-10-175",
+                "grid-lg-11": "MuiGrid-grid-lg-11-176",
+                "grid-lg-12": "MuiGrid-grid-lg-12-177",
+                "grid-lg-2": "MuiGrid-grid-lg-2-167",
+                "grid-lg-3": "MuiGrid-grid-lg-3-168",
+                "grid-lg-4": "MuiGrid-grid-lg-4-169",
+                "grid-lg-5": "MuiGrid-grid-lg-5-170",
+                "grid-lg-6": "MuiGrid-grid-lg-6-171",
+                "grid-lg-7": "MuiGrid-grid-lg-7-172",
+                "grid-lg-8": "MuiGrid-grid-lg-8-173",
+                "grid-lg-9": "MuiGrid-grid-lg-9-174",
+                "grid-lg-auto": "MuiGrid-grid-lg-auto-164",
+                "grid-lg-true": "MuiGrid-grid-lg-true-165",
+                "grid-md-1": "MuiGrid-grid-md-1-152",
+                "grid-md-10": "MuiGrid-grid-md-10-161",
+                "grid-md-11": "MuiGrid-grid-md-11-162",
+                "grid-md-12": "MuiGrid-grid-md-12-163",
+                "grid-md-2": "MuiGrid-grid-md-2-153",
+                "grid-md-3": "MuiGrid-grid-md-3-154",
+                "grid-md-4": "MuiGrid-grid-md-4-155",
+                "grid-md-5": "MuiGrid-grid-md-5-156",
+                "grid-md-6": "MuiGrid-grid-md-6-157",
+                "grid-md-7": "MuiGrid-grid-md-7-158",
+                "grid-md-8": "MuiGrid-grid-md-8-159",
+                "grid-md-9": "MuiGrid-grid-md-9-160",
+                "grid-md-auto": "MuiGrid-grid-md-auto-150",
+                "grid-md-true": "MuiGrid-grid-md-true-151",
+                "grid-sm-1": "MuiGrid-grid-sm-1-138",
+                "grid-sm-10": "MuiGrid-grid-sm-10-147",
+                "grid-sm-11": "MuiGrid-grid-sm-11-148",
+                "grid-sm-12": "MuiGrid-grid-sm-12-149",
+                "grid-sm-2": "MuiGrid-grid-sm-2-139",
+                "grid-sm-3": "MuiGrid-grid-sm-3-140",
+                "grid-sm-4": "MuiGrid-grid-sm-4-141",
+                "grid-sm-5": "MuiGrid-grid-sm-5-142",
+                "grid-sm-6": "MuiGrid-grid-sm-6-143",
+                "grid-sm-7": "MuiGrid-grid-sm-7-144",
+                "grid-sm-8": "MuiGrid-grid-sm-8-145",
+                "grid-sm-9": "MuiGrid-grid-sm-9-146",
+                "grid-sm-auto": "MuiGrid-grid-sm-auto-136",
+                "grid-sm-true": "MuiGrid-grid-sm-true-137",
+                "grid-xl-1": "MuiGrid-grid-xl-1-180",
+                "grid-xl-10": "MuiGrid-grid-xl-10-189",
+                "grid-xl-11": "MuiGrid-grid-xl-11-190",
+                "grid-xl-12": "MuiGrid-grid-xl-12-191",
+                "grid-xl-2": "MuiGrid-grid-xl-2-181",
+                "grid-xl-3": "MuiGrid-grid-xl-3-182",
+                "grid-xl-4": "MuiGrid-grid-xl-4-183",
+                "grid-xl-5": "MuiGrid-grid-xl-5-184",
+                "grid-xl-6": "MuiGrid-grid-xl-6-185",
+                "grid-xl-7": "MuiGrid-grid-xl-7-186",
+                "grid-xl-8": "MuiGrid-grid-xl-8-187",
+                "grid-xl-9": "MuiGrid-grid-xl-9-188",
+                "grid-xl-auto": "MuiGrid-grid-xl-auto-178",
+                "grid-xl-true": "MuiGrid-grid-xl-true-179",
+                "grid-xs-1": "MuiGrid-grid-xs-1-124",
+                "grid-xs-10": "MuiGrid-grid-xs-10-133",
+                "grid-xs-11": "MuiGrid-grid-xs-11-134",
+                "grid-xs-12": "MuiGrid-grid-xs-12-135",
+                "grid-xs-2": "MuiGrid-grid-xs-2-125",
+                "grid-xs-3": "MuiGrid-grid-xs-3-126",
+                "grid-xs-4": "MuiGrid-grid-xs-4-127",
+                "grid-xs-5": "MuiGrid-grid-xs-5-128",
+                "grid-xs-6": "MuiGrid-grid-xs-6-129",
+                "grid-xs-7": "MuiGrid-grid-xs-7-130",
+                "grid-xs-8": "MuiGrid-grid-xs-8-131",
+                "grid-xs-9": "MuiGrid-grid-xs-9-132",
+                "grid-xs-auto": "MuiGrid-grid-xs-auto-122",
+                "grid-xs-true": "MuiGrid-grid-xs-true-123",
+                "item": "MuiGrid-item-96",
+                "justify-xs-center": "MuiGrid-justify-xs-center-112",
+                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end-113",
+                "justify-xs-space-around": "MuiGrid-justify-xs-space-around-115",
+                "justify-xs-space-between": "MuiGrid-justify-xs-space-between-114",
+                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly-116",
+                "spacing-xs-16": "MuiGrid-spacing-xs-16-118",
+                "spacing-xs-24": "MuiGrid-spacing-xs-24-119",
+                "spacing-xs-32": "MuiGrid-spacing-xs-32-120",
+                "spacing-xs-40": "MuiGrid-spacing-xs-40-121",
+                "spacing-xs-8": "MuiGrid-spacing-xs-8-117",
+                "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap-101",
+                "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse-102",
+                "zeroMinWidth": "MuiGrid-zeroMinWidth-97",
+              }
+            }
+            component="div"
+            container={true}
+            direction="row"
+            item={false}
+            justify="flex-start"
+            lg={false}
+            md={false}
+            sm={false}
+            spacing={24}
+            wrap="wrap"
+            xl={false}
+            xs={false}
+            zeroMinWidth={false}
+          >
+            <div
+              className="MuiGrid-container-95 MuiGrid-spacing-xs-24-119"
+            />
+          </Grid>
+        </WithStyles(Grid)>
+        <WithStyles(Snackbar)
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          autoHideDuration={6000}
+          onClose={[Function]}
+          open={false}
+        >
+          <Snackbar
+            TransitionComponent={[Function]}
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            autoHideDuration={6000}
+            classes={
+              Object {
+                "anchorOriginBottomCenter": "MuiSnackbar-anchorOriginBottomCenter-194",
+                "anchorOriginBottomLeft": "MuiSnackbar-anchorOriginBottomLeft-198",
+                "anchorOriginBottomRight": "MuiSnackbar-anchorOriginBottomRight-196",
+                "anchorOriginTopCenter": "MuiSnackbar-anchorOriginTopCenter-193",
+                "anchorOriginTopLeft": "MuiSnackbar-anchorOriginTopLeft-197",
+                "anchorOriginTopRight": "MuiSnackbar-anchorOriginTopRight-195",
+                "root": "MuiSnackbar-root-192",
+              }
+            }
+            disableWindowBlurListener={false}
+            onClose={[Function]}
+            open={false}
+            transitionDuration={
+              Object {
+                "enter": 225,
+                "exit": 195,
+              }
+            }
+          />
+        </WithStyles(Snackbar)>
+      </App>
+    </WithStyles(App)>
+  </Connect(WithStyles(App))>
+</Provider>
+`;
+
+exports[`App.js dispatch new shoe 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(WithStyles(App))>
+    <WithStyles(App)
+      globalMessage={null}
+      handleGlobalMsgClose={[Function]}
+      storeData={Object {}}
+    >
+      <App
+        classes={
+          Object {
+            "error": "App-error-2",
+            "icon": "App-icon-5",
+            "iconVariant": "App-iconVariant-6",
+            "info": "App-info-3",
+            "message": "App-message-7",
+            "success": "App-success-1",
+            "warning": "App-warning-4",
+          }
+        }
+        globalMessage={null}
+        handleGlobalMsgClose={[Function]}
+        storeData={Object {}}
+      >
+        <WithStyles(AppBar)
+          position="static"
+          style={
+            Object {
+              "marginBottom": 24,
+            }
+          }
+        >
+          <AppBar
+            classes={
+              Object {
+                "colorDefault": "MuiAppBar-colorDefault-13",
+                "colorPrimary": "MuiAppBar-colorPrimary-14",
+                "colorSecondary": "MuiAppBar-colorSecondary-15",
+                "positionAbsolute": "MuiAppBar-positionAbsolute-10",
+                "positionFixed": "MuiAppBar-positionFixed-9",
+                "positionStatic": "MuiAppBar-positionStatic-12",
+                "positionSticky": "MuiAppBar-positionSticky-11",
+                "root": "MuiAppBar-root-8",
+              }
+            }
+            color="primary"
+            position="static"
+            style={
+              Object {
+                "marginBottom": 24,
+              }
+            }
+          >
+            <WithStyles(Paper)
+              className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+              component="header"
+              elevation={4}
+              square={true}
+              style={
+                Object {
+                  "marginBottom": 24,
+                }
+              }
+            >
+              <Paper
+                className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                classes={
+                  Object {
+                    "elevation0": "MuiPaper-elevation0-18",
+                    "elevation1": "MuiPaper-elevation1-19",
+                    "elevation10": "MuiPaper-elevation10-28",
+                    "elevation11": "MuiPaper-elevation11-29",
+                    "elevation12": "MuiPaper-elevation12-30",
+                    "elevation13": "MuiPaper-elevation13-31",
+                    "elevation14": "MuiPaper-elevation14-32",
+                    "elevation15": "MuiPaper-elevation15-33",
+                    "elevation16": "MuiPaper-elevation16-34",
+                    "elevation17": "MuiPaper-elevation17-35",
+                    "elevation18": "MuiPaper-elevation18-36",
+                    "elevation19": "MuiPaper-elevation19-37",
+                    "elevation2": "MuiPaper-elevation2-20",
+                    "elevation20": "MuiPaper-elevation20-38",
+                    "elevation21": "MuiPaper-elevation21-39",
+                    "elevation22": "MuiPaper-elevation22-40",
+                    "elevation23": "MuiPaper-elevation23-41",
+                    "elevation24": "MuiPaper-elevation24-42",
+                    "elevation3": "MuiPaper-elevation3-21",
+                    "elevation4": "MuiPaper-elevation4-22",
+                    "elevation5": "MuiPaper-elevation5-23",
+                    "elevation6": "MuiPaper-elevation6-24",
+                    "elevation7": "MuiPaper-elevation7-25",
+                    "elevation8": "MuiPaper-elevation8-26",
+                    "elevation9": "MuiPaper-elevation9-27",
+                    "root": "MuiPaper-root-16",
+                    "rounded": "MuiPaper-rounded-17",
+                  }
+                }
+                component="header"
+                elevation={4}
+                square={true}
+                style={
+                  Object {
+                    "marginBottom": 24,
+                  }
+                }
+              >
+                <header
+                  className="MuiPaper-root-16 MuiPaper-elevation4-22 MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                  style={
+                    Object {
+                      "marginBottom": 24,
+                    }
+                  }
+                >
+                  <WithStyles(Toolbar)>
+                    <Toolbar
+                      classes={
+                        Object {
+                          "dense": "MuiToolbar-dense-46",
+                          "gutters": "MuiToolbar-gutters-44",
+                          "regular": "MuiToolbar-regular-45",
+                          "root": "MuiToolbar-root-43",
+                        }
+                      }
+                      disableGutters={false}
+                      variant="regular"
+                    >
+                      <div
+                        className="MuiToolbar-root-43 MuiToolbar-regular-45 MuiToolbar-gutters-44"
+                      >
+                        <WithStyles(IconButton)
+                          color="inherit"
+                        >
+                          <IconButton
+                            classes={
+                              Object {
+                                "colorInherit": "MuiIconButton-colorInherit-48",
+                                "colorPrimary": "MuiIconButton-colorPrimary-49",
+                                "colorSecondary": "MuiIconButton-colorSecondary-50",
+                                "disabled": "MuiIconButton-disabled-51",
+                                "label": "MuiIconButton-label-52",
+                                "root": "MuiIconButton-root-47",
+                              }
+                            }
+                            color="inherit"
+                            disabled={false}
+                          >
+                            <WithStyles(ButtonBase)
+                              centerRipple={true}
+                              className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                              disabled={false}
+                              focusRipple={true}
+                            >
+                              <ButtonBase
+                                centerRipple={true}
+                                className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                classes={
+                                  Object {
+                                    "disabled": "MuiButtonBase-disabled-54",
+                                    "focusVisible": "MuiButtonBase-focusVisible-55",
+                                    "root": "MuiButtonBase-root-53",
+                                  }
+                                }
+                                component="button"
+                                disableRipple={false}
+                                disableTouchRipple={false}
+                                disabled={false}
+                                focusRipple={true}
+                                tabIndex="0"
+                                type="button"
+                              >
+                                <button
+                                  className="MuiButtonBase-root-53 MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                  disabled={false}
+                                  onBlur={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  tabIndex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    className="MuiIconButton-label-52"
+                                  >
+                                    <pure(ShoppingCart)>
+                                      <ShoppingCart>
+                                        <WithStyles(SvgIcon)>
+                                          <SvgIcon
+                                            classes={
+                                              Object {
+                                                "colorAction": "MuiSvgIcon-colorAction-59",
+                                                "colorDisabled": "MuiSvgIcon-colorDisabled-61",
+                                                "colorError": "MuiSvgIcon-colorError-60",
+                                                "colorPrimary": "MuiSvgIcon-colorPrimary-57",
+                                                "colorSecondary": "MuiSvgIcon-colorSecondary-58",
+                                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-62",
+                                                "root": "MuiSvgIcon-root-56",
+                                              }
+                                            }
+                                            color="inherit"
+                                            component="svg"
+                                            fontSize="default"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              className="MuiSvgIcon-root-56"
+                                              focusable="false"
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                                              />
+                                              <path
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                              />
+                                            </svg>
+                                          </SvgIcon>
+                                        </WithStyles(SvgIcon)>
+                                      </ShoppingCart>
+                                    </pure(ShoppingCart)>
+                                  </span>
+                                  <WithStyles(TouchRipple)
+                                    center={true}
+                                    innerRef={[Function]}
+                                  >
+                                    <TouchRipple
+                                      center={true}
+                                      classes={
+                                        Object {
+                                          "child": "MuiTouchRipple-child-67",
+                                          "childLeaving": "MuiTouchRipple-childLeaving-68",
+                                          "childPulsate": "MuiTouchRipple-childPulsate-69",
+                                          "ripple": "MuiTouchRipple-ripple-64",
+                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
+                                          "rippleVisible": "MuiTouchRipple-rippleVisible-65",
+                                          "root": "MuiTouchRipple-root-63",
+                                        }
+                                      }
+                                    >
+                                      <TransitionGroup
+                                        childFactory={[Function]}
+                                        className="MuiTouchRipple-root-63"
+                                        component="span"
+                                        enter={true}
+                                        exit={true}
+                                      >
+                                        <span
+                                          className="MuiTouchRipple-root-63"
+                                        />
+                                      </TransitionGroup>
+                                    </TouchRipple>
+                                  </WithStyles(TouchRipple)>
+                                </button>
+                              </ButtonBase>
+                            </WithStyles(ButtonBase)>
+                          </IconButton>
+                        </WithStyles(IconButton)>
+                        <WithStyles(Typography)
+                          color="inherit"
+                          variant="title"
+                        >
+                          <Typography
+                            align="inherit"
+                            classes={
+                              Object {
+                                "alignCenter": "MuiTypography-alignCenter-83",
+                                "alignJustify": "MuiTypography-alignJustify-85",
+                                "alignLeft": "MuiTypography-alignLeft-82",
+                                "alignRight": "MuiTypography-alignRight-84",
+                                "body1": "MuiTypography-body1-79",
+                                "body2": "MuiTypography-body2-78",
+                                "button": "MuiTypography-button-81",
+                                "caption": "MuiTypography-caption-80",
+                                "colorError": "MuiTypography-colorError-94",
+                                "colorInherit": "MuiTypography-colorInherit-89",
+                                "colorPrimary": "MuiTypography-colorPrimary-90",
+                                "colorSecondary": "MuiTypography-colorSecondary-91",
+                                "colorTextPrimary": "MuiTypography-colorTextPrimary-92",
+                                "colorTextSecondary": "MuiTypography-colorTextSecondary-93",
+                                "display1": "MuiTypography-display1-74",
+                                "display2": "MuiTypography-display2-73",
+                                "display3": "MuiTypography-display3-72",
+                                "display4": "MuiTypography-display4-71",
+                                "gutterBottom": "MuiTypography-gutterBottom-87",
+                                "headline": "MuiTypography-headline-75",
+                                "noWrap": "MuiTypography-noWrap-86",
+                                "paragraph": "MuiTypography-paragraph-88",
+                                "root": "MuiTypography-root-70",
+                                "subheading": "MuiTypography-subheading-77",
+                                "title": "MuiTypography-title-76",
+                              }
+                            }
+                            color="inherit"
+                            gutterBottom={false}
+                            headlineMapping={
+                              Object {
+                                "body1": "p",
+                                "body2": "aside",
+                                "display1": "h1",
+                                "display2": "h1",
+                                "display3": "h1",
+                                "display4": "h1",
+                                "headline": "h1",
+                                "subheading": "h3",
+                                "title": "h2",
+                              }
+                            }
+                            noWrap={false}
+                            paragraph={false}
+                            variant="title"
+                          >
+                            <h2
+                              className="MuiTypography-root-70 MuiTypography-title-76 MuiTypography-colorInherit-89"
+                            >
+                              Shoe Stores
+                            </h2>
+                          </Typography>
+                        </WithStyles(Typography)>
+                      </div>
+                    </Toolbar>
+                  </WithStyles(Toolbar)>
+                </header>
+              </Paper>
+            </WithStyles(Paper)>
+          </AppBar>
+        </WithStyles(AppBar)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <Grid
+            alignContent="stretch"
+            alignItems="stretch"
+            classes={
+              Object {
+                "align-content-xs-center": "MuiGrid-align-content-xs-center-107",
+                "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end-109",
+                "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start-108",
+                "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around-111",
+                "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between-110",
+                "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline-106",
+                "align-items-xs-center": "MuiGrid-align-items-xs-center-103",
+                "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end-105",
+                "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start-104",
+                "container": "MuiGrid-container-95",
+                "direction-xs-column": "MuiGrid-direction-xs-column-98",
+                "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse-99",
+                "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse-100",
+                "grid-lg-1": "MuiGrid-grid-lg-1-166",
+                "grid-lg-10": "MuiGrid-grid-lg-10-175",
+                "grid-lg-11": "MuiGrid-grid-lg-11-176",
+                "grid-lg-12": "MuiGrid-grid-lg-12-177",
+                "grid-lg-2": "MuiGrid-grid-lg-2-167",
+                "grid-lg-3": "MuiGrid-grid-lg-3-168",
+                "grid-lg-4": "MuiGrid-grid-lg-4-169",
+                "grid-lg-5": "MuiGrid-grid-lg-5-170",
+                "grid-lg-6": "MuiGrid-grid-lg-6-171",
+                "grid-lg-7": "MuiGrid-grid-lg-7-172",
+                "grid-lg-8": "MuiGrid-grid-lg-8-173",
+                "grid-lg-9": "MuiGrid-grid-lg-9-174",
+                "grid-lg-auto": "MuiGrid-grid-lg-auto-164",
+                "grid-lg-true": "MuiGrid-grid-lg-true-165",
+                "grid-md-1": "MuiGrid-grid-md-1-152",
+                "grid-md-10": "MuiGrid-grid-md-10-161",
+                "grid-md-11": "MuiGrid-grid-md-11-162",
+                "grid-md-12": "MuiGrid-grid-md-12-163",
+                "grid-md-2": "MuiGrid-grid-md-2-153",
+                "grid-md-3": "MuiGrid-grid-md-3-154",
+                "grid-md-4": "MuiGrid-grid-md-4-155",
+                "grid-md-5": "MuiGrid-grid-md-5-156",
+                "grid-md-6": "MuiGrid-grid-md-6-157",
+                "grid-md-7": "MuiGrid-grid-md-7-158",
+                "grid-md-8": "MuiGrid-grid-md-8-159",
+                "grid-md-9": "MuiGrid-grid-md-9-160",
+                "grid-md-auto": "MuiGrid-grid-md-auto-150",
+                "grid-md-true": "MuiGrid-grid-md-true-151",
+                "grid-sm-1": "MuiGrid-grid-sm-1-138",
+                "grid-sm-10": "MuiGrid-grid-sm-10-147",
+                "grid-sm-11": "MuiGrid-grid-sm-11-148",
+                "grid-sm-12": "MuiGrid-grid-sm-12-149",
+                "grid-sm-2": "MuiGrid-grid-sm-2-139",
+                "grid-sm-3": "MuiGrid-grid-sm-3-140",
+                "grid-sm-4": "MuiGrid-grid-sm-4-141",
+                "grid-sm-5": "MuiGrid-grid-sm-5-142",
+                "grid-sm-6": "MuiGrid-grid-sm-6-143",
+                "grid-sm-7": "MuiGrid-grid-sm-7-144",
+                "grid-sm-8": "MuiGrid-grid-sm-8-145",
+                "grid-sm-9": "MuiGrid-grid-sm-9-146",
+                "grid-sm-auto": "MuiGrid-grid-sm-auto-136",
+                "grid-sm-true": "MuiGrid-grid-sm-true-137",
+                "grid-xl-1": "MuiGrid-grid-xl-1-180",
+                "grid-xl-10": "MuiGrid-grid-xl-10-189",
+                "grid-xl-11": "MuiGrid-grid-xl-11-190",
+                "grid-xl-12": "MuiGrid-grid-xl-12-191",
+                "grid-xl-2": "MuiGrid-grid-xl-2-181",
+                "grid-xl-3": "MuiGrid-grid-xl-3-182",
+                "grid-xl-4": "MuiGrid-grid-xl-4-183",
+                "grid-xl-5": "MuiGrid-grid-xl-5-184",
+                "grid-xl-6": "MuiGrid-grid-xl-6-185",
+                "grid-xl-7": "MuiGrid-grid-xl-7-186",
+                "grid-xl-8": "MuiGrid-grid-xl-8-187",
+                "grid-xl-9": "MuiGrid-grid-xl-9-188",
+                "grid-xl-auto": "MuiGrid-grid-xl-auto-178",
+                "grid-xl-true": "MuiGrid-grid-xl-true-179",
+                "grid-xs-1": "MuiGrid-grid-xs-1-124",
+                "grid-xs-10": "MuiGrid-grid-xs-10-133",
+                "grid-xs-11": "MuiGrid-grid-xs-11-134",
+                "grid-xs-12": "MuiGrid-grid-xs-12-135",
+                "grid-xs-2": "MuiGrid-grid-xs-2-125",
+                "grid-xs-3": "MuiGrid-grid-xs-3-126",
+                "grid-xs-4": "MuiGrid-grid-xs-4-127",
+                "grid-xs-5": "MuiGrid-grid-xs-5-128",
+                "grid-xs-6": "MuiGrid-grid-xs-6-129",
+                "grid-xs-7": "MuiGrid-grid-xs-7-130",
+                "grid-xs-8": "MuiGrid-grid-xs-8-131",
+                "grid-xs-9": "MuiGrid-grid-xs-9-132",
+                "grid-xs-auto": "MuiGrid-grid-xs-auto-122",
+                "grid-xs-true": "MuiGrid-grid-xs-true-123",
+                "item": "MuiGrid-item-96",
+                "justify-xs-center": "MuiGrid-justify-xs-center-112",
+                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end-113",
+                "justify-xs-space-around": "MuiGrid-justify-xs-space-around-115",
+                "justify-xs-space-between": "MuiGrid-justify-xs-space-between-114",
+                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly-116",
+                "spacing-xs-16": "MuiGrid-spacing-xs-16-118",
+                "spacing-xs-24": "MuiGrid-spacing-xs-24-119",
+                "spacing-xs-32": "MuiGrid-spacing-xs-32-120",
+                "spacing-xs-40": "MuiGrid-spacing-xs-40-121",
+                "spacing-xs-8": "MuiGrid-spacing-xs-8-117",
+                "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap-101",
+                "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse-102",
+                "zeroMinWidth": "MuiGrid-zeroMinWidth-97",
+              }
+            }
+            component="div"
+            container={true}
+            direction="row"
+            item={false}
+            justify="flex-start"
+            lg={false}
+            md={false}
+            sm={false}
+            spacing={24}
+            wrap="wrap"
+            xl={false}
+            xs={false}
+            zeroMinWidth={false}
+          >
+            <div
+              className="MuiGrid-container-95 MuiGrid-spacing-xs-24-119"
+            />
+          </Grid>
+        </WithStyles(Grid)>
+        <WithStyles(Snackbar)
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          autoHideDuration={6000}
+          onClose={[Function]}
+          open={false}
+        >
+          <Snackbar
+            TransitionComponent={[Function]}
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            autoHideDuration={6000}
+            classes={
+              Object {
+                "anchorOriginBottomCenter": "MuiSnackbar-anchorOriginBottomCenter-194",
+                "anchorOriginBottomLeft": "MuiSnackbar-anchorOriginBottomLeft-198",
+                "anchorOriginBottomRight": "MuiSnackbar-anchorOriginBottomRight-196",
+                "anchorOriginTopCenter": "MuiSnackbar-anchorOriginTopCenter-193",
+                "anchorOriginTopLeft": "MuiSnackbar-anchorOriginTopLeft-197",
+                "anchorOriginTopRight": "MuiSnackbar-anchorOriginTopRight-195",
+                "root": "MuiSnackbar-root-192",
+              }
+            }
+            disableWindowBlurListener={false}
+            onClose={[Function]}
+            open={false}
+            transitionDuration={
+              Object {
+                "enter": 225,
+                "exit": 195,
+              }
+            }
+          />
+        </WithStyles(Snackbar)>
+      </App>
+    </WithStyles(App)>
+  </Connect(WithStyles(App))>
+</Provider>
+`;
+
+exports[`App.js without props rendering 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(WithStyles(App))>
+    <WithStyles(App)
+      globalMessage={null}
+      handleGlobalMsgClose={[Function]}
+      storeData={Object {}}
+    >
+      <App
+        classes={
+          Object {
+            "error": "App-error-2",
+            "icon": "App-icon-5",
+            "iconVariant": "App-iconVariant-6",
+            "info": "App-info-3",
+            "message": "App-message-7",
+            "success": "App-success-1",
+            "warning": "App-warning-4",
+          }
+        }
+        globalMessage={null}
+        handleGlobalMsgClose={[Function]}
+        storeData={Object {}}
+      >
+        <WithStyles(AppBar)
+          position="static"
+          style={
+            Object {
+              "marginBottom": 24,
+            }
+          }
+        >
+          <AppBar
+            classes={
+              Object {
+                "colorDefault": "MuiAppBar-colorDefault-13",
+                "colorPrimary": "MuiAppBar-colorPrimary-14",
+                "colorSecondary": "MuiAppBar-colorSecondary-15",
+                "positionAbsolute": "MuiAppBar-positionAbsolute-10",
+                "positionFixed": "MuiAppBar-positionFixed-9",
+                "positionStatic": "MuiAppBar-positionStatic-12",
+                "positionSticky": "MuiAppBar-positionSticky-11",
+                "root": "MuiAppBar-root-8",
+              }
+            }
+            color="primary"
+            position="static"
+            style={
+              Object {
+                "marginBottom": 24,
+              }
+            }
+          >
+            <WithStyles(Paper)
+              className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+              component="header"
+              elevation={4}
+              square={true}
+              style={
+                Object {
+                  "marginBottom": 24,
+                }
+              }
+            >
+              <Paper
+                className="MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                classes={
+                  Object {
+                    "elevation0": "MuiPaper-elevation0-18",
+                    "elevation1": "MuiPaper-elevation1-19",
+                    "elevation10": "MuiPaper-elevation10-28",
+                    "elevation11": "MuiPaper-elevation11-29",
+                    "elevation12": "MuiPaper-elevation12-30",
+                    "elevation13": "MuiPaper-elevation13-31",
+                    "elevation14": "MuiPaper-elevation14-32",
+                    "elevation15": "MuiPaper-elevation15-33",
+                    "elevation16": "MuiPaper-elevation16-34",
+                    "elevation17": "MuiPaper-elevation17-35",
+                    "elevation18": "MuiPaper-elevation18-36",
+                    "elevation19": "MuiPaper-elevation19-37",
+                    "elevation2": "MuiPaper-elevation2-20",
+                    "elevation20": "MuiPaper-elevation20-38",
+                    "elevation21": "MuiPaper-elevation21-39",
+                    "elevation22": "MuiPaper-elevation22-40",
+                    "elevation23": "MuiPaper-elevation23-41",
+                    "elevation24": "MuiPaper-elevation24-42",
+                    "elevation3": "MuiPaper-elevation3-21",
+                    "elevation4": "MuiPaper-elevation4-22",
+                    "elevation5": "MuiPaper-elevation5-23",
+                    "elevation6": "MuiPaper-elevation6-24",
+                    "elevation7": "MuiPaper-elevation7-25",
+                    "elevation8": "MuiPaper-elevation8-26",
+                    "elevation9": "MuiPaper-elevation9-27",
+                    "root": "MuiPaper-root-16",
+                    "rounded": "MuiPaper-rounded-17",
+                  }
+                }
+                component="header"
+                elevation={4}
+                square={true}
+                style={
+                  Object {
+                    "marginBottom": 24,
+                  }
+                }
+              >
+                <header
+                  className="MuiPaper-root-16 MuiPaper-elevation4-22 MuiAppBar-root-8 MuiAppBar-positionStatic-12 MuiAppBar-colorPrimary-14"
+                  style={
+                    Object {
+                      "marginBottom": 24,
+                    }
+                  }
+                >
+                  <WithStyles(Toolbar)>
+                    <Toolbar
+                      classes={
+                        Object {
+                          "dense": "MuiToolbar-dense-46",
+                          "gutters": "MuiToolbar-gutters-44",
+                          "regular": "MuiToolbar-regular-45",
+                          "root": "MuiToolbar-root-43",
+                        }
+                      }
+                      disableGutters={false}
+                      variant="regular"
+                    >
+                      <div
+                        className="MuiToolbar-root-43 MuiToolbar-regular-45 MuiToolbar-gutters-44"
+                      >
+                        <WithStyles(IconButton)
+                          color="inherit"
+                        >
+                          <IconButton
+                            classes={
+                              Object {
+                                "colorInherit": "MuiIconButton-colorInherit-48",
+                                "colorPrimary": "MuiIconButton-colorPrimary-49",
+                                "colorSecondary": "MuiIconButton-colorSecondary-50",
+                                "disabled": "MuiIconButton-disabled-51",
+                                "label": "MuiIconButton-label-52",
+                                "root": "MuiIconButton-root-47",
+                              }
+                            }
+                            color="inherit"
+                            disabled={false}
+                          >
+                            <WithStyles(ButtonBase)
+                              centerRipple={true}
+                              className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                              disabled={false}
+                              focusRipple={true}
+                            >
+                              <ButtonBase
+                                centerRipple={true}
+                                className="MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                classes={
+                                  Object {
+                                    "disabled": "MuiButtonBase-disabled-54",
+                                    "focusVisible": "MuiButtonBase-focusVisible-55",
+                                    "root": "MuiButtonBase-root-53",
+                                  }
+                                }
+                                component="button"
+                                disableRipple={false}
+                                disableTouchRipple={false}
+                                disabled={false}
+                                focusRipple={true}
+                                tabIndex="0"
+                                type="button"
+                              >
+                                <button
+                                  className="MuiButtonBase-root-53 MuiIconButton-root-47 MuiIconButton-colorInherit-48"
+                                  disabled={false}
+                                  onBlur={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  tabIndex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    className="MuiIconButton-label-52"
+                                  >
+                                    <pure(ShoppingCart)>
+                                      <ShoppingCart>
+                                        <WithStyles(SvgIcon)>
+                                          <SvgIcon
+                                            classes={
+                                              Object {
+                                                "colorAction": "MuiSvgIcon-colorAction-59",
+                                                "colorDisabled": "MuiSvgIcon-colorDisabled-61",
+                                                "colorError": "MuiSvgIcon-colorError-60",
+                                                "colorPrimary": "MuiSvgIcon-colorPrimary-57",
+                                                "colorSecondary": "MuiSvgIcon-colorSecondary-58",
+                                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-62",
+                                                "root": "MuiSvgIcon-root-56",
+                                              }
+                                            }
+                                            color="inherit"
+                                            component="svg"
+                                            fontSize="default"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              className="MuiSvgIcon-root-56"
+                                              focusable="false"
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                                              />
+                                              <path
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                              />
+                                            </svg>
+                                          </SvgIcon>
+                                        </WithStyles(SvgIcon)>
+                                      </ShoppingCart>
+                                    </pure(ShoppingCart)>
+                                  </span>
+                                  <WithStyles(TouchRipple)
+                                    center={true}
+                                    innerRef={[Function]}
+                                  >
+                                    <TouchRipple
+                                      center={true}
+                                      classes={
+                                        Object {
+                                          "child": "MuiTouchRipple-child-67",
+                                          "childLeaving": "MuiTouchRipple-childLeaving-68",
+                                          "childPulsate": "MuiTouchRipple-childPulsate-69",
+                                          "ripple": "MuiTouchRipple-ripple-64",
+                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
+                                          "rippleVisible": "MuiTouchRipple-rippleVisible-65",
+                                          "root": "MuiTouchRipple-root-63",
+                                        }
+                                      }
+                                    >
+                                      <TransitionGroup
+                                        childFactory={[Function]}
+                                        className="MuiTouchRipple-root-63"
+                                        component="span"
+                                        enter={true}
+                                        exit={true}
+                                      >
+                                        <span
+                                          className="MuiTouchRipple-root-63"
+                                        />
+                                      </TransitionGroup>
+                                    </TouchRipple>
+                                  </WithStyles(TouchRipple)>
+                                </button>
+                              </ButtonBase>
+                            </WithStyles(ButtonBase)>
+                          </IconButton>
+                        </WithStyles(IconButton)>
+                        <WithStyles(Typography)
+                          color="inherit"
+                          variant="title"
+                        >
+                          <Typography
+                            align="inherit"
+                            classes={
+                              Object {
+                                "alignCenter": "MuiTypography-alignCenter-83",
+                                "alignJustify": "MuiTypography-alignJustify-85",
+                                "alignLeft": "MuiTypography-alignLeft-82",
+                                "alignRight": "MuiTypography-alignRight-84",
+                                "body1": "MuiTypography-body1-79",
+                                "body2": "MuiTypography-body2-78",
+                                "button": "MuiTypography-button-81",
+                                "caption": "MuiTypography-caption-80",
+                                "colorError": "MuiTypography-colorError-94",
+                                "colorInherit": "MuiTypography-colorInherit-89",
+                                "colorPrimary": "MuiTypography-colorPrimary-90",
+                                "colorSecondary": "MuiTypography-colorSecondary-91",
+                                "colorTextPrimary": "MuiTypography-colorTextPrimary-92",
+                                "colorTextSecondary": "MuiTypography-colorTextSecondary-93",
+                                "display1": "MuiTypography-display1-74",
+                                "display2": "MuiTypography-display2-73",
+                                "display3": "MuiTypography-display3-72",
+                                "display4": "MuiTypography-display4-71",
+                                "gutterBottom": "MuiTypography-gutterBottom-87",
+                                "headline": "MuiTypography-headline-75",
+                                "noWrap": "MuiTypography-noWrap-86",
+                                "paragraph": "MuiTypography-paragraph-88",
+                                "root": "MuiTypography-root-70",
+                                "subheading": "MuiTypography-subheading-77",
+                                "title": "MuiTypography-title-76",
+                              }
+                            }
+                            color="inherit"
+                            gutterBottom={false}
+                            headlineMapping={
+                              Object {
+                                "body1": "p",
+                                "body2": "aside",
+                                "display1": "h1",
+                                "display2": "h1",
+                                "display3": "h1",
+                                "display4": "h1",
+                                "headline": "h1",
+                                "subheading": "h3",
+                                "title": "h2",
+                              }
+                            }
+                            noWrap={false}
+                            paragraph={false}
+                            variant="title"
+                          >
+                            <h2
+                              className="MuiTypography-root-70 MuiTypography-title-76 MuiTypography-colorInherit-89"
+                            >
+                              Shoe Stores
+                            </h2>
+                          </Typography>
+                        </WithStyles(Typography)>
+                      </div>
+                    </Toolbar>
+                  </WithStyles(Toolbar)>
+                </header>
+              </Paper>
+            </WithStyles(Paper)>
+          </AppBar>
+        </WithStyles(AppBar)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <Grid
+            alignContent="stretch"
+            alignItems="stretch"
+            classes={
+              Object {
+                "align-content-xs-center": "MuiGrid-align-content-xs-center-107",
+                "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end-109",
+                "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start-108",
+                "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around-111",
+                "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between-110",
+                "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline-106",
+                "align-items-xs-center": "MuiGrid-align-items-xs-center-103",
+                "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end-105",
+                "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start-104",
+                "container": "MuiGrid-container-95",
+                "direction-xs-column": "MuiGrid-direction-xs-column-98",
+                "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse-99",
+                "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse-100",
+                "grid-lg-1": "MuiGrid-grid-lg-1-166",
+                "grid-lg-10": "MuiGrid-grid-lg-10-175",
+                "grid-lg-11": "MuiGrid-grid-lg-11-176",
+                "grid-lg-12": "MuiGrid-grid-lg-12-177",
+                "grid-lg-2": "MuiGrid-grid-lg-2-167",
+                "grid-lg-3": "MuiGrid-grid-lg-3-168",
+                "grid-lg-4": "MuiGrid-grid-lg-4-169",
+                "grid-lg-5": "MuiGrid-grid-lg-5-170",
+                "grid-lg-6": "MuiGrid-grid-lg-6-171",
+                "grid-lg-7": "MuiGrid-grid-lg-7-172",
+                "grid-lg-8": "MuiGrid-grid-lg-8-173",
+                "grid-lg-9": "MuiGrid-grid-lg-9-174",
+                "grid-lg-auto": "MuiGrid-grid-lg-auto-164",
+                "grid-lg-true": "MuiGrid-grid-lg-true-165",
+                "grid-md-1": "MuiGrid-grid-md-1-152",
+                "grid-md-10": "MuiGrid-grid-md-10-161",
+                "grid-md-11": "MuiGrid-grid-md-11-162",
+                "grid-md-12": "MuiGrid-grid-md-12-163",
+                "grid-md-2": "MuiGrid-grid-md-2-153",
+                "grid-md-3": "MuiGrid-grid-md-3-154",
+                "grid-md-4": "MuiGrid-grid-md-4-155",
+                "grid-md-5": "MuiGrid-grid-md-5-156",
+                "grid-md-6": "MuiGrid-grid-md-6-157",
+                "grid-md-7": "MuiGrid-grid-md-7-158",
+                "grid-md-8": "MuiGrid-grid-md-8-159",
+                "grid-md-9": "MuiGrid-grid-md-9-160",
+                "grid-md-auto": "MuiGrid-grid-md-auto-150",
+                "grid-md-true": "MuiGrid-grid-md-true-151",
+                "grid-sm-1": "MuiGrid-grid-sm-1-138",
+                "grid-sm-10": "MuiGrid-grid-sm-10-147",
+                "grid-sm-11": "MuiGrid-grid-sm-11-148",
+                "grid-sm-12": "MuiGrid-grid-sm-12-149",
+                "grid-sm-2": "MuiGrid-grid-sm-2-139",
+                "grid-sm-3": "MuiGrid-grid-sm-3-140",
+                "grid-sm-4": "MuiGrid-grid-sm-4-141",
+                "grid-sm-5": "MuiGrid-grid-sm-5-142",
+                "grid-sm-6": "MuiGrid-grid-sm-6-143",
+                "grid-sm-7": "MuiGrid-grid-sm-7-144",
+                "grid-sm-8": "MuiGrid-grid-sm-8-145",
+                "grid-sm-9": "MuiGrid-grid-sm-9-146",
+                "grid-sm-auto": "MuiGrid-grid-sm-auto-136",
+                "grid-sm-true": "MuiGrid-grid-sm-true-137",
+                "grid-xl-1": "MuiGrid-grid-xl-1-180",
+                "grid-xl-10": "MuiGrid-grid-xl-10-189",
+                "grid-xl-11": "MuiGrid-grid-xl-11-190",
+                "grid-xl-12": "MuiGrid-grid-xl-12-191",
+                "grid-xl-2": "MuiGrid-grid-xl-2-181",
+                "grid-xl-3": "MuiGrid-grid-xl-3-182",
+                "grid-xl-4": "MuiGrid-grid-xl-4-183",
+                "grid-xl-5": "MuiGrid-grid-xl-5-184",
+                "grid-xl-6": "MuiGrid-grid-xl-6-185",
+                "grid-xl-7": "MuiGrid-grid-xl-7-186",
+                "grid-xl-8": "MuiGrid-grid-xl-8-187",
+                "grid-xl-9": "MuiGrid-grid-xl-9-188",
+                "grid-xl-auto": "MuiGrid-grid-xl-auto-178",
+                "grid-xl-true": "MuiGrid-grid-xl-true-179",
+                "grid-xs-1": "MuiGrid-grid-xs-1-124",
+                "grid-xs-10": "MuiGrid-grid-xs-10-133",
+                "grid-xs-11": "MuiGrid-grid-xs-11-134",
+                "grid-xs-12": "MuiGrid-grid-xs-12-135",
+                "grid-xs-2": "MuiGrid-grid-xs-2-125",
+                "grid-xs-3": "MuiGrid-grid-xs-3-126",
+                "grid-xs-4": "MuiGrid-grid-xs-4-127",
+                "grid-xs-5": "MuiGrid-grid-xs-5-128",
+                "grid-xs-6": "MuiGrid-grid-xs-6-129",
+                "grid-xs-7": "MuiGrid-grid-xs-7-130",
+                "grid-xs-8": "MuiGrid-grid-xs-8-131",
+                "grid-xs-9": "MuiGrid-grid-xs-9-132",
+                "grid-xs-auto": "MuiGrid-grid-xs-auto-122",
+                "grid-xs-true": "MuiGrid-grid-xs-true-123",
+                "item": "MuiGrid-item-96",
+                "justify-xs-center": "MuiGrid-justify-xs-center-112",
+                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end-113",
+                "justify-xs-space-around": "MuiGrid-justify-xs-space-around-115",
+                "justify-xs-space-between": "MuiGrid-justify-xs-space-between-114",
+                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly-116",
+                "spacing-xs-16": "MuiGrid-spacing-xs-16-118",
+                "spacing-xs-24": "MuiGrid-spacing-xs-24-119",
+                "spacing-xs-32": "MuiGrid-spacing-xs-32-120",
+                "spacing-xs-40": "MuiGrid-spacing-xs-40-121",
+                "spacing-xs-8": "MuiGrid-spacing-xs-8-117",
+                "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap-101",
+                "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse-102",
+                "zeroMinWidth": "MuiGrid-zeroMinWidth-97",
+              }
+            }
+            component="div"
+            container={true}
+            direction="row"
+            item={false}
+            justify="flex-start"
+            lg={false}
+            md={false}
+            sm={false}
+            spacing={24}
+            wrap="wrap"
+            xl={false}
+            xs={false}
+            zeroMinWidth={false}
+          >
+            <div
+              className="MuiGrid-container-95 MuiGrid-spacing-xs-24-119"
+            />
+          </Grid>
+        </WithStyles(Grid)>
+        <WithStyles(Snackbar)
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          autoHideDuration={6000}
+          onClose={[Function]}
+          open={false}
+        >
+          <Snackbar
+            TransitionComponent={[Function]}
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            autoHideDuration={6000}
+            classes={
+              Object {
+                "anchorOriginBottomCenter": "MuiSnackbar-anchorOriginBottomCenter-194",
+                "anchorOriginBottomLeft": "MuiSnackbar-anchorOriginBottomLeft-198",
+                "anchorOriginBottomRight": "MuiSnackbar-anchorOriginBottomRight-196",
+                "anchorOriginTopCenter": "MuiSnackbar-anchorOriginTopCenter-193",
+                "anchorOriginTopLeft": "MuiSnackbar-anchorOriginTopLeft-197",
+                "anchorOriginTopRight": "MuiSnackbar-anchorOriginTopRight-195",
+                "root": "MuiSnackbar-root-192",
+              }
+            }
+            disableWindowBlurListener={false}
+            onClose={[Function]}
+            open={false}
+            transitionDuration={
+              Object {
+                "enter": 225,
+                "exit": 195,
+              }
+            }
+          />
+        </WithStyles(Snackbar)>
+      </App>
+    </WithStyles(App)>
+  </Connect(WithStyles(App))>
+</Provider>
+`;

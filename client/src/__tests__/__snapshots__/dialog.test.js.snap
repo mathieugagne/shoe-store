@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dialog.js renders 1`] = `
+<WithStyles(Dialog)
+  fullWidth={true}
+  onClose={[Function]}
+  open={true}
+  scroll="paper"
+>
+  <WithStyles(AppBar)
+    color="default"
+    position="static"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(IconButton)
+        color="inherit"
+      >
+        <pure(StoreTwoTone) />
+      </WithStyles(IconButton)>
+      <WithStyles(Typography)
+        color="inherit"
+        variant="title"
+      >
+        Test Title
+      </WithStyles(Typography)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(DialogContent)>
+    <WithStyles(ShoeRow)
+      data={Object {}}
+    />
+  </WithStyles(DialogContent)>
+  <WithStyles(DialogActions)>
+    <WithStyles(Button)
+      autoFocus={true}
+      color="primary"
+      onClick={[Function]}
+    >
+      Close
+    </WithStyles(Button)>
+  </WithStyles(DialogActions)>
+</WithStyles(Dialog)>
+`;
