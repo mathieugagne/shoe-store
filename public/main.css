@@ -5,6 +5,10 @@ body {
   border: 0;
 }
 
+.stores button {
+	flex: 0 0 70px;
+}
+
 ul.models {
 	display: flex;
 	flex-wrap: wrap;

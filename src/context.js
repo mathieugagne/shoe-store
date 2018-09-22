@@ -13,7 +13,9 @@ export class AppProvider extends Component {
 		super()
 
 		this.state = {
-			productsData: []
+			products: [],
+			stores: stores,
+			models: models
 		}
 	}
 
@@ -25,12 +27,11 @@ export class AppProvider extends Component {
 		const products = []
 		for (let store of stores) {
 			for (let model of models) {
-				const product = {
+				products.push({
 					store: store,
 					model: model,
 					inventory: BASE_NUMBER
-				}
-				products.push(product)
+				})
 			}
 		}
 		return products
@@ -38,7 +39,7 @@ export class AppProvider extends Component {
 
 	componentDidMount() {
 		this.setState({
-			productsData: this.initProducts()
+			products: this.initProducts()
 		})
 	}
 
@@ -46,7 +47,9 @@ export class AppProvider extends Component {
 		return (
 			<AppContext.Provider
 				value={{
-					products: this.state.productsData,
+					stores: this.state.stores,
+					models: this.state.models,
+					products: this.state.products,
 					setGlobalState: this.setGlobalState
 				}}>
 				{this.props.children}
