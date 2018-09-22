@@ -9,6 +9,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@material-ui/core": "^3.1.0",
     "eslint": "^5.6.0",
     "eslint-plugin-react": "^7.11.1",
     "react": "^16.5.2",
