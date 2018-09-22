@@ -3,6 +3,7 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 
+import Order from './Order'
 import { models } from '../static/models'
 
 class TabContainer extends Component {
@@ -20,7 +21,8 @@ class TabContainer extends Component {
 				{this.state.models.map((model) =>
 					<ListItem className="model" key={model}>
 						<ListItemText primary={model} />
-            <ListItemText primary="100" />
+						<ListItemText primary="100" />
+						<Order />
 					</ListItem>
 				)}
 			</List>
