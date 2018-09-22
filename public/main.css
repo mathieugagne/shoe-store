@@ -4,3 +4,21 @@ body {
 	padding: 0;
   border: 0;
 }
+
+ul.models {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+li.model {
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+	border-bottom: 1px solid gray;
+	padding: 10px 50px;
+	text-align: center;
+}
+
+li.model div {
+	width: 150px;
+}
