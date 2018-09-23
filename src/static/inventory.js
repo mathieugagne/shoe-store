@@ -18,7 +18,7 @@ export const limitViews = [
 		limit: 75
 	},
 	{
-		label : 'all',
+		label : 'max',
 		limit: 100
 	}
 ]
