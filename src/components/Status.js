@@ -22,7 +22,7 @@ class Status extends Component {
 				open={this.state.message}
 				onClose={this.handleClose}
 				ContentProps={{'aria-describedby': 'message-id'}}
-				message={<span id="message-id">{this.state.message}</span>}
+				message={<span>{this.state.message}</span>}
 			/>
 		)
 	}
