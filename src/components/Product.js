@@ -9,7 +9,9 @@ class Product extends Component {
 	render() {
 		const quantity = this.props.data.inventory
 		let stockFeedback
-		if (quantity >= 10 && quantity < 50) {
+		if (quantity >= 50 && quantity < 99) {
+			stockFeedback = 'in-stock'
+		} else if (quantity >= 10 && quantity < 50) {
 			stockFeedback = 'could-restock'
 		} else if (quantity <= 10) {
 			stockFeedback = 'should-restock'

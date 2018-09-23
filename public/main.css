@@ -27,6 +27,10 @@ li.model div {
 	width: 150px;
 }
 
+li.model .in-stock span {
+	color: green;
+}
+
 li.model .should-restock span {
 	color: red;
 }
