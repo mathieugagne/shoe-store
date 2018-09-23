@@ -3,18 +3,24 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
-class Store extends Component {
+import { AppConsumer } from '../context'
+import Status from '../components/Status'
+
+class Store extends Component {	
 	render() {
-		return ( 
-			<div>
-				<AppBar position="static">
-					<Toolbar>
-						<Typography variant="title" color="inherit">
-                Shoe Store Inventory
-						</Typography>
-					</Toolbar>
-				</AppBar>
-			</div>
+		return (
+			<AppBar position="static">
+				<Toolbar>
+					<Typography variant="title" color="inherit">
+							Shoe Store Inventory
+					</Typography>
+				</Toolbar>
+
+				<AppConsumer>
+					{ context => <Status message={context.status} /> }
+				</AppConsumer>
+
+			</AppBar>
 		)
 	}
 }

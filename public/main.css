@@ -38,3 +38,19 @@ li.model .should-restock span {
 li.model .could-restock span {
 	color: orange;
 }
+
+div.status-bar {
+	width: 100%;
+	display: flex;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+div.status-bar div {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	border-radius: 0;
+	text-align: center;
+}

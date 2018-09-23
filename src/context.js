@@ -17,7 +17,7 @@ export class AppProvider extends Component {
 			products: [],
 			stores: stores,
 			models: models,
-			statusMessage: null
+			status: null
 		}
 	}
 
@@ -41,11 +41,11 @@ export class AppProvider extends Component {
 
 	initSocket() {
 		this.ws = new WebSocket('ws://localhost:8080')
-		this.ws.onopen = _ => this.setState({ statusMessage: 'Opened connection 🎉' })
-		this.ws.onerror = _ => this.setState({ statusMessage: 'WebSocket error' })
+		this.ws.onopen = _ => this.setState({ status: 'Opened connection' })
+		this.ws.onerror = _ => this.setState({ status: 'WebSocket error' })
 		this.ws.onclose = event => {
 			!event.wasClean && this.setState({
-				statusMessage: `WebSocket error: ${event.code} ${event.reason}`
+				status: `WebSocket error: ${event.code} ${event.reason}`
 			})
 		}
 
@@ -65,7 +65,10 @@ export class AppProvider extends Component {
 					}
 				}
 			})
-			this.setState({ products: upgrade.products })
+			this.setState({
+				status: 'App running',
+				products: upgrade.products
+			})
 		}
 	}
 
@@ -84,6 +87,7 @@ export class AppProvider extends Component {
 					stores: this.state.stores,
 					models: this.state.models,
 					products: this.state.products,
+					status: this.state.status,
 					setGlobalState: this.setGlobalState
 				}}>
 				{this.props.children}
