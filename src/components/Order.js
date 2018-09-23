@@ -7,6 +7,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Badge from '@material-ui/core/Badge'
 
 import { AppConsumer } from '../context'
+import { inventory } from '../static/inventory'
 
 class Order extends Component {
 	constructor(props) {
@@ -15,8 +16,14 @@ class Order extends Component {
 		this.state = {
 			store: props.data.store,
 			model: props.data.model,
-			inventory: props.data.inventory,
+			inventory: inventory,
 			quantity: 0
+		}
+	}
+
+	componentDidUpdate(prevProps, prevState) {
+		if(prevProps.data.inventory !== prevState.inventory) {
+			this.setState({ inventory: prevProps.data.inventory })
 		}
 	}
 
@@ -25,9 +32,6 @@ class Order extends Component {
 	}
 
 	sendQuantity(ws, updateProducts) {
-		console.log(this.state.quantity)
-		console.log(this.state.inventory)
-
 		const data = JSON.stringify({
 			store: this.state.store,
 			model: this.state.model,

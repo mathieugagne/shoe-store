@@ -1,0 +1,1 @@
+export const inventory = 100

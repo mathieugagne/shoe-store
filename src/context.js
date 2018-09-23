@@ -3,11 +3,10 @@ import update from 'react-addons-update'
 
 import { stores } from './static/stores'
 import { models } from './static/models'
+import { inventory } from './static/inventory'
 
 export const AppContext = React.createContext()
 export const AppConsumer = AppContext.Consumer
-
-const BASE_INVENTORY = 100
 
 export class AppProvider extends Component {
 	constructor () {
@@ -29,7 +28,7 @@ export class AppProvider extends Component {
 				products.push({
 					store: store,
 					model: model,
-					inventory: BASE_INVENTORY
+					inventory: inventory
 				})
 			}
 		}
