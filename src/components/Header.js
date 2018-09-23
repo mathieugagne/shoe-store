@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import { AppConsumer } from '../context'
 import Status from '../components/Status'
 
-class Store extends Component {	
+class Store extends Component {
 	render() {
 		return (
 			<AppBar position="static">

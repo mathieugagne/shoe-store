@@ -13,13 +13,13 @@ class Status extends Component {
 			this.setState({ message: prevProps.message })
 		}
 	}
-	
-	render() {	
+
+	render() {
 		return (
 			<Snackbar
 				className="status-bar"
 				anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-				open={this.state.message}
+				open={this.state.message ? true : false}
 				onClose={this.handleClose}
 				ContentProps={{'aria-describedby': 'message-id'}}
 				message={<span>{this.state.message}</span>}

@@ -18,15 +18,10 @@ class Product extends Component {
 		}
 
 		return (
-			<ListItem
-				className="model"
-				store={this.props.data.store}
-				key={this.props.data.model}>
+			<ListItem className="model">
 				<ListItemText primary={this.props.data.model} />
-				<ListItemText
-					className={stockFeedback}
-					primary={quantity} />
-				<Order />
+				<ListItemText className={stockFeedback} primary={quantity} />
+				<Order data={this.props.data} />
 			</ListItem>
 		)
 	}

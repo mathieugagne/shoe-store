@@ -21,8 +21,8 @@ class Store extends Component {
 	}
 
 	render() {
-	
-		return ( 
+
+		return (
 			<div>
 				<AppBar position="static" color="default">
 					<Tabs

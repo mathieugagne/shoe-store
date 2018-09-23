@@ -6,7 +6,7 @@ import Tabs from './components/Tabs'
 
 class App extends Component {
 	render() {
-		return ( 
+		return (
 			<AppProvider>
 				<Header />
 				<AppConsumer>

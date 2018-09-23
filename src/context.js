@@ -17,12 +17,9 @@ export class AppProvider extends Component {
 			products: [],
 			stores: stores,
 			models: models,
-			status: null
+			status: null,
+			websocket: null
 		}
-	}
-
-	setGlobalState(obj) {
-		this.setState(obj)
 	}
 
 	initProducts() {
@@ -40,44 +37,50 @@ export class AppProvider extends Component {
 	}
 
 	initSocket() {
-		this.ws = new WebSocket('ws://localhost:8080')
-		this.ws.onopen = _ => this.setState({ status: 'Opened connection' })
-		this.ws.onerror = _ => this.setState({ status: 'WebSocket error' })
-		this.ws.onclose = event => {
+		const ws = new WebSocket('ws://localhost:8080')
+		ws.onopen = _ => this.setState({ status: 'Opened connection' })
+		ws.onerror = _ => this.setState({ status: 'WebSocket error' })
+		ws.onclose = event => {
 			!event.wasClean && this.setState({
 				status: `WebSocket error: ${event.code} ${event.reason}`
 			})
 		}
+		ws.onmessage = event => { this.updateProducts(event.data) }
+		this.setState({ websocket : ws })
+	}
 
-		this.ws.onmessage = event => {
-			const data = JSON.parse(event.data)
-			const index = this.state.products.findIndex(element => {
-				return element.store === data.store && element.model === data.model
-			})
-			const upgrade = update(this.state, {
-				products: {
-					[index]: {
-						$set: {
-							store: data.store,
-							model: data.model,
-							inventory: data.inventory
-						}
+	updateProducts = data => {
+		data = JSON.parse(data)
+		const index = this.state.products.findIndex(product => {
+			return product.store === data.store && product.model === data.model
+		})
+		const upgrade = update(this.state, {
+			products: {
+				[index]: {
+					$set: {
+						store: data.store,
+						model: data.model,
+						inventory: data.inventory
 					}
 				}
-			})
-			this.setState({
-				status: 'App running',
-				products: upgrade.products
-			})
-		}
+			}
+		})
+		this.setState({
+			status: 'App running',
+			products: upgrade.products
+		})
 	}
 
 	componentDidMount() {
 		this.setState({
 			products: this.initProducts()
 		}, _ => {
-			this.initSocket() 
+			this.initSocket()
 		})
+	}
+
+	componentWillUnmount() {
+		this.state.ws.close()
 	}
 
 	render () {
@@ -88,7 +91,8 @@ export class AppProvider extends Component {
 					models: this.state.models,
 					products: this.state.products,
 					status: this.state.status,
-					setGlobalState: this.setGlobalState
+					websocket: this.state.websocket,
+					updateProducts: this.updateProducts,
 				}}>
 				{this.props.children}
 			</AppContext.Provider>

@@ -14,11 +14,11 @@ class TabContainer extends Component {
 			products: []
 		}
 	}
-  
+
 	render() {
 		return (
 			<AppConsumer>
-				{ context => 
+				{ context =>
 					<List className="models">
 						{ context.products.map(product => {
 							if (product.store.includes(this.state.store)) {
