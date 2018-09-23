@@ -7,7 +7,7 @@ import { models } from './static/models'
 export const AppContext = React.createContext()
 export const AppConsumer = AppContext.Consumer
 
-const BASE_NUMBER = 100
+const BASE_INVENTORY = 100
 
 export class AppProvider extends Component {
 	constructor () {
@@ -32,7 +32,7 @@ export class AppProvider extends Component {
 				products.push({
 					store: store,
 					model: model,
-					inventory: BASE_NUMBER
+					inventory: BASE_INVENTORY
 				})
 			}
 		}
@@ -54,15 +54,17 @@ export class AppProvider extends Component {
 			const index = this.state.products.findIndex(element => {
 				return element.store === data.store && element.model === data.model
 			})
-			const upgrade = update(this.state, { products: {
-				[index]: {
-					$set: {
-						store: data.store,
-						model: data.model,
-						inventory: data.inventory
+			const upgrade = update(this.state, {
+				products: {
+					[index]: {
+						$set: {
+							store: data.store,
+							model: data.model,
+							inventory: data.inventory
+						}
 					}
 				}
-			}})
+			})
 			this.setState({ products: upgrade.products })
 		}
 	}
@@ -70,8 +72,8 @@ export class AppProvider extends Component {
 	componentDidMount() {
 		this.setState({
 			products: this.initProducts()
-		}, () => {
-			this.initSocket()
+		}, _ => {
+			this.initSocket() 
 		})
 	}
 

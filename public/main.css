@@ -26,3 +26,11 @@ li.model {
 li.model div {
 	width: 150px;
 }
+
+li.model .shouldRestock span {
+	color: red;
+}
+
+li.model .couldRestock span {
+	color: orange;
+}
