@@ -22,7 +22,7 @@ class TabContainer extends Component {
 					<List className="models">
 						{ context.products.map(product => {
 							if (product.store.includes(this.state.store)) {
-								return <Product key={product} data={product} />
+								return <Product key={product.model} data={product} />
 							}
 						}) }
 					</List>

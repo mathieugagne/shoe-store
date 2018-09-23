@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import update from 'react-addons-update'
 
 import { stores } from './static/stores'
 import { models } from './static/models'
@@ -15,7 +16,8 @@ export class AppProvider extends Component {
 		this.state = {
 			products: [],
 			stores: stores,
-			models: models
+			models: models,
+			statusMessage: null
 		}
 	}
 
@@ -37,9 +39,39 @@ export class AppProvider extends Component {
 		return products
 	}
 
+	initSocket() {
+		this.ws = new WebSocket('ws://localhost:8080')
+		this.ws.onopen = _ => this.setState({ statusMessage: 'Opened connection 🎉' })
+		this.ws.onerror = _ => this.setState({ statusMessage: 'WebSocket error' })
+		this.ws.onclose = event => {
+			!event.wasClean && this.setState({
+				statusMessage: `WebSocket error: ${event.code} ${event.reason}`
+			})
+		}
+
+		this.ws.onmessage = event => {
+			const data = JSON.parse(event.data)
+			const index = this.state.products.findIndex(element => {
+				return element.store === data.store && element.model === data.model
+			})
+			const upgrade = update(this.state, { products: {
+				[index]: {
+					$set: {
+						store: data.store,
+						model: data.model,
+						inventory: data.inventory
+					}
+				}
+			}})
+			this.setState({ products: upgrade.products })
+		}
+	}
+
 	componentDidMount() {
 		this.setState({
 			products: this.initProducts()
+		}, () => {
+			this.initSocket()
 		})
 	}
 
