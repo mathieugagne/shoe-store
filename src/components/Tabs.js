@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -38,11 +39,13 @@ class Store extends Component {
 					</Tabs>
 				</AppBar>
 				{ this.state.stores.map((store, index) => 
-					index === this.state.value && <TabContainer key={index}>{store}</TabContainer>
+					index === this.state.value && <TabContainer key={index} store={store}>{store}</TabContainer>
 				)}
 			</div>
 		)
 	}
 }
+
+Store.propTypes = { stores: PropTypes.array }
 
 export default Store
