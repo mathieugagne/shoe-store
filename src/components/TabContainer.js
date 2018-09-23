@@ -21,7 +21,9 @@ class TabContainer extends Component {
 				{ context =>
 					<List className="models">
 						{ context.products.map(product => {
-							if (product.store.includes(this.state.store)) {
+							const store = product.store.includes(this.state.store)
+							const inventory = context.limit >= product.inventory
+							if (store & inventory) {
 								return <Product key={product.model} data={product} />
 							}
 						}) }

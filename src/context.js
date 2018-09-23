@@ -3,7 +3,7 @@ import update from 'react-addons-update'
 
 import { stores } from './static/stores'
 import { models } from './static/models'
-import { inventory } from './static/inventory'
+import { inventory, maxLimitView } from './static/inventory'
 
 export const AppContext = React.createContext()
 export const AppConsumer = AppContext.Consumer
@@ -17,8 +17,21 @@ export class AppProvider extends Component {
 			stores: stores,
 			models: models,
 			status: null,
-			websocket: null
+			websocket: null,
+			limit: maxLimitView
 		}
+	}
+
+	componentDidMount() {
+		this.setState({
+			products: this.initProducts()
+		}, _ => {
+			this.initSocket()
+		})
+	}
+
+	componentWillUnmount() {
+		this.state.ws.close()
 	}
 
 	initProducts() {
@@ -70,17 +83,9 @@ export class AppProvider extends Component {
 		})
 	}
 
-	componentDidMount() {
-		this.setState({
-			products: this.initProducts()
-		}, _ => {
-			this.initSocket()
-		})
-	}
-
-	componentWillUnmount() {
-		this.state.ws.close()
-	}
+	setLimit = (value) => {
+    this.setState({limit: value})
+  }
 
 	render () {
 		return (
@@ -91,7 +96,9 @@ export class AppProvider extends Component {
 					products: this.state.products,
 					status: this.state.status,
 					websocket: this.state.websocket,
+					limit: this.state.limit,
 					updateProducts: this.updateProducts,
+					setLimit: this.setLimit
 				}}>
 				{this.props.children}
 			</AppContext.Provider>
