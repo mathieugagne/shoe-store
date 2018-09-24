@@ -17,10 +17,6 @@ module.exports = {
   "rules": {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "indent": [
-      "error",
-      "tab"
-    ],
     "linebreak-style": [
       "error",
       "unix"

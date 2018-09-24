@@ -1,88 +1,88 @@
 html,
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
   border: 0;
 }
 
 header > div {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 form > div {
-	width: 180px;
+  width: 180px;
 }
 
 form label.label-view {
-	color: white !important; /* material-UI focus */
-	font-size: 20px;
+  color: white !important; /* material-UI focus */
+  font-size: 20px;
 }
 
 form .select-view::before {
-	border-bottom: 1px solid white !important;  /* material-UI animation */
+  border-bottom: 1px solid white !important;  /* material-UI animation */
 }
 
 form .select-view div {
-	color: white !important;  /* material-UI animation */
-	text-align: right;
-	text-transform: uppercase;
+  color: white !important;  /* material-UI animation */
+  text-align: right;
+  text-transform: uppercase;
 }
 
 form .select-view svg {
-	color: white;
+  color: white;
 }
 
 li.limit-options {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .stores button {
-	flex: 0 0 70px;
+  flex: 0 0 70px;
 }
 
 ul.models {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 li.model {
-	display: flex;
-	justify-content: space-around;
-	width: 50%;
-	border-bottom: 1px solid gray;
-	padding: 5px 50px;
-	text-align: center;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  border-bottom: 1px solid gray;
+  padding: 5px 50px;
+  text-align: center;
 }
 
 li.model div {
-	width: 150px;
+  width: 150px;
 }
 
 li.model .in-stock span {
-	color: green;
+  color: green;
 }
 
 li.model .should-restock span {
-	color: red;
+  color: red;
 }
 
 li.model .could-restock span {
-	color: orange;
+  color: orange;
 }
 
 div.status-bar {
-	width: 100%;
-	display: flex;
-	left: 0;
-	right: 0;
-	bottom: 0;
+  width: 100%;
+  display: flex;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 div.status-bar div {
-	width: 100%;
-	min-width: 100%;
-	max-width: 100%;
-	border-radius: 0;
-	text-align: center;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  text-align: center;
 }

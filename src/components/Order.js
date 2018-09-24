@@ -10,72 +10,72 @@ import { AppConsumer } from '../context'
 import { inventory } from '../static/inventory'
 
 class Order extends Component {
-	constructor(props) {
-		super(props)
+  constructor(props) {
+    super(props)
 
-		this.state = {
-			store: props.data.store,
-			model: props.data.model,
-			inventory: inventory,
-			quantity: 0
-		}
-	}
+    this.state = {
+      store: props.data.store,
+      model: props.data.model,
+      inventory: inventory,
+      quantity: 0
+    }
+  }
 
-	componentDidUpdate(prevProps, prevState) {
-		if(prevProps.data.inventory !== prevState.inventory) {
-			this.setState({ inventory: prevProps.data.inventory })
-		}
-	}
+  componentDidUpdate(prevProps, prevState) {
+    if(prevProps.data.inventory !== prevState.inventory) {
+      this.setState({ inventory: prevProps.data.inventory })
+    }
+  }
 
-	setQuantity(quantity) {
-		this.setState({ quantity: this.state.quantity + quantity })
-	}
+  setQuantity(quantity) {
+    this.setState({ quantity: this.state.quantity + quantity })
+  }
 
-	sendQuantity(ws, updateProducts) {
-		const data = JSON.stringify({
-			store: this.state.store,
-			model: this.state.model,
-			inventory: this.state.inventory + this.state.quantity
-		})
-		ws.send(data)
-		updateProducts(data)
-		this.setState({ quantity: 0 })
-	}
+  sendQuantity(ws, updateProducts) {
+    const data = JSON.stringify({
+      store: this.state.store,
+      model: this.state.model,
+      inventory: this.state.inventory + this.state.quantity
+    })
+    ws.send(data)
+    updateProducts(data)
+    this.setState({ quantity: 0 })
+  }
 
-	render() {
-		return (
-			<div>
-				<IconButton
-					color="primary"
-					aria-label="Remove one article"
-					onClick={_ => this.setQuantity(-1)}>
-					<RemoveShoppingCartIcon />
-				</IconButton>
+  render() {
+    return (
+      <div>
+        <IconButton
+          color="primary"
+          aria-label="Remove one article"
+          onClick={_ => this.setQuantity(-1)}>
+          <RemoveShoppingCartIcon />
+        </IconButton>
 
-				<IconButton
-					color="primary"
-					aria-label="Add one article"
-					onClick={_ => this.setQuantity(1)}>
-					<AddShoppingCartIcon />
-				</IconButton>
+        <IconButton
+          color="primary"
+          aria-label="Add one article"
+          onClick={_ => this.setQuantity(1)}>
+          <AddShoppingCartIcon />
+        </IconButton>
 
-				<AppConsumer>
-					{ context => {
-						return (
-							<IconButton
-								aria-label="Send stock movement to database"
-								disabled={this.state.quantity === 0}
-								onClick={() => this.sendQuantity(context.websocket, context.updateProducts)}>
-								<Badge badgeContent={this.state.quantity} color="primary">
-									<ShoppingCartIcon />
-								</Badge>
-							</IconButton>
-						)
-					}}
-				</AppConsumer>
-			</div>
-		)
-	}
+        <AppConsumer>
+          { context => {
+            return (
+              <IconButton
+                aria-label="Send stock movement to database"
+                disabled={this.state.quantity === 0}
+                onClick={() => this.sendQuantity(context.websocket, context.updateProducts)}>
+                <Badge badgeContent={this.state.quantity} color="primary">
+                  <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
+            )
+          }}
+        </AppConsumer>
+      </div>
+    )
+  }
 }
 
 Order.propTypes = { data: PropTypes.object }
