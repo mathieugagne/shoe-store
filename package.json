@@ -1,0 +1,22 @@
+{
+  "name": "shoes-inventory-review",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "websocket": "websocketd --port=8080 ruby inventory.rb",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^3.1.0",
+    "@material-ui/icons": "^3.0.1",
+    "eslint": "^5.6.0",
+    "eslint-plugin-react": "^7.11.1",
+    "react": "^16.5.2",
+    "react-addons-update": "^15.6.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "1.1.5"
+  }
+}

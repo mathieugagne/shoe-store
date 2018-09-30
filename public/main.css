@@ -1,0 +1,96 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+form > div {
+  width: 180px;
+}
+
+form label.label-view {
+  color: white !important; /* material-UI focus */
+  font-size: 20px;
+}
+
+form .select-view::before {
+  border-bottom: 1px solid white !important;  /* material-UI animation */
+}
+
+form .select-view div {
+  color: white !important;  /* material-UI animation */
+  text-align: right;
+  text-transform: uppercase;
+}
+
+form .select-view svg {
+  color: white;
+}
+
+li.limit-options {
+  text-transform: uppercase;
+}
+
+.stores button {
+  flex: 0 0 70px;
+}
+
+ul.models {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li.model {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  border-bottom: 1px solid gray;
+  padding: 5px 50px;
+  text-align: center;
+}
+
+li.model div {
+  width: 150px;
+}
+
+li.model .max span {
+  color: blue;
+}
+
+li.model .hight span {
+  color: green;
+}
+
+li.model .safe span {
+  color: purple;
+}
+
+li.model .dangerous span {
+  color: orange;
+}
+
+li.model .warning span {
+  color: red;
+}
+
+div.status-bar {
+  width: 100%;
+  display: flex;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+div.status-bar div {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  text-align: center;
+}

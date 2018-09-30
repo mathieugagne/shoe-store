@@ -1,12 +1,19 @@
 # Shoe Store
 
+## Quick start
+
+Install package with `npm install`.
+
+Then run react applicaiton and WebSocket Server with: `npm start`
+
+
 ## Synopsis
 
 Aldo Shoes is having a huge flash sale online. You provide support to the inventory department. They want to react real-time to various inventory problems as they arise.
 
 You adjust the inventory whenever a new sale is completed. The return value includes the store, the shoe model and the inventory left for that shoe model in the store.
 
-```
+``` JSON
 {
   'store' => 'ALDO Ste-Catherine',
   'model' => 'ADERI',
@@ -54,7 +61,7 @@ You can run it directly from your own machine.
 
 Run the following to start tapping into the inventory events.
 
-```
+``` BASH
 (bin/)websocketd --port=8080 ruby inventory.rb
 ```
 
@@ -74,7 +81,7 @@ Here are two examples for our favorite languages:
 
 Open a console on a non-secured page:
 
-```
+``` JAVASCRIPT
 var ws = new WebSocket('ws://localhost:8080/');
 
 ws.onmessage = function(event) {
