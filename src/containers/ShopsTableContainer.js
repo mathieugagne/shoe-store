@@ -1,9 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux'
+import styled from 'styled-components';
+
 import ShopsTable from '../components/ShopsTable';
 import ShopsRow from '../components/ShopsRow';
-import styled from 'styled-components';
+import { VisibilityFilters } from '../constants/ActionTypes';
 
 const ShopsTableContainerStyled = styled.div`
     margin: 30px 0;
@@ -47,9 +49,18 @@ ShopsTableContainer.propTypes = propTypes;
 
 const mapStateToProps = (state) => {
     try {
-        return {
-            shops: state.inventory.shops
-        };
+        switch (state.visibilityFilter.shopStat) {
+            case VisibilityFilters.SHOW_FULL_STOCK:
+                return { shops: state.inventory.shops.filter((shop) => shop.stats.fullStock > 0) };
+            case VisibilityFilters.SHOW_LOW_ON_STOCK:
+                return { shops: state.inventory.shops.filter((shop) => shop.stats.lowOnStock > 0) };
+            case VisibilityFilters.SHOW_NO_STOCK:
+                return { shops: state.inventory.shops.filter((shop) => shop.stats.noStock > 0) };
+            default:
+                return {
+                    shops: state.inventory.shops
+                };
+        }
     } catch (err) {
         return {
             shops : []

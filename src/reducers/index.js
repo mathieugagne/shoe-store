@@ -1,12 +1,20 @@
 import * as types from '../constants/ActionTypes';
 import { combineReducers } from 'redux';
 
-const visibilityFilter = (state = {}, action) => {
+const visibilityFilter = (state = {
+            shopName: 'SHOW_ALL',
+            shopStat: 'SHOW_ALL'
+        }, action) => {
     switch (action.type) {
+        case types.SET_VISIBILITY_FILTER_STORE_STAT:
+            return Object.assign({}, { shopName: state.shopName, shopStat: action.filter });
+         case types.SET_VISIBILITY_FILTER_STORE_NAME:
+            return Object.assign({}, { shopName: action.filter, shopStat: state.shopStat });
         default:
             return state;
     }
 };
+
 
 const inventory = (state = {}, action) => {
     switch (action.type) {

@@ -1,8 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
-import StockCard from '../components/StockCard';
+import { connect } from 'react-redux'
 import styled from 'styled-components';
+
+import * as types from '../constants/ActionTypes';
+import { changeStatVisibilityFilter } from '../actions';
+
+import StockCard from '../components/StockCard';
 
 const CardContainersStyled = styled.div`
     width: 100%;
@@ -31,17 +35,18 @@ const CardContainersStyled = styled.div`
 const propTypes = {
     fullStock: PropTypes.number.isRequired,
     lowOnStock: PropTypes.number.isRequired,
-    noStock: PropTypes.number.isRequired
+    noStock: PropTypes.number.isRequired,
+    changeStatVisibilityFilter: PropTypes.func
 };
 
 class CardContainers extends React.Component {
     render() {
-        const { fullStock, lowOnStock, noStock} = this.props;
+        const { fullStock, lowOnStock, noStock, changeStatVisibilityFilter} = this.props;
         return (
             <CardContainersStyled>
-                <StockCard quantity={fullStock} type="fullStock"></StockCard>
-                <StockCard quantity={lowOnStock} type="lowOnStock"></StockCard>
-                <StockCard quantity={noStock} type="noStock"></StockCard>
+                <StockCard onClick={() => changeStatVisibilityFilter(types.VisibilityFilters.SHOW_FULL_STOCK)} quantity={fullStock && fullStock} type="fullStock"></StockCard>
+                <StockCard onClick={() => changeStatVisibilityFilter(types.VisibilityFilters.SHOW_LOW_ON_STOCK)} quantity={lowOnStock && lowOnStock} type="lowOnStock"></StockCard>
+                <StockCard onClick={() => changeStatVisibilityFilter(types.VisibilityFilters.SHOW_NO_STOCK)} quantity={noStock && noStock} type="noStock"></StockCard>
             </CardContainersStyled>
         );
     }
@@ -65,4 +70,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)( CardContainers );
+export default connect(mapStateToProps, {changeStatVisibilityFilter})( CardContainers );
