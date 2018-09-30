@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 
-import { AppProvider, AppConsumer } from './context'
+import { AppProvider } from './context'
 import Header from './components/Header/Header'
 import Tabs from './components/Shops/Tabs'
+
+import { stores } from './static/stores'
 
 class App extends Component {
   render () {
     return (
       <AppProvider>
         <Header />
-        <AppConsumer>
-          { context => <Tabs stores={context.stores} /> }
-        </AppConsumer>
+        <Tabs stores={stores} />
       </AppProvider>
     )
   }

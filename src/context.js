@@ -14,8 +14,6 @@ export class AppProvider extends Component {
 
     this.state = {
       products: [],
-      stores: stores,
-      models: models,
       status: null,
       websocket: null,
       limit: maxLimitView
@@ -61,7 +59,7 @@ export class AppProvider extends Component {
     this.setState({websocket: ws})
   }
 
-  updateProducts (data) {
+  updateProducts = data => {
     data = JSON.parse(data)
     const index = this.state.products.findIndex(product => {
       return product.store === data.store && product.model === data.model
@@ -91,8 +89,6 @@ export class AppProvider extends Component {
     return (
       <AppContext.Provider
         value={{
-          stores: this.state.stores,
-          models: this.state.models,
           products: this.state.products,
           status: this.state.status,
           websocket: this.state.websocket,
