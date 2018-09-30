@@ -6,20 +6,19 @@ import { AppConsumer } from '../context'
 import Product from './Product'
 
 class TabContainer extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
-      store: props.store,
-      products: []
+      store: props.store
     }
   }
 
-  render() {
+  render () {
     return (
       <AppConsumer>
         { context =>
-          <List className="models">
+          <List className='models'>
             { context.products.map(product => {
               const store = product.store.includes(this.state.store)
               const inventory = context.limit >= product.inventory

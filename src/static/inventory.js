@@ -2,23 +2,23 @@ export const inventory = 50
 export const maxLimitView = 100
 export const limitViews = [
   {
-    label : 'warning',
+    label: 'warning',
     limit: 10
   },
   {
-    label : 'dangerous',
+    label: 'dangerous',
     limit: 20
   },
   {
-    label : 'safe',
+    label: 'safe',
     limit: 50
   },
   {
-    label : 'hight',
+    label: 'hight',
     limit: 75
   },
   {
-    label : 'max',
+    label: 'max',
     limit: 100
   }
 ]

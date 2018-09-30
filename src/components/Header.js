@@ -16,11 +16,11 @@ class Store extends Component {
     setLimit(event.target.value)
   }
 
-  render() {
+  render () {
     const listItems = limitViews.map(limitView => {
       return (
         <MenuItem
-          className="limit-options"
+          className='limit-options'
           key={limitView.label}
           value={limitView.limit}>
           {limitView.label}
@@ -29,19 +29,19 @@ class Store extends Component {
     })
 
     return (
-      <AppBar position="static">
+      <AppBar position='static'>
         <Toolbar>
-          <Typography variant="title" color="inherit">
-              Shoe Store Inventory
+          <Typography variant='title' color='inherit'>
+            Shoe Store Inventory
           </Typography>
 
           <AppConsumer>
             { context => <p>View limit set to {context.limit}</p> }
           </AppConsumer>
 
-          <form autoComplete="off">
+          <form autoComplete='off'>
             <FormControl>
-              <InputLabel htmlFor="product-view" className="label-view">
+              <InputLabel htmlFor='product-view' className='label-view'>
                 Select product view
               </InputLabel>
               <AppConsumer>
@@ -49,7 +49,7 @@ class Store extends Component {
                   <Select
                     value={context.limit}
                     onChange={event => this.handleChange(context.setLimit, event)}
-                    className="select-view"
+                    className='select-view'
                     inputProps={{ name: 'Select your view', id: 'product-view' }}>
                     {listItems}
                   </Select>

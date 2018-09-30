@@ -10,7 +10,7 @@ import { AppConsumer } from '../context'
 import { inventory } from '../static/inventory'
 
 class Order extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -21,17 +21,17 @@ class Order extends Component {
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if(prevProps.data.inventory !== prevState.inventory) {
+  componentDidUpdate (prevProps, prevState) {
+    if (prevProps.data.inventory !== prevState.inventory) {
       this.setState({ inventory: prevProps.data.inventory })
     }
   }
 
-  setQuantity(quantity) {
+  setQuantity (quantity) {
     this.setState({ quantity: this.state.quantity + quantity })
   }
 
-  sendQuantity(ws, updateProducts) {
+  sendQuantity (ws, updateProducts) {
     const data = JSON.stringify({
       store: this.state.store,
       model: this.state.model,
@@ -42,19 +42,19 @@ class Order extends Component {
     this.setState({ quantity: 0 })
   }
 
-  render() {
+  render () {
     return (
       <div>
         <IconButton
-          color="primary"
-          aria-label="Remove one article"
+          color='primary'
+          aria-label='Remove one article'
           onClick={_ => this.setQuantity(-1)}>
           <RemoveShoppingCartIcon />
         </IconButton>
 
         <IconButton
-          color="primary"
-          aria-label="Add one article"
+          color='primary'
+          aria-label='Add one article'
           onClick={_ => this.setQuantity(1)}>
           <AddShoppingCartIcon />
         </IconButton>
@@ -63,10 +63,10 @@ class Order extends Component {
           { context => {
             return (
               <IconButton
-                aria-label="Send stock movement to database"
+                aria-label='Send stock movement to database'
                 disabled={this.state.quantity === 0}
-                onClick={() => this.sendQuantity(context.websocket, context.updateProducts)}>
-                <Badge badgeContent={this.state.quantity} color="primary">
+                onClick={_ => this.sendQuantity(context.websocket, context.updateProducts)}>
+                <Badge badgeContent={this.state.quantity} color='primary'>
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>

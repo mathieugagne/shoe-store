@@ -22,7 +22,7 @@ export class AppProvider extends Component {
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.setState({
       products: this.initProducts()
     }, _ => {
@@ -30,11 +30,11 @@ export class AppProvider extends Component {
     })
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.state.ws.close()
   }
 
-  initProducts() {
+  initProducts () {
     const products = []
     for (let store of stores) {
       for (let model of models) {
@@ -48,7 +48,7 @@ export class AppProvider extends Component {
     return products
   }
 
-  initSocket() {
+  initSocket () {
     const ws = new WebSocket('ws://localhost:8080')
     ws.onopen = _ => this.setState({ status: 'Opened connection' })
     ws.onerror = _ => this.setState({ status: 'WebSocket error' })
@@ -58,10 +58,10 @@ export class AppProvider extends Component {
       })
     }
     ws.onmessage = event => { this.updateProducts(event.data) }
-    this.setState({ websocket : ws })
+    this.setState({websocket: ws})
   }
 
-  updateProducts = data => {
+  updateProducts (data) {
     data = JSON.parse(data)
     const index = this.state.products.findIndex(product => {
       return product.store === data.store && product.model === data.model
@@ -83,7 +83,7 @@ export class AppProvider extends Component {
     })
   }
 
-  setLimit = (value) => {
+  setLimit (value) {
     this.setState({limit: value})
   }
 

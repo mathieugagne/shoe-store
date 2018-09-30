@@ -1,31 +1,22 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import Snackbar from '@material-ui/core/Snackbar'
 
-class Status extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = { message: null }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if(prevProps.message !== prevState.message) {
-      this.setState({ message: prevProps.message })
-    }
-  }
-
-  render() {
+class Status extends PureComponent {
+  render () {
     return (
       <Snackbar
-        className="status-bar"
+        className='status-bar'
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        open={this.state.message ? true : false}
+        open={this.props.message ? true : false}
         onClose={this.handleClose}
         ContentProps={{'aria-describedby': 'message-id'}}
-        message={<span>{this.state.message}</span>}
+        message={<span>{this.props.message}</span>}
       />
     )
   }
 }
+
+Status.propTypes = { message: PropTypes.string }
 
 export default Status

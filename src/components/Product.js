@@ -6,7 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Order from './Order'
 
 class Product extends Component {
-  render() {
+  render () {
     const quantity = this.props.data.inventory
     let stockFeedback
     if (quantity >= 50 && quantity < 99) {
@@ -18,7 +18,7 @@ class Product extends Component {
     }
 
     return (
-      <ListItem className="model">
+      <ListItem className='model'>
         <ListItemText primary={this.props.data.model} />
         <ListItemText className={stockFeedback} primary={quantity} />
         <Order data={this.props.data} />

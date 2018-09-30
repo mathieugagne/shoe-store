@@ -5,7 +5,7 @@ import Header from './components/Header'
 import Tabs from './components/Tabs'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <AppProvider>
         <Header />

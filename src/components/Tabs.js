@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -7,7 +7,7 @@ import Tab from '@material-ui/core/Tab'
 import TabContainer from './TabContainer'
 
 class Store extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -16,21 +16,20 @@ class Store extends Component {
     }
   }
 
-  handleChange = (event, value) => {
+  handleChange (event, value) {
     this.setState({ value })
   }
 
-  render() {
-
+  render () {
     return (
       <div>
-        <AppBar position="static" color="default">
+        <AppBar position='static' color='default'>
           <Tabs
-            className="stores"
+            className='stores'
             value={this.state.value}
             onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
+            indicatorColor='primary'
+            textColor='primary'
             scrollable
             fullWidth>
             { this.state.stores.map((store, index) =>
