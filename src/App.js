@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import Header from './components/Header';
 import CardContainers from './containers/CardContainers';
+import ShopsTableContainer from './containers/ShopsTableContainer';
+import ShopTableContainer from './containers/ShopTableContainer';
 
 import './App.css';
 
@@ -16,6 +18,8 @@ class App extends Component {
             <AppStyled>
                 <Header />
                 <CardContainers />
+                <ShopsTableContainer />
+                <ShopTableContainer />
             </AppStyled>
         );
     }
