@@ -6,12 +6,12 @@ import App from './App';
 import reducer from './reducers';
 import thunk from 'redux-thunk';
 
-import websocketMiddleware from './actions/websocket'
+// import websocketMiddleware from './actions/websocket';
 import { getAllShops } from './actions';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk, websocketMiddleware('ws://127.0.0.1:8080/'))));
-// const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
+// const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk, websocketMiddleware('ws://127.0.0.1:8080/'))));
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 store.dispatch(getAllShops());
 
