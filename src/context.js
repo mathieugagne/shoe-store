@@ -83,7 +83,7 @@ export class AppProvider extends Component {
     })
   }
 
-  setLimit (value) {
+  setLimit = value => {
     this.setState({limit: value})
   }
 

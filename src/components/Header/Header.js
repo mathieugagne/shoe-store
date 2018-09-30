@@ -7,9 +7,9 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
 
-import { AppConsumer } from '../context'
-import { limitViews } from '../static/inventory'
-import Status from '../components/Status'
+import { AppConsumer } from '../../context'
+import { limitViews } from '../../static/inventory'
+import Status from './Status'
 
 class Store extends Component {
   handleChange (setLimit, event) {

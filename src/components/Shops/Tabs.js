@@ -16,7 +16,7 @@ class Store extends Component {
     }
   }
 
-  handleChange (event, value) {
+  handleChange = (event, value) => {
     this.setState({ value })
   }
 

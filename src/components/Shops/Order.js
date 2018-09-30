@@ -6,8 +6,8 @@ import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Badge from '@material-ui/core/Badge'
 
-import { AppConsumer } from '../context'
-import { inventory } from '../static/inventory'
+import { AppConsumer } from '../../context'
+import { inventory } from '../../static/inventory'
 
 class Order extends Component {
   constructor (props) {
