@@ -38,7 +38,11 @@ class Store extends Component {
           </Tabs>
         </AppBar>
         { this.state.stores.map((store, index) =>
-          index === this.state.value && <TabContainer key={index} store={store}>{store}</TabContainer>
+          index === this.state.value &&
+            <TabContainer
+              key={`tab-${this.props.store}`}
+              tabIndex={index}
+              store={store} />
         )}
       </div>
     )

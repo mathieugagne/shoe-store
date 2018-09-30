@@ -5,15 +5,22 @@ import { AppConsumer } from '../../context'
 import Shop from './Shop'
 
 class TabContainer extends PureComponent {
+  getProducts (context, store) {
+    if (context.shops.length) {
+      const index = context.shops.findIndex(shop => shop.store === this.props.store)
+      const products = context.shops[index].products
+      return products.filter(product => product.inventory <= context.limit)
+    }
+  }
+
   render () {
     return (
       <AppConsumer>
         { context =>
-          context.shops.map(shop => {
-            if (shop.store === this.props.store) {
-              return <Shop key={shop.store} products={shop.products} />
-            }
-          })
+          <Shop
+            key={`shop-${this.props.store}`}
+            store={this.props.store}
+            products={this.getProducts(context, this.props.store)} />
         }
       </AppConsumer>
     )

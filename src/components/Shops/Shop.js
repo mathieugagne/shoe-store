@@ -8,14 +8,26 @@ class Shop extends PureComponent {
   render () {
     return (
       <List className='models'>
-        { this.props.products.map(product => {
-          return <Product key={product.model} data={product} />
-        }) }
+        { this.props.products.map((product, index) => {
+          return (
+            <Product
+              key={`product-${index}`}
+              store={this.props.store}
+              product={product} />
+          )
+        })}
       </List>
     )
   }
 }
 
-Shop.propTypes = { product: PropTypes.array }
+Shop.defaultProps = {
+  products: []
+}
+
+Shop.propTypes = {
+  products: PropTypes.array,
+  store: PropTypes.string
+}
 
 export default Shop

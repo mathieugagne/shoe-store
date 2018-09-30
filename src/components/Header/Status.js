@@ -8,7 +8,7 @@ class Status extends PureComponent {
       <Snackbar
         className='status-bar'
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        open={this.props.message ? true : false}
+        open={true}
         onClose={this.handleClose}
         ContentProps={{'aria-describedby': 'message-id'}}
         message={<span>{this.props.message}</span>}

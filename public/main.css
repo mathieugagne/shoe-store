@@ -59,16 +59,24 @@ li.model div {
   width: 150px;
 }
 
-li.model .in-stock span {
+li.model .max span {
+  color: blue;
+}
+
+li.model .hight span {
   color: green;
 }
 
-li.model .should-restock span {
-  color: red;
+li.model .safe span {
+  color: purple;
 }
 
-li.model .could-restock span {
+li.model .dangerous span {
   color: orange;
+}
+
+li.model .warning span {
+  color: red;
 }
 
 div.status-bar {

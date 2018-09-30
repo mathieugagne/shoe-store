@@ -14,16 +14,16 @@ class Order extends Component {
     super(props)
 
     this.state = {
-      store: props.data.store,
-      model: props.data.model,
+      store: props.store,
+      model: props.product.model,
       inventory: inventory,
       quantity: 0
     }
   }
 
   componentDidUpdate (prevProps, prevState) {
-    if (prevProps.data.inventory !== prevState.inventory) {
-      this.setState({ inventory: prevProps.data.inventory })
+    if (prevProps.product.inventory !== prevState.inventory) {
+      this.setState({ inventory: prevProps.product.inventory })
     }
   }
 
@@ -78,6 +78,9 @@ class Order extends Component {
   }
 }
 
-Order.propTypes = { data: PropTypes.object }
+Order.propTypes = {
+  product: PropTypes.object,
+  store: PropTypes.string
+}
 
 export default Order

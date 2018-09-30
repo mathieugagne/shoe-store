@@ -4,29 +4,31 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 
 import Order from './Order'
+import { limitViews } from '../../static/inventory'
 
 class Product extends PureComponent {
+  stockFeedback (quantity) {
+    return limitViews.find(status => quantity <= status.limit).label
+  }
+
   render () {
-    const quantity = this.props.data.inventory
-    let stockFeedback
-    if (quantity >= 50 && quantity < 99) {
-      stockFeedback = 'in-stock'
-    } else if (quantity >= 10 && quantity < 50) {
-      stockFeedback = 'could-restock'
-    } else if (quantity <= 10) {
-      stockFeedback = 'should-restock'
-    }
+    const quantity = this.props.product.inventory
 
     return (
       <ListItem className='model'>
-        <ListItemText primary={this.props.data.model} />
-        <ListItemText className={stockFeedback} primary={quantity} />
-        <Order data={this.props.data} />
+        <ListItemText primary={this.props.product.model} />
+        <ListItemText
+          className={this.stockFeedback(quantity)}
+          primary={quantity} />
+        <Order store={this.props.store} product={this.props.product} />
       </ListItem>
     )
   }
 }
 
-Product.propTypes = { data: PropTypes.object }
+Product.propTypes = {
+  store: PropTypes.string,
+  product: PropTypes.object
+}
 
 export default Product

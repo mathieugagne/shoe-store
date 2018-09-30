@@ -3,11 +3,11 @@ export const maxLimitView = 100
 export const limitViews = [
   {
     label: 'warning',
-    limit: 10
+    limit: 15
   },
   {
     label: 'dangerous',
-    limit: 20
+    limit: 25
   },
   {
     label: 'safe',

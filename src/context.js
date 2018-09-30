@@ -69,23 +69,29 @@ export class AppProvider extends Component {
 
   updateProducts = data => {
     data = JSON.parse(data)
-    const index = this.state.products.findIndex(product => {
-      return product.store === data.store && product.model === data.model
+    const indexStore = this.state.shops.findIndex(shop => {
+      return shop.store === data.store
+    })
+    const indexProduct = models.findIndex(model => {
+      return model === data.model
     })
     const upgrade = update(this.state, {
-      products: {
-        [index]: {
-          $set: {
-            store: data.store,
-            model: data.model,
-            inventory: data.inventory
+      shops: {
+        [indexStore]: {
+          products: {
+            [indexProduct]: {
+              $merge: {
+                model: data.model,
+                inventory: data.inventory
+              }
+            }
           }
         }
       }
     })
     this.setState({
       status: 'App running',
-      products: upgrade.products
+      shops: upgrade.shops
     })
   }
 
