@@ -15,6 +15,7 @@ export default class ShopTable extends React.Component {
                         <TheadTh>Shop Name</TheadTh>
                         <TheadTh>Product Name</TheadTh>
                         <TheadTh>Stock</TheadTh>
+                        <TheadTh></TheadTh>
                     </TheadTr>
                 </thead>
                 <tbody>
