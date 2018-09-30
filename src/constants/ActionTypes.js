@@ -1,0 +1,1 @@
+export const RECEIVE_SHOPS = 'RECEIVE_SHOPS';

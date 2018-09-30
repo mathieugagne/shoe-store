@@ -1,0 +1,855 @@
+[
+    {
+        "name": "ALDO Centre Eaton",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 5
+            },            
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            }, 
+            {
+                "name": "BEODA",
+                "inventory": 50
+            }, 
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            }, 
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            }, 
+            {
+                "name": "GREG",
+                "inventory": 50
+            }, 
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+    },
+    {
+        "name": "ALDO Destiny USA Mall",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 5
+            },
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            },
+            {
+                "name": "BEODA",
+                "inventory": 50
+            },
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            },
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            },
+            {
+                "name": "GREG",
+                "inventory": 50
+            },
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+       
+    },
+    {
+        "name": "ALDO Pheasant Lane Mall",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 5
+            },            
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            }, 
+            {
+                "name": "BEODA",
+                "inventory": 50
+            }, 
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            }, 
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            }, 
+            {
+                "name": "GREG",
+                "inventory": 50
+            }, 
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+       
+    },
+    {
+        "name": "ALDO Holyoke Mall",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 5
+            },            
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            }, 
+            {
+                "name": "BEODA",
+                "inventory": 50
+            }, 
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            }, 
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            }, 
+            {
+                "name": "GREG",
+                "inventory": 50
+            }, 
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+      
+    },
+    {
+        "name": "ALDO Maine Mall",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 0
+            },            
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            }, 
+            {
+                "name": "BEODA",
+                "inventory": 50
+            }, 
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            }, 
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            }, 
+            {
+                "name": "GREG",
+                "inventory": 50
+            }, 
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+    },
+    {
+        "name": "ALDO Crossgates Mall",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 0
+            },            
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            }, 
+            {
+                "name": "BEODA",
+                "inventory": 50
+            }, 
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            }, 
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            }, 
+            {
+                "name": "GREG",
+                "inventory": 50
+            }, 
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+    },
+    {
+        "name": "ALDO Burlington Mall",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 0
+            },            
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            }, 
+            {
+                "name": "BEODA",
+                "inventory": 50
+            }, 
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            }, 
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            }, 
+            {
+                "name": "GREG",
+                "inventory": 50
+            }, 
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+    },
+    {
+        "name": "ALDO Solomon Pond Mall",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 0
+            },            
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            }, 
+            {
+                "name": "BEODA",
+                "inventory": 50
+            }, 
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            }, 
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            }, 
+            {
+                "name": "GREG",
+                "inventory": 50
+            }, 
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+    },
+    {
+        "name": "ALDO Auburn Mall",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 0
+            },            
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            }, 
+            {
+                "name": "BEODA",
+                "inventory": 50
+            }, 
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            }, 
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            }, 
+            {
+                "name": "GREG",
+                "inventory": 50
+            }, 
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+    },
+    {
+        "name": "ALDO Waterloo Premium Outlets",
+        "products": [
+            {
+                "name": "ADERI",
+                "inventory": 12
+            },
+            {
+                "name": "MIRIRA",
+                "inventory": 2
+            },
+            {
+                "name": "CAELAN",
+                "inventory": 0
+            },            
+            {
+                "name": "BUTAUD",
+                "inventory": 50
+            },
+            {
+                "name": "SCHOOLER",
+                "inventory": 50
+            },
+            {
+                "name": "SODANO",
+                "inventory": 50
+            },
+            {
+                "name": "MCTYRE",
+                "inventory": 50
+            },
+            {
+                "name": "CADAUDIA",
+                "inventory": 50
+            },
+            {
+                "name": "RASIEN",
+                "inventory": 50
+            },
+            {
+                "name": "WUMA",
+                "inventory": 50
+            },
+            {
+                "name": "GRELIDIEN",
+                "inventory": 50
+            },
+            {
+                "name": "CADEVEN",
+                "inventory": 50
+            },
+            {
+                "name": "SEVIDE",
+                "inventory": 50
+            },
+            {
+                "name": "ELOILLAN",
+                "inventory": 50
+            }, 
+            {
+                "name": "BEODA",
+                "inventory": 50
+            }, 
+            {
+                "name": "VENDOGNUS",
+                "inventory": 50
+            }, 
+            {
+                "name": "ABOEN",
+                "inventory": 50
+            },
+            {
+                "name": "ALALIWEN",
+                "inventory": 50
+            }, 
+            {
+                "name": "GREG",
+                "inventory": 50
+            }, 
+            {
+                "name": "BOZZA",
+                "inventory": 50
+            }
+        ]
+    }
+]
