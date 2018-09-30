@@ -13,7 +13,7 @@ export class AppProvider extends Component {
     super()
 
     this.state = {
-      products: [],
+      shops: [],
       status: null,
       websocket: null,
       limit: maxLimitView
@@ -22,7 +22,7 @@ export class AppProvider extends Component {
 
   componentDidMount () {
     this.setState({
-      products: this.initProducts()
+      shops: this.initShops()
     }, _ => {
       this.initSocket()
     })
@@ -32,16 +32,24 @@ export class AppProvider extends Component {
     this.state.ws.close()
   }
 
+  initShops () {
+    const shops = []
+    for (let store of stores) {
+      shops.push({
+        store: store,
+        products: this.initProducts()
+      })
+    }
+    return shops
+  }
+
   initProducts () {
     const products = []
-    for (let store of stores) {
-      for (let model of models) {
-        products.push({
-          store: store,
-          model: model,
-          inventory: inventory
-        })
-      }
+    for (let model of models) {
+      products.push({
+        model: model,
+        inventory: inventory
+      })
     }
     return products
   }
@@ -89,7 +97,7 @@ export class AppProvider extends Component {
     return (
       <AppContext.Provider
         value={{
-          products: this.state.products,
+          shops: this.state.shops,
           status: this.state.status,
           websocket: this.state.websocket,
           limit: this.state.limit,

@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 
 import Order from './Order'
 
-class Product extends Component {
+class Product extends PureComponent {
   render () {
     const quantity = this.props.data.inventory
     let stockFeedback
