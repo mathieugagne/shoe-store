@@ -40,7 +40,36 @@ const inventory = (state = {}, action) => {
           return {
               shops: action.shops,
               shopsStats: shopsStats
-          };
+            };
+        
+        case types.WEBSOCKET_INVENTORY_CHANGE:
+            let shopsStatsCopy = Object.assign({}, state.shopsStats);
+            let aldoShop = state.shops.map(shop => {
+                let inventoryUpdate = false;
+                let shopCopy = Object.assign({}, shop);
+                let shopStatsCopy = Object.assign({}, shop.stats);
+                if (shopCopy.name === action.entry.store) {
+                    shopCopy.products = shopCopy.products.map(product => {
+                        let productCopy = Object.assign({}, product);
+                        if (productCopy.name === action.entry.model) {
+                            productCopy.inventory = action.entry.inventory;
+                            inventoryUpdate = true;
+                        }
+                        return productCopy;
+                    });
+                }
+
+                //refresh ShopsStats
+                if (inventoryUpdate) {
+                    const newStats = getShopStats(shopCopy);
+                    updateShopsStats(shopStatsCopy, newStats, shopsStatsCopy);
+                    shopCopy.stats = newStats;
+                }               
+                
+                return shopCopy;
+            });
+
+            return { shops: aldoShop, shopsStats : shopsStatsCopy};
         default:
             return state;
     }
@@ -90,3 +119,22 @@ const sumObjectsByKey = (...objs) => {
         return a;
     }, {});
 };
+
+/**
+ * Return the new shops stats object with modification 
+ * @param {Object} oldShopStats old shop stats object
+ * @param {Object} newShopStat new shop stats object
+ * @param {Object} shopsStats object of all shops stats
+ * @returns {Object} The new shops stats object.
+ */
+const updateShopsStats = (oldShopStats, newShopStat, shopsStats) => {
+    const full = oldShopStats.fullStock - newShopStat.fullStock;
+    const low = oldShopStats.lowOnStock - newShopStat.lowOnStock;
+    const no = oldShopStats.noStock - newShopStat.noStock;
+
+    shopsStats.fullStock = shopsStats.fullStock - full;
+    shopsStats.lowOnStock = shopsStats.lowOnStock - low;
+    shopsStats.noStock = shopsStats.noStock - no;
+
+    return shopsStats;
+}
