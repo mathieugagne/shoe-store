@@ -1,0 +1,25 @@
+{
+  "root": true,
+
+  "extends": ["react-app", "airbnb", "plugin:prettier/recommended", "prettier/react"],
+
+  "env": {
+    "browser": true
+  },
+
+  "rules": {
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }]
+  },
+
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "plugins": ["jest"],
+      "rules": {
+        "max-statements": 0
+      }
+    }
+  ]
+
+}

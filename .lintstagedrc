@@ -1,0 +1,12 @@
+{
+  "*.js": [
+    "eslint --fix --ignore-path .gitignore \"**/*.js\"",
+    "prettier --ignore-path .gitignore --write \"**/*.js\"",
+    "cross-env CI=true npm run test --  --bail --findRelatedTests",
+    "git add"
+  ],
+  "*.{json,md,yml}": [
+    "prettier --ignore-path .gitignore --write \"**/*.{json,md,yml}\"",
+    "git add"
+  ]
+}
