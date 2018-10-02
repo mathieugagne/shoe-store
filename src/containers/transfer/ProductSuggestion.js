@@ -8,7 +8,6 @@ import { layoutHorizontal, layoutFlex } from '../../style/flex-layout';
 
 const ShoeNameContent = styled.div `
     ${layoutFlex};
-
     font-weight:600;
 `;
 
@@ -19,6 +18,7 @@ const ShoeName = styled.div `
     margin:2px;
     border: 2px solid #36304a;
     color: #36304a;
+    cursor:pointer;
 
     ${props => props.shoeSelected && css`
         border: 2px solid #FF9800;
