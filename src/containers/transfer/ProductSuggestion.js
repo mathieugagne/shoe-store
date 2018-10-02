@@ -4,24 +4,16 @@ import styled, {css} from 'styled-components';
 import { connect } from 'react-redux';
 import { shoeTransferSelected, inventoryTransferValidity } from '../../actions';
 import InventoryLevelColor from '../../components/InventoryLevelColor';
+import { layoutHorizontal, layoutFlex } from '../../style/flex-layout';
 
 const ShoeNameContent = styled.div `
-    -ms-flex: 1 1 0.000000001px;
-    -webkit-flex: 1;
-    flex: 1;
-    -webkit-flex-basis: 0.000000001px;
-    flex-basis: 0.000000001px;
+    ${layoutFlex};
 
     font-weight:600;
 `;
 
 const ShoeName = styled.div `
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -ms-flex-direction: row;
-    -webkit-flex-direction: row;
-    flex-direction: row;
+    ${layoutHorizontal};
     
     padding:5px;
     margin:2px;

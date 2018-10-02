@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../aldo_group_logo.svg';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { layoutVertical } from '../style/flex-layout';
 
 const HeaderStyled = styled.div`
     width: 100%;
@@ -11,15 +12,7 @@ const HeaderStyled = styled.div`
     border-bottom:1px solid #dcdcdc;
     margin-bottom:5px;
 
-    /* layout */
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    /* layout vertical */
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
+    ${layoutVertical};
 `;
 
 const StyledLink = styled(Link)`

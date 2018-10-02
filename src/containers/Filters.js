@@ -5,18 +5,11 @@ import * as types from '../constants/ActionTypes';
 import { changeStatVisibilityFilter, changeNameVisibilityFilter } from '../actions';
 import styled from 'styled-components';
 import { Option, Select } from '../components/Combobox';
+import { layoutHorizontal } from '../style/flex-layout';
 
 const FiltersStyled = styled.div`
     margin-top: 40px;
-    /* layout */
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    /* layout horizontal */
-    -ms-flex-direction: row;
-    -webkit-flex-direction: row;
-    flex-direction: row;
+    ${layoutHorizontal};
 `;
 
 const FilterTitle = styled.div `

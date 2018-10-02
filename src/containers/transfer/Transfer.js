@@ -4,26 +4,15 @@ import { connect } from 'react-redux';
 import TransferSource from './TransferSource';
 import styled from 'styled-components';
 import {doTransfer, quantityChanged} from '../../actions';
+import { layoutHorizontal, layoutWrap, layoutVertical } from '../../style/flex-layout';
 
 const TransferStyled = styled.div`
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -ms-flex-direction: row;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    ${layoutHorizontal};
+    ${layoutWrap};
 `;
 
 const QuantityInputGroup = styled.div`
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
+    ${layoutVertical};
     padding: 5px;
 `;
 

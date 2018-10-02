@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import StoreCombobox from '../../components/StoreCombobox';
+import Combobox from '../../components/Combobox';
 import ProductSuggestion from './ProductSuggestion';
 import { storeTransferSelected } from '../../actions';
 
@@ -22,7 +22,7 @@ class Transfer extends React.Component {
         const { storeTransferSelected, shopsName, type, title, comboPlaceholder } = this.props;
         return (
             <TransferSourceStyled>
-                <StoreCombobox comboPlaceholder={comboPlaceholder} onChange={(e) => storeTransferSelected({ name: e.currentTarget.value, type: type })} combotitle={title} values={shopsName} />
+                <Combobox comboPlaceholder={comboPlaceholder} onChange={(e) => storeTransferSelected({ name: e.currentTarget.value, type: type })} combotitle={title} values={shopsName} />
                 <ProductSuggestion type={type}/>
             </TransferSourceStyled>
         );

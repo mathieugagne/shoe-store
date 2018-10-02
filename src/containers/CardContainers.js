@@ -7,29 +7,14 @@ import * as types from '../constants/ActionTypes';
 import { changeStatVisibilityFilter } from '../actions';
 
 import StockCard from '../components/StockCard';
+import { layoutHorizontal, layoutWrap, layoutAroundJustified } from '../style/flex-layout';
 
 const CardContainersStyled = styled.div`
     width: 100%;
 
-    /* layout */
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    /* layout horizontal */
-    -ms-flex-direction: row;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-
-    /* layout around justified */
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-
-    /* layout wrap */
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    ${layoutHorizontal};
+    ${layoutAroundJustified};
+    ${layoutWrap};
 `;
 
 const propTypes = {
