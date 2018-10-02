@@ -1,5 +1,66 @@
 # Shoe Store
 
+## My work
+
+#### Installation
+
+```js
+$ npm install
+
+//web socket need to be started first
+$ websocketd --port=8080 ruby inventory.rb
+
+$npm start
+```
+
+This application is made with 
+- React and Redux.
+- A simple use of React-router
+- Styled-components library for the styling.
+
+The application template was created with *create-react-app* and is not ejected.
+
+### What the app do
+
+First you have the "dashboard" view, which is not very stylish and don't look like a real dashboard, but is functionnal and meet the acceptance criteria. This will be refresh on each update. 
+
+All the app is based on three general state. 
+- In stock (> 10) (blue)
+- Low On Stock (<=10) (yellow)
+- No stock (=0) (red)
+I also used a color to indentify the category. This is useful to see faster the current level of the product inventory.
+
+There is three block on top of the dashboard that are used to show that basic indication about the inventory. 
+- The first one indicates the number of product with more than 10 pieces in the inventory.
+- The second one indicates the number of product with less or equal to 10 pieces in the inventory.
+- The third one indicates the number of product that don't have any pieces in the inventory (=0).
+
+Those three tiles can be clicked, and will filtered both table below.
+
+- The first table lists all the store with a resume of the products inventory following the general state I mention earlier.
+- The second table lists all the products with the quantity left. 
+
+Those table can be filtered by the store name or by the general state.
+
+The second view is called "transfer", because this view is used to transfer product between store.
+Currently, there is no server listening to receive a request, so everything is happening on the client side.
+This view will allow you to : 
+- Select a store from where you move a product.
+- Select a store where the product will be moved.
+- Choose the product
+- Enter the required quantity
+- Apply the transfer
+
+This functionnality is created in the optic to equalize the product quantity between all the stores.
+So you will only have the product with a low inventory listed under the destination, and you will have the matching product on the other side if the inventory is enough.
+
+
+------------------------
+------------------------
+------------------------
+
+
+
 ## Synopsis
 
 Aldo Shoes is having a huge flash sale online. You provide support to the inventory department. They want to react real-time to various inventory problems as they arise.
