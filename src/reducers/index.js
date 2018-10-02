@@ -43,33 +43,89 @@ const inventory = (state = {}, action) => {
             };
         
         case types.WEBSOCKET_INVENTORY_CHANGE:
-            let shopsStatsCopy = Object.assign({}, state.shopsStats);
-            let aldoShop = state.shops.map(shop => {
-                let inventoryUpdate = false;
-                let shopCopy = Object.assign({}, shop);
-                let shopStatsCopy = Object.assign({}, shop.stats);
-                if (shopCopy.name === action.entry.store) {
-                    shopCopy.products = shopCopy.products.map(product => {
-                        let productCopy = Object.assign({}, product);
-                        if (productCopy.name === action.entry.model) {
-                            productCopy.inventory = action.entry.inventory;
-                            inventoryUpdate = true;
-                        }
-                        return productCopy;
-                    });
+            return alternInventory(state, [{
+                store: action.entry.store,
+                model: action.entry.model,
+                inventory: action.entry.inventory,
+                isNewInventory: true
+            }]);
+        case types.DO_TRANSFER:
+            return alternInventory(state, [{
+                store: action.transfer.from,
+                model: action.transfer.product,
+                inventory: -1 * action.transfer.quantity,
+                isNewInventory: false
+            },
+            {
+                store: action.transfer.to,
+                model: action.transfer.product,
+                inventory: action.transfer.quantity,
+                isNewInventory: false
+            }]);
+        default:
+            return state;
+    }
+};
+
+const transfer = (state = {
+    storeFrom: "",
+    storeTo: "",
+    shoeModel: "",
+    shoeQuantity: 0,
+    quantityFromOk: false,
+    quantityToOk: false
+}, action) => {
+    switch (action.type) {
+        case types.SET_STORE_FROM_TO:
+            if (action.store.type === "from") {
+                return {
+                    ...state,
+                    ...{ storeFrom: action.store.name }
                 }
-
-                //refresh ShopsStats
-                if (inventoryUpdate) {
-                    const newStats = getShopStats(shopCopy);
-                    updateShopsStats(shopStatsCopy, newStats, shopsStatsCopy);
-                    shopCopy.stats = newStats;
-                }               
-                
-                return shopCopy;
-            });
-
-            return { shops: aldoShop, shopsStats : shopsStatsCopy};
+            } else {
+                return {
+                    ...state,
+                    ...{ storeTo: action.store.name }
+                }
+            }
+        case types.SET_SHOE_FROM_TO:
+            return {
+                ...state,
+                ...{
+                    shoeModel: action.shoeModel
+                }
+            }
+        case types.SET_QUANTITY:
+            return {
+                ...state,
+                ...{
+                    shoeQuantity: action.quantity
+                }
+            }
+        case types.SET_TRANSFER_VALIDITY:
+             if (action.transfer.type === "from") {
+                return {
+                    ...state,
+                    ...{ quantityFromOk: action.transfer.isValid }
+                }
+            } else {
+                return {
+                    ...state,
+                    ...{ quantityToOk: action.transfer.isValid }
+                }
+            }
+        case types.TRANSFER_RESET:
+            return {
+                ...state,
+                ...{
+                    storeFrom: "",
+                    storeTo: "",
+                    shoeModel: "",
+                    shoeQuantity: 0,
+                    quantityFromOk: false,
+                    quantityToOk: false
+                }
+            }
         default:
             return state;
     }
@@ -77,8 +133,61 @@ const inventory = (state = {}, action) => {
 
 export default combineReducers({
     inventory,
-    visibilityFilter
+    visibilityFilter,
+    transfer
 });
+
+/**
+ * 
+ * @param {Object} state The inventory state
+ * @param {Array} entries array of inventory to edit.
+ *                      {
+ *                        store,
+ *                        model,
+ *                        inventory,
+ *                        isNewInventory
+ *                      }
+ */
+const alternInventory = (state, entries) => {
+    let shopsStatsCopy = Object.assign({}, state.shopsStats);
+    let aldoShop = state.shops.map(shop => {
+        let inventoryUpdate = false;
+        let shopCopy = Object.assign({}, shop);
+        let shopStatsCopy = Object.assign({}, shop.stats);
+       
+        entries.forEach((entry) => {
+           
+            if (shopCopy.name === entry.store) {
+                shopCopy.products = shopCopy.products.map(product => {
+                    let productCopy = Object.assign({}, product);
+                    if (productCopy.name === entry.model) {
+                        if (entry.isNewInventory) {
+                            productCopy.inventory = entry.inventory;
+                        } else {
+                            productCopy.inventory = productCopy.inventory + entry.inventory < 0 ? 0 : productCopy.inventory + entry.inventory;
+                        }
+                        inventoryUpdate = true;
+                    }
+                    return productCopy;
+                });
+            }
+
+            //refresh ShopsStats
+            if (inventoryUpdate) {
+                const newStats = getShopStats(shopCopy);
+                updateShopsStats(shopStatsCopy, newStats, shopsStatsCopy);
+                shopCopy.stats = newStats;
+            }
+        });
+
+        return shopCopy;
+
+    });
+    return {
+        shops: aldoShop,
+        shopsStats: shopsStatsCopy
+    };
+}
 
 
 /**

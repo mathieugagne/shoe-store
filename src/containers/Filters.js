@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import * as types from '../constants/ActionTypes';
 import { changeStatVisibilityFilter, changeNameVisibilityFilter } from '../actions';
 import styled from 'styled-components';
+import { Option, Select } from '../components/Combobox';
 
 const FiltersStyled = styled.div`
     margin-top: 40px;
@@ -18,28 +19,11 @@ const FiltersStyled = styled.div`
     flex-direction: row;
 `;
 
-const Select = styled.select `
-    height: 40px;
-    margin: auto 0 auto 10px;
-    background-color: #36304a;
-    color: #fff;
-    border: none;
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-`;
-
-const Option = styled.option `
-    background-color: whitesmoke;
-    border: none;
-    color: grey;
-`;
-
 const FilterTitle = styled.div `
     margin-top: auto;
     margin-bottom: auto;
     font-size:25px;
 `;
-
 
 const propTypes = {
     shopsName: PropTypes.arrayOf(PropTypes.string),

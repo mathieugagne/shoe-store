@@ -1,22 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { TbodyTr } from './Table';
+import InventoryLevelColor from './InventoryLevelColor';
 
-const InventoryLevelColor = styled.div`
-    width: 15px;
-    height: 15px;
-    border-radius: 25px;
-    background-color: ${ props => {
-        if (props.inventory > 10) {
-            return '#03A9F4';
-        } else if (props.inventory <= 10 && props.inventory > 0) {
-            return '#FF9800';
-        } else if (props.inventory === 0) {
-            return '#F44336';
-        }
-    }};
-`;
 
 const propTypes = {
     shopName: PropTypes.string.isRequired,

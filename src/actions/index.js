@@ -8,7 +8,7 @@ const initStore = shops => ({
 
 export const getAllShops = () => dispatch => {
     db.getAllShopsValue(shops => {
-        dispatch(initStore(shops))
+        dispatch(initStore(shops));
     });
 };
 
@@ -19,7 +19,7 @@ export const setFilterStoreStat = (filter) => ({
 });
 
 export const changeStatVisibilityFilter = filter => dispatch => {
-    dispatch(setFilterStoreStat(filter))
+    dispatch(setFilterStoreStat(filter));
 };
 
 export const setFilterStoreName = (filter) => ({
@@ -28,5 +28,71 @@ export const setFilterStoreName = (filter) => ({
 });
 
 export const changeNameVisibilityFilter = filter => dispatch => {
-    dispatch(setFilterStoreName(filter))
+    dispatch(setFilterStoreName(filter));
 };
+
+//Transfer
+
+/**
+ * @param {Object} store will contain {name,type}.
+ */
+export const setTransferStore = (store) => ({
+    type: types.SET_STORE_FROM_TO,
+    store
+});
+
+export const storeTransferSelected = store => dispatch => {
+    dispatch(setTransferStore(store));
+};
+
+/**
+ * @param {Object} shoeModel will contain {name}.
+ */
+export const setTransferShoe = (shoeModel) => ({
+    type: types.SET_SHOE_FROM_TO,
+    shoeModel
+});
+
+export const shoeTransferSelected = shoeModel => dispatch => {
+    dispatch(setTransferShoe(shoeModel));
+};
+
+/**
+ * @param {Object} transfer will contain {isValid,type}.
+ */
+export const setTransferValidity = (transfer) => ({
+    type: types.SET_TRANSFER_VALIDITY,
+    transfer
+});
+
+export const inventoryTransferValidity = transfer => dispatch => {
+    dispatch(setTransferValidity(transfer));
+};
+
+export const setQuantity = (quantity) => ({
+    type: types.SET_QUANTITY,
+    quantity
+});
+
+export const quantityChanged = quantity => dispatch => {
+    dispatch(setQuantity(quantity));
+};
+
+/**
+ * @param {Object} transfer will contain {isValid,type}.
+ */
+export const executeTransfer = (transfer) => ({
+    type: types.DO_TRANSFER,
+    transfer
+});
+
+export const resetTransferState = () => ({
+    type: types.TRANSFER_RESET
+});
+
+export const doTransfer = transfer => dispatch => {
+    dispatch(executeTransfer(transfer)).then(() => {
+        dispatch(resetTransferState());
+    });
+};
+
