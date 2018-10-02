@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose} from 'redux';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom'
 
 import App from './App';
 import reducer from './reducers';
@@ -18,9 +17,7 @@ store.dispatch(getAllShops());
 
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <App />
     </Provider>,
     document.getElementById('root')
 );

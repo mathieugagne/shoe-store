@@ -26,7 +26,7 @@ class App extends Component {
                         <AppBody>
                             <Switch>
                                 <Route exact path='/' component={Dashboard}/>
-                                    <Route path='/transfer' component={Transfer} />
+                                <Route path='/transfer' component={Transfer} />
                             </Switch>
                         </AppBody>
                     </div>
