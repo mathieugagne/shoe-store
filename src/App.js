@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, BrowserRouter as Router} from 'react-router-dom'
 
 import Header from './components/Header';
 import Dashboard from './containers/Dashboard';
@@ -20,13 +20,17 @@ class App extends Component {
     render() {
         return (
             <AppStyled>
-                <Header />  
-                <AppBody>
-                    <Switch>
-                        <Route exact path='/' component={Dashboard}/>
-                        <Route path='/transfer' component={Transfer}/>
-                    </Switch>
-                </AppBody>
+                <Router>
+                    <div>
+                        <Header/>  
+                        <AppBody>
+                            <Switch>
+                                <Route exact path='/' component={Dashboard}/>
+                                    <Route path='/transfer' component={Transfer} />
+                            </Switch>
+                        </AppBody>
+                    </div>
+                </Router>
             </AppStyled>
         );
     }
