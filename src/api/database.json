@@ -16,19 +16,19 @@
             },            
             {
                 "name": "BUTAUD",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "SCHOOLER",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "SODANO",
-                "inventory": 50
+                "inventory": 5
             },
             {
                 "name": "MCTYRE",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "CADAUDIA",
@@ -36,35 +36,35 @@
             },
             {
                 "name": "RASIEN",
-                "inventory": 50
+                "inventory": 6
             },
             {
                 "name": "WUMA",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "GRELIDIEN",
-                "inventory": 50
+                "inventory": 18
             },
             {
                 "name": "CADEVEN",
-                "inventory": 50
+                "inventory": 66
             },
             {
                 "name": "SEVIDE",
-                "inventory": 50
+                "inventory": 22
             },
             {
                 "name": "ELOILLAN",
-                "inventory": 50
+                "inventory": 1
             }, 
             {
                 "name": "BEODA",
-                "inventory": 50
+                "inventory": 0
             }, 
             {
                 "name": "VENDOGNUS",
-                "inventory": 50
+                "inventory": 25
             }, 
             {
                 "name": "ABOEN",
@@ -72,15 +72,15 @@
             },
             {
                 "name": "ALALIWEN",
-                "inventory": 50
+                "inventory": 12
             }, 
             {
                 "name": "GREG",
-                "inventory": 50
+                "inventory": 11
             }, 
             {
                 "name": "BOZZA",
-                "inventory": 50
+                "inventory": 10
             }
         ]
     },
@@ -89,31 +89,31 @@
         "products": [
             {
                 "name": "ADERI",
-                "inventory": 12
+                "inventory": 0
             },
             {
                 "name": "MIRIRA",
-                "inventory": 2
+                "inventory": 26
             },
             {
                 "name": "CAELAN",
-                "inventory": 5
+                "inventory": 56
             },
             {
                 "name": "BUTAUD",
-                "inventory": 50
+                "inventory": 15
             },
             {
                 "name": "SCHOOLER",
-                "inventory": 50
+                "inventory": 5
             },
             {
                 "name": "SODANO",
-                "inventory": 50
+                "inventory": 10
             },
             {
                 "name": "MCTYRE",
-                "inventory": 50
+                "inventory": 18
             },
             {
                 "name": "CADAUDIA",
@@ -121,35 +121,35 @@
             },
             {
                 "name": "RASIEN",
-                "inventory": 50
+                "inventory": 90
             },
             {
                 "name": "WUMA",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "GRELIDIEN",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "CADEVEN",
-                "inventory": 50
+                "inventory": 3
             },
             {
                 "name": "SEVIDE",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "ELOILLAN",
-                "inventory": 50
+                "inventory": 19
             },
             {
                 "name": "BEODA",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "VENDOGNUS",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "ABOEN",
@@ -157,11 +157,11 @@
             },
             {
                 "name": "ALALIWEN",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "GREG",
-                "inventory": 50
+                "inventory": 8
             },
             {
                 "name": "BOZZA",
@@ -191,7 +191,7 @@
             },
             {
                 "name": "SCHOOLER",
-                "inventory": 50
+                "inventory": 22
             },
             {
                 "name": "SODANO",
@@ -199,59 +199,59 @@
             },
             {
                 "name": "MCTYRE",
-                "inventory": 50
+                "inventory": 19
             },
             {
                 "name": "CADAUDIA",
-                "inventory": 50
+                "inventory": 5
             },
             {
                 "name": "RASIEN",
-                "inventory": 50
+                "inventory": 60
             },
             {
                 "name": "WUMA",
-                "inventory": 50
+                "inventory": 11
             },
             {
                 "name": "GRELIDIEN",
-                "inventory": 50
+                "inventory": 11
             },
             {
                 "name": "CADEVEN",
-                "inventory": 50
+                "inventory": 90
             },
             {
                 "name": "SEVIDE",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "ELOILLAN",
-                "inventory": 50
+                "inventory": 12
             }, 
             {
                 "name": "BEODA",
-                "inventory": 50
+                "inventory": 11
             }, 
             {
                 "name": "VENDOGNUS",
-                "inventory": 50
+                "inventory": 0
             }, 
             {
                 "name": "ABOEN",
-                "inventory": 50
+                "inventory": 9
             },
             {
                 "name": "ALALIWEN",
-                "inventory": 50
+                "inventory": 17
             }, 
             {
                 "name": "GREG",
-                "inventory": 50
+                "inventory": 19
             }, 
             {
                 "name": "BOZZA",
-                "inventory": 50
+                "inventory": 33
             }
         ]
        
@@ -261,83 +261,83 @@
         "products": [
             {
                 "name": "ADERI",
-                "inventory": 12
+                "inventory": 14
             },
             {
                 "name": "MIRIRA",
-                "inventory": 2
+                "inventory": 63
             },
             {
                 "name": "CAELAN",
-                "inventory": 5
+                "inventory": 12
             },            
             {
                 "name": "BUTAUD",
-                "inventory": 50
+                "inventory": 25
             },
             {
                 "name": "SCHOOLER",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "SODANO",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "MCTYRE",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "CADAUDIA",
-                "inventory": 50
+                "inventory": 6
             },
             {
                 "name": "RASIEN",
-                "inventory": 50
+                "inventory": 9
             },
             {
                 "name": "WUMA",
-                "inventory": 50
+                "inventory": 1
             },
             {
                 "name": "GRELIDIEN",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "CADEVEN",
-                "inventory": 50
+                "inventory": 16
             },
             {
                 "name": "SEVIDE",
-                "inventory": 50
+                "inventory": 2
             },
             {
                 "name": "ELOILLAN",
-                "inventory": 50
+                "inventory": 55
             }, 
             {
                 "name": "BEODA",
-                "inventory": 50
+                "inventory": 5
             }, 
             {
                 "name": "VENDOGNUS",
-                "inventory": 50
+                "inventory": 5
             }, 
             {
                 "name": "ABOEN",
-                "inventory": 50
+                "inventory": 5
             },
             {
                 "name": "ALALIWEN",
-                "inventory": 50
+                "inventory": 15
             }, 
             {
                 "name": "GREG",
-                "inventory": 50
+                "inventory": 16
             }, 
             {
                 "name": "BOZZA",
-                "inventory": 50
+                "inventory": 40
             }
         ]
       
@@ -347,23 +347,23 @@
         "products": [
             {
                 "name": "ADERI",
-                "inventory": 12
+                "inventory": 0
             },
             {
                 "name": "MIRIRA",
-                "inventory": 2
+                "inventory": 11
             },
             {
                 "name": "CAELAN",
-                "inventory": 0
+                "inventory": 11
             },            
             {
                 "name": "BUTAUD",
-                "inventory": 50
+                "inventory": 11
             },
             {
                 "name": "SCHOOLER",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "SODANO",
@@ -371,39 +371,39 @@
             },
             {
                 "name": "MCTYRE",
-                "inventory": 50
+                "inventory": 19
             },
             {
                 "name": "CADAUDIA",
-                "inventory": 50
+                "inventory": 18
             },
             {
                 "name": "RASIEN",
-                "inventory": 50
+                "inventory": 17
             },
             {
                 "name": "WUMA",
-                "inventory": 50
+                "inventory": 5
             },
             {
                 "name": "GRELIDIEN",
-                "inventory": 50
+                "inventory": 5
             },
             {
                 "name": "CADEVEN",
-                "inventory": 50
+                "inventory": 2
             },
             {
                 "name": "SEVIDE",
-                "inventory": 50
+                "inventory": 17
             },
             {
                 "name": "ELOILLAN",
-                "inventory": 50
+                "inventory": 20
             }, 
             {
                 "name": "BEODA",
-                "inventory": 50
+                "inventory": 22
             }, 
             {
                 "name": "VENDOGNUS",
@@ -411,19 +411,19 @@
             }, 
             {
                 "name": "ABOEN",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "ALALIWEN",
-                "inventory": 50
+                "inventory": 3
             }, 
             {
                 "name": "GREG",
-                "inventory": 50
+                "inventory": 18
             }, 
             {
                 "name": "BOZZA",
-                "inventory": 50
+                "inventory": 17
             }
         ]
     },
@@ -432,83 +432,83 @@
         "products": [
             {
                 "name": "ADERI",
-                "inventory": 12
+                "inventory": 22
             },
             {
                 "name": "MIRIRA",
-                "inventory": 2
+                "inventory": 0
             },
             {
                 "name": "CAELAN",
-                "inventory": 0
+                "inventory": 18
             },            
             {
                 "name": "BUTAUD",
-                "inventory": 50
+                "inventory": 54
             },
             {
                 "name": "SCHOOLER",
-                "inventory": 50
+                "inventory": 14
             },
             {
                 "name": "SODANO",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "MCTYRE",
-                "inventory": 50
+                "inventory": 13
             },
             {
                 "name": "CADAUDIA",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "RASIEN",
-                "inventory": 50
+                "inventory": 2
             },
             {
                 "name": "WUMA",
-                "inventory": 50
+                "inventory": 8
             },
             {
                 "name": "GRELIDIEN",
-                "inventory": 50
+                "inventory": 10
             },
             {
                 "name": "CADEVEN",
-                "inventory": 50
+                "inventory": 11
             },
             {
                 "name": "SEVIDE",
-                "inventory": 50
+                "inventory": 36
             },
             {
                 "name": "ELOILLAN",
-                "inventory": 50
+                "inventory": 4
             }, 
             {
                 "name": "BEODA",
-                "inventory": 50
+                "inventory": 15
             }, 
             {
                 "name": "VENDOGNUS",
-                "inventory": 50
+                "inventory":16
             }, 
             {
                 "name": "ABOEN",
-                "inventory": 50
+                "inventory": 18
             },
             {
                 "name": "ALALIWEN",
-                "inventory": 50
+                "inventory": 19
             }, 
             {
                 "name": "GREG",
-                "inventory": 50
+                "inventory": 17
             }, 
             {
                 "name": "BOZZA",
-                "inventory": 50
+                "inventory": 3
             }
         ]
     },
@@ -517,63 +517,63 @@
         "products": [
             {
                 "name": "ADERI",
-                "inventory": 12
+                "inventory": 17
             },
             {
                 "name": "MIRIRA",
-                "inventory": 2
+                "inventory": 5
             },
             {
                 "name": "CAELAN",
-                "inventory": 0
+                "inventory": 6
             },            
             {
                 "name": "BUTAUD",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "SCHOOLER",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "SODANO",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "MCTYRE",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "CADAUDIA",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "RASIEN",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "WUMA",
-                "inventory": 50
+                "inventory": 5
             },
             {
                 "name": "GRELIDIEN",
-                "inventory": 50
+                "inventory": 10
             },
             {
                 "name": "CADEVEN",
-                "inventory": 50
+                "inventory": 1
             },
             {
                 "name": "SEVIDE",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "ELOILLAN",
-                "inventory": 50
+                "inventory": 18
             }, 
             {
                 "name": "BEODA",
-                "inventory": 50
+                "inventory": 11
             }, 
             {
                 "name": "VENDOGNUS",
@@ -581,15 +581,15 @@
             }, 
             {
                 "name": "ABOEN",
-                "inventory": 50
+                "inventory": 53
             },
             {
                 "name": "ALALIWEN",
-                "inventory": 50
-            }, 
+                "inventory": 23
+            },
             {
                 "name": "GREG",
-                "inventory": 50
+                "inventory": 28
             }, 
             {
                 "name": "BOZZA",
@@ -606,79 +606,79 @@
             },
             {
                 "name": "MIRIRA",
-                "inventory": 2
+                "inventory": 22
             },
             {
                 "name": "CAELAN",
-                "inventory": 0
+                "inventory": 20
             },            
             {
                 "name": "BUTAUD",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "SCHOOLER",
-                "inventory": 50
+                "inventory": 13
             },
             {
                 "name": "SODANO",
-                "inventory": 50
+                "inventory": 55
             },
             {
                 "name": "MCTYRE",
-                "inventory": 50
+                "inventory": 52
             },
             {
                 "name": "CADAUDIA",
-                "inventory": 50
+                "inventory": 48
             },
             {
                 "name": "RASIEN",
-                "inventory": 50
+                "inventory": 19
             },
             {
                 "name": "WUMA",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "GRELIDIEN",
-                "inventory": 50
+                "inventory": 10
             },
             {
                 "name": "CADEVEN",
-                "inventory": 50
+                "inventory": 5
             },
             {
                 "name": "SEVIDE",
-                "inventory": 50
+                "inventory": 8
             },
             {
                 "name": "ELOILLAN",
-                "inventory": 50
+                "inventory": 42
             }, 
             {
                 "name": "BEODA",
-                "inventory": 50
+                "inventory": 12
             }, 
             {
                 "name": "VENDOGNUS",
-                "inventory": 50
+                "inventory": 13
             }, 
             {
                 "name": "ABOEN",
-                "inventory": 50
+                "inventory": 20
             },
             {
                 "name": "ALALIWEN",
-                "inventory": 50
+                "inventory": 20
             }, 
             {
                 "name": "GREG",
-                "inventory": 50
+                "inventory": 0
             }, 
             {
                 "name": "BOZZA",
-                "inventory": 50
+                "inventory": 12
             }
         ]
     },
@@ -687,63 +687,63 @@
         "products": [
             {
                 "name": "ADERI",
-                "inventory": 12
+                "inventory": 90
             },
             {
                 "name": "MIRIRA",
-                "inventory": 2
+                "inventory": 30
             },
             {
                 "name": "CAELAN",
-                "inventory": 0
+                "inventory": 12
             },            
             {
                 "name": "BUTAUD",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "SCHOOLER",
-                "inventory": 50
+                "inventory": 58
             },
             {
                 "name": "SODANO",
-                "inventory": 50
+                "inventory": 7
             },
             {
                 "name": "MCTYRE",
-                "inventory": 50
+                "inventory": 13
             },
             {
                 "name": "CADAUDIA",
-                "inventory": 50
+                "inventory": 10
             },
             {
                 "name": "RASIEN",
-                "inventory": 50
+                "inventory": 10
             },
             {
                 "name": "WUMA",
-                "inventory": 50
+                "inventory": 12
             },
             {
                 "name": "GRELIDIEN",
-                "inventory": 50
+                "inventory": 0
             },
             {
                 "name": "CADEVEN",
-                "inventory": 50
+                "inventory": 16
             },
             {
                 "name": "SEVIDE",
-                "inventory": 50
+                "inventory": 11
             },
             {
                 "name": "ELOILLAN",
-                "inventory": 50
+                "inventory": 6
             }, 
             {
                 "name": "BEODA",
-                "inventory": 50
+                "inventory": 55
             }, 
             {
                 "name": "VENDOGNUS",
@@ -751,19 +751,19 @@
             }, 
             {
                 "name": "ABOEN",
-                "inventory": 50
+                "inventory": 3
             },
             {
                 "name": "ALALIWEN",
-                "inventory": 50
+                "inventory": 0
             }, 
             {
                 "name": "GREG",
-                "inventory": 50
+                "inventory": 9
             }, 
             {
                 "name": "BOZZA",
-                "inventory": 50
+                "inventory": 12
             }
         ]
     },
