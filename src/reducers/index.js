@@ -1,3 +1,7 @@
+/**
+ * TODO : Global state should be flattenized (use of normalizr?)
+ */
+
 import * as types from '../constants/ActionTypes';
 import { combineReducers } from 'redux';
 
