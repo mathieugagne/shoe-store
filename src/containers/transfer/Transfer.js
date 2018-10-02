@@ -33,11 +33,11 @@ const Input = styled.input `
     padding: 5px;
 `;
 
-const Button = styled.a`
+const Button = styled.button`
     display: inline-block;
     border-radius: 3px;
     width: 7rem;
-    height: 26px;
+    height: 41px;
     padding: 5px;
     background: #36304a;
     color: #ffffff;
@@ -48,6 +48,10 @@ const Button = styled.a`
     font-weight: 600;
 
     &:hover{
+        opacity:0.7;
+    }
+
+    &:disabled{
         opacity:0.7;
     }
 `
