@@ -86,8 +86,9 @@ class ProductSuggestion extends React.Component {
                                 <ShoeName key={type + product.name}
                                     onClick={() => shoeTransferSelected(product.name)}
                                     shoeSelected={shoeModel === product.name}>
-                                    
-                                    {product.name}
+                                    <ShoeNameContent>
+                                        {product.name}
+                                    </ShoeNameContent>
                                     <InventoryLevelColor inventory={product.inventory}>{product.inventory}</InventoryLevelColor>
                                 </ShoeName>
                             )
