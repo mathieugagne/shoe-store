@@ -91,8 +91,6 @@ export const resetTransferState = () => ({
 });
 
 export const doTransfer = transfer => dispatch => {
-    dispatch(executeTransfer(transfer)).then(() => {
-        dispatch(resetTransferState());
-    });
+    dispatch(executeTransfer(transfer));
 };
 
