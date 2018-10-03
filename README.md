@@ -1,5 +1,9 @@
 # Shoe Store
 
+# Prototype
+
+You can access a small prototype here: https://www.figma.com/proto/YmEwHOQZFZVEQWo1edkUjrL8 The design reuse some element of the ALDO Website.
+
 ## Synopsis
 
 Aldo Shoes is having a huge flash sale online. You provide support to the inventory department. They want to react real-time to various inventory problems as they arise.
