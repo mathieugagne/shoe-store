@@ -14,6 +14,22 @@ is currently implementing a macro. (https://github.com/styled-components/styled-
 start using it because it add some nice features
 (https://www.styled-components.com/docs/basics#installation)
 
+# API
+
+Do not forget to seed by typing this in the terminal
+
+```
+npm run db:seed
+```
+
+For the API to run you need to execute the http server, the websocket listener and the websocket emitter like this:
+
+```
+npm run start:http
+npm run start:ws
+npm run start:aldo
+```
+
 ## Synopsis
 
 Aldo Shoes is having a huge flash sale online. You provide support to the inventory department. They want to react real-time to various inventory problems as they arise.
