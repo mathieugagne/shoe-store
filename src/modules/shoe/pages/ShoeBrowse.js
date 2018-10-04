@@ -1,5 +1,5 @@
 import React from 'react';
-import injectBreadcrumb from '../../app/hocs/withBreadcrumb';
+import injectBreadcrumb from '../../app/hocs/injectBreadcrumb';
 
 function ShoeBrowse() {
   return <div>Browse shoes page</div>;

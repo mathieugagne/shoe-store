@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Provider as ReduxProvider } from 'react-redux';
 import history from './libs/history';
 import GlobalStyle from './GlobalStyle';
+import InitialLoading from './InitialLoading';
 import Routes from './Routes';
 import { getStore } from './store';
 import theme from './theme';
@@ -14,6 +15,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
+          <InitialLoading />
           <Router history={history}>
             <Routes />
           </Router>

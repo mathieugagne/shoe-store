@@ -1,23 +1,35 @@
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import { createEpicMiddleware } from 'redux-observable';
+import compose from 'recompose/compose';
 import rootReducer from './rootReducer';
+import rootEpics from './rootEpics';
 
 let reduxStore;
 
-/* eslint-disable no-underscore-dangle, import/prefer-default-export */
+/* eslint-disable no-underscore-dangle */
+const storeCompose =
+  (typeof window !== 'undefined' &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
+  compose;
+/* eslint-enable no-underscore-dangle */
+
+// eslint-disable-next-line import/prefer-default-export
 export const getStore = (forceCreationOfNewStore = false) => {
   if (!reduxStore || forceCreationOfNewStore) {
+    const epicMiddleware = createEpicMiddleware();
+
     reduxStore = createStore(
       rootReducer,
       /**
        * Browser tool to visualize the Redux store & actions
        * @see https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
        */
-      typeof window !== 'undefined' &&
-        window.__REDUX_DEVTOOLS_EXTENSION__ &&
-        window.__REDUX_DEVTOOLS_EXTENSION__(),
+      storeCompose(applyMiddleware(epicMiddleware)),
     );
+
+    epicMiddleware.run(rootEpics);
   }
 
   return reduxStore;
 };
-/* eslint-enable */

@@ -1,5 +1,5 @@
 import React from 'react';
-import injectBreadcrumb from '../hocs/withBreadcrumb';
+import injectBreadcrumb from '../hocs/injectBreadcrumb';
 
 function Error404() {
   return <div>404</div>;

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { appSetBreadcrumb } from '../state/appActions';
 
 const injectBreadcrumb = breadcrumb => WrappedComponent => {
-  class WithBreadcrumb extends Component {
+  class InjectBreadcrumb extends Component {
     componentDidMount() {
       const { setBreadcrumb } = this.props;
 
@@ -18,7 +18,7 @@ const injectBreadcrumb = breadcrumb => WrappedComponent => {
     }
   }
 
-  WithBreadcrumb.propTypes = {
+  InjectBreadcrumb.propTypes = {
     setBreadcrumb: PropTypes.func.isRequired,
   };
 
@@ -37,7 +37,7 @@ const injectBreadcrumb = breadcrumb => WrappedComponent => {
   return connect(
     null,
     mapDispatch,
-  )(WithBreadcrumb);
+  )(InjectBreadcrumb);
 };
 
 export default injectBreadcrumb;

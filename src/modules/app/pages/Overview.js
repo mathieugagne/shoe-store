@@ -1,5 +1,5 @@
 import React from 'react';
-import injectBreadcrumb from '../hocs/withBreadcrumb';
+import injectBreadcrumb from '../hocs/injectBreadcrumb';
 
 function Overview() {
   return <div>Overview page</div>;

@@ -1,5 +1,5 @@
 import React from 'react';
-import injectBreadcrumb from '../../app/hocs/withBreadcrumb';
+import injectBreadcrumb from '../../app/hocs/injectBreadcrumb';
 
 function NotificationBrowse() {
   return <div>Browse notifications page</div>;
