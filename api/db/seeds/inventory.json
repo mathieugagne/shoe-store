@@ -1,0 +1,822 @@
+{
+  "ALDO Auburn Mall": {
+    "ABOEN": {
+      "quantity": 94,
+      "sold": 8
+    },
+    "ADERI": {
+      "quantity": 62,
+      "sold": 13
+    },
+    "ALALIWEN": {
+      "quantity": 73,
+      "sold": 25
+    },
+    "BEODA": {
+      "quantity": 62,
+      "sold": 36
+    },
+    "BOZZA": {
+      "quantity": 42,
+      "sold": 37
+    },
+    "BUTAUD": {
+      "quantity": 38,
+      "sold": 34
+    },
+    "CADAUDIA": {
+      "quantity": 6,
+      "sold": 45
+    },
+    "CADEVEN": {
+      "quantity": 43,
+      "sold": 18
+    },
+    "CAELAN": {
+      "quantity": 8,
+      "sold": 22
+    },
+    "ELOILLAN": {
+      "quantity": 38,
+      "sold": 9
+    },
+    "GREG": {
+      "quantity": 51,
+      "sold": 37
+    },
+    "GRELIDIEN": {
+      "quantity": 51,
+      "sold": 26
+    },
+    "MCTYRE": {
+      "quantity": 98,
+      "sold": 41
+    },
+    "MIRIRA": {
+      "quantity": 36,
+      "sold": 50
+    },
+    "RASIEN": {
+      "quantity": 34,
+      "sold": 27
+    },
+    "SCHOOLER": {
+      "quantity": 59,
+      "sold": 3
+    },
+    "SEVIDE": {
+      "quantity": 87,
+      "sold": 48
+    },
+    "SODANO": {
+      "quantity": 81,
+      "sold": 30
+    },
+    "VENDOGNUS": {
+      "quantity": 42,
+      "sold": 6
+    },
+    "WUMA": {
+      "quantity": 98,
+      "sold": 30
+    }
+  },
+  "ALDO Burlington Mall": {
+    "ABOEN": {
+      "quantity": 49,
+      "sold": 49
+    },
+    "ADERI": {
+      "quantity": 5,
+      "sold": 31
+    },
+    "ALALIWEN": {
+      "quantity": 80,
+      "sold": 29
+    },
+    "BEODA": {
+      "quantity": 94,
+      "sold": 18
+    },
+    "BOZZA": {
+      "quantity": 18,
+      "sold": 33
+    },
+    "BUTAUD": {
+      "quantity": 49,
+      "sold": 31
+    },
+    "CADAUDIA": {
+      "quantity": 56,
+      "sold": 13
+    },
+    "CADEVEN": {
+      "quantity": 83,
+      "sold": 20
+    },
+    "CAELAN": {
+      "quantity": 39,
+      "sold": 3
+    },
+    "ELOILLAN": {
+      "quantity": 100,
+      "sold": 19
+    },
+    "GREG": {
+      "quantity": 75,
+      "sold": 19
+    },
+    "GRELIDIEN": {
+      "quantity": 28,
+      "sold": 19
+    },
+    "MCTYRE": {
+      "quantity": 5,
+      "sold": 6
+    },
+    "MIRIRA": {
+      "quantity": 40,
+      "sold": 5
+    },
+    "RASIEN": {
+      "quantity": 83,
+      "sold": 35
+    },
+    "SCHOOLER": {
+      "quantity": 51,
+      "sold": 22
+    },
+    "SEVIDE": {
+      "quantity": 90,
+      "sold": 3
+    },
+    "SODANO": {
+      "quantity": 82,
+      "sold": 7
+    },
+    "VENDOGNUS": {
+      "quantity": 47,
+      "sold": 40
+    },
+    "WUMA": {
+      "quantity": 51,
+      "sold": 21
+    }
+  },
+  "ALDO Centre Eaton": {
+    "ABOEN": {
+      "quantity": 97,
+      "sold": 16
+    },
+    "ADERI": {
+      "quantity": 92,
+      "sold": 45
+    },
+    "ALALIWEN": {
+      "quantity": 32,
+      "sold": 30
+    },
+    "BEODA": {
+      "quantity": 39,
+      "sold": 6
+    },
+    "BOZZA": {
+      "quantity": 14,
+      "sold": 21
+    },
+    "BUTAUD": {
+      "quantity": 33,
+      "sold": 32
+    },
+    "CADAUDIA": {
+      "quantity": 29,
+      "sold": 10
+    },
+    "CADEVEN": {
+      "quantity": 98,
+      "sold": 15
+    },
+    "CAELAN": {
+      "quantity": 31,
+      "sold": 10
+    },
+    "ELOILLAN": {
+      "quantity": 16,
+      "sold": 37
+    },
+    "GREG": {
+      "quantity": 80,
+      "sold": 29
+    },
+    "GRELIDIEN": {
+      "quantity": 20,
+      "sold": 26
+    },
+    "MCTYRE": {
+      "quantity": 4,
+      "sold": 39
+    },
+    "MIRIRA": {
+      "quantity": 44,
+      "sold": 5
+    },
+    "RASIEN": {
+      "quantity": 40,
+      "sold": 1
+    },
+    "SCHOOLER": {
+      "quantity": 78,
+      "sold": 9
+    },
+    "SEVIDE": {
+      "quantity": 65,
+      "sold": 19
+    },
+    "SODANO": {
+      "quantity": 58,
+      "sold": 43
+    },
+    "VENDOGNUS": {
+      "quantity": 5,
+      "sold": 1
+    },
+    "WUMA": {
+      "quantity": 97,
+      "sold": 45
+    }
+  },
+  "ALDO Crossgates Mall": {
+    "ABOEN": {
+      "quantity": 22,
+      "sold": 4
+    },
+    "ADERI": {
+      "quantity": 61,
+      "sold": 35
+    },
+    "ALALIWEN": {
+      "quantity": 10,
+      "sold": 1
+    },
+    "BEODA": {
+      "quantity": 95,
+      "sold": 36
+    },
+    "BOZZA": {
+      "quantity": 50,
+      "sold": 42
+    },
+    "BUTAUD": {
+      "quantity": 49,
+      "sold": 7
+    },
+    "CADAUDIA": {
+      "quantity": 89,
+      "sold": 47
+    },
+    "CADEVEN": {
+      "quantity": 41,
+      "sold": 8
+    },
+    "CAELAN": {
+      "quantity": 35,
+      "sold": 20
+    },
+    "ELOILLAN": {
+      "quantity": 59,
+      "sold": 37
+    },
+    "GREG": {
+      "quantity": 56,
+      "sold": 33
+    },
+    "GRELIDIEN": {
+      "quantity": 10,
+      "sold": 37
+    },
+    "MCTYRE": {
+      "quantity": 63,
+      "sold": 45
+    },
+    "MIRIRA": {
+      "quantity": 28,
+      "sold": 45
+    },
+    "RASIEN": {
+      "quantity": 53,
+      "sold": 30
+    },
+    "SCHOOLER": {
+      "quantity": 39,
+      "sold": 9
+    },
+    "SEVIDE": {
+      "quantity": 85,
+      "sold": 24
+    },
+    "SODANO": {
+      "quantity": 92,
+      "sold": 19
+    },
+    "VENDOGNUS": {
+      "quantity": 45,
+      "sold": 34
+    },
+    "WUMA": {
+      "quantity": 74,
+      "sold": 38
+    }
+  },
+  "ALDO Destiny USA Mall": {
+    "ABOEN": {
+      "quantity": 99,
+      "sold": 6
+    },
+    "ADERI": {
+      "quantity": 97,
+      "sold": 17
+    },
+    "ALALIWEN": {
+      "quantity": 38,
+      "sold": 36
+    },
+    "BEODA": {
+      "quantity": 89,
+      "sold": 24
+    },
+    "BOZZA": {
+      "quantity": 100,
+      "sold": 10
+    },
+    "BUTAUD": {
+      "quantity": 40,
+      "sold": 15
+    },
+    "CADAUDIA": {
+      "quantity": 66,
+      "sold": 6
+    },
+    "CADEVEN": {
+      "quantity": 83,
+      "sold": 24
+    },
+    "CAELAN": {
+      "quantity": 56,
+      "sold": 45
+    },
+    "ELOILLAN": {
+      "quantity": 65,
+      "sold": 25
+    },
+    "GREG": {
+      "quantity": 30,
+      "sold": 13
+    },
+    "GRELIDIEN": {
+      "quantity": 43,
+      "sold": 42
+    },
+    "MCTYRE": {
+      "quantity": 7,
+      "sold": 47
+    },
+    "MIRIRA": {
+      "quantity": 31,
+      "sold": 12
+    },
+    "RASIEN": {
+      "quantity": 75,
+      "sold": 48
+    },
+    "SCHOOLER": {
+      "quantity": 29,
+      "sold": 14
+    },
+    "SEVIDE": {
+      "quantity": 85,
+      "sold": 35
+    },
+    "SODANO": {
+      "quantity": 37,
+      "sold": 8
+    },
+    "VENDOGNUS": {
+      "quantity": 67,
+      "sold": 4
+    },
+    "WUMA": {
+      "quantity": 72,
+      "sold": 16
+    }
+  },
+  "ALDO Holyoke Mall": {
+    "ABOEN": {
+      "quantity": 54,
+      "sold": 10
+    },
+    "ADERI": {
+      "quantity": 59,
+      "sold": 23
+    },
+    "ALALIWEN": {
+      "quantity": 47,
+      "sold": 14
+    },
+    "BEODA": {
+      "quantity": 31,
+      "sold": 22
+    },
+    "BOZZA": {
+      "quantity": 42,
+      "sold": 15
+    },
+    "BUTAUD": {
+      "quantity": 71,
+      "sold": 40
+    },
+    "CADAUDIA": {
+      "quantity": 41,
+      "sold": 15
+    },
+    "CADEVEN": {
+      "quantity": 13,
+      "sold": 12
+    },
+    "CAELAN": {
+      "quantity": 73,
+      "sold": 8
+    },
+    "ELOILLAN": {
+      "quantity": 4,
+      "sold": 39
+    },
+    "GREG": {
+      "quantity": 9,
+      "sold": 50
+    },
+    "GRELIDIEN": {
+      "quantity": 46,
+      "sold": 16
+    },
+    "MCTYRE": {
+      "quantity": 63,
+      "sold": 24
+    },
+    "MIRIRA": {
+      "quantity": 27,
+      "sold": 30
+    },
+    "RASIEN": {
+      "quantity": 48,
+      "sold": 37
+    },
+    "SCHOOLER": {
+      "quantity": 63,
+      "sold": 20
+    },
+    "SEVIDE": {
+      "quantity": 1,
+      "sold": 32
+    },
+    "SODANO": {
+      "quantity": 59,
+      "sold": 10
+    },
+    "VENDOGNUS": {
+      "quantity": 59,
+      "sold": 36
+    },
+    "WUMA": {
+      "quantity": 94,
+      "sold": 46
+    }
+  },
+  "ALDO Maine Mall": {
+    "ABOEN": {
+      "quantity": 60,
+      "sold": 2
+    },
+    "ADERI": {
+      "quantity": 30,
+      "sold": 31
+    },
+    "ALALIWEN": {
+      "quantity": 100,
+      "sold": 30
+    },
+    "BEODA": {
+      "quantity": 66,
+      "sold": 20
+    },
+    "BOZZA": {
+      "quantity": 80,
+      "sold": 32
+    },
+    "BUTAUD": {
+      "quantity": 65,
+      "sold": 17
+    },
+    "CADAUDIA": {
+      "quantity": 100,
+      "sold": 43
+    },
+    "CADEVEN": {
+      "quantity": 31,
+      "sold": 5
+    },
+    "CAELAN": {
+      "quantity": 62,
+      "sold": 20
+    },
+    "ELOILLAN": {
+      "quantity": 26,
+      "sold": 16
+    },
+    "GREG": {
+      "quantity": 72,
+      "sold": 43
+    },
+    "GRELIDIEN": {
+      "quantity": 21,
+      "sold": 40
+    },
+    "MCTYRE": {
+      "quantity": 2,
+      "sold": 48
+    },
+    "MIRIRA": {
+      "quantity": 6,
+      "sold": 22
+    },
+    "RASIEN": {
+      "quantity": 61,
+      "sold": 1
+    },
+    "SCHOOLER": {
+      "quantity": 93,
+      "sold": 41
+    },
+    "SEVIDE": {
+      "quantity": 91,
+      "sold": 43
+    },
+    "SODANO": {
+      "quantity": 21,
+      "sold": 16
+    },
+    "VENDOGNUS": {
+      "quantity": 98,
+      "sold": 10
+    },
+    "WUMA": {
+      "quantity": 62,
+      "sold": 3
+    }
+  },
+  "ALDO Pheasant Lane Mall": {
+    "ABOEN": {
+      "quantity": 46,
+      "sold": 14
+    },
+    "ADERI": {
+      "quantity": 23,
+      "sold": 48
+    },
+    "ALALIWEN": {
+      "quantity": 95,
+      "sold": 6
+    },
+    "BEODA": {
+      "quantity": 96,
+      "sold": 27
+    },
+    "BOZZA": {
+      "quantity": 85,
+      "sold": 48
+    },
+    "BUTAUD": {
+      "quantity": 53,
+      "sold": 20
+    },
+    "CADAUDIA": {
+      "quantity": 86,
+      "sold": 8
+    },
+    "CADEVEN": {
+      "quantity": 12,
+      "sold": 49
+    },
+    "CAELAN": {
+      "quantity": 70,
+      "sold": 9
+    },
+    "ELOILLAN": {
+      "quantity": 44,
+      "sold": 2
+    },
+    "GREG": {
+      "quantity": 4,
+      "sold": 1
+    },
+    "GRELIDIEN": {
+      "quantity": 15,
+      "sold": 11
+    },
+    "MCTYRE": {
+      "quantity": 52,
+      "sold": 48
+    },
+    "MIRIRA": {
+      "quantity": 76,
+      "sold": 18
+    },
+    "RASIEN": {
+      "quantity": 72,
+      "sold": 38
+    },
+    "SCHOOLER": {
+      "quantity": 2,
+      "sold": 30
+    },
+    "SEVIDE": {
+      "quantity": 8,
+      "sold": 28
+    },
+    "SODANO": {
+      "quantity": 42,
+      "sold": 1
+    },
+    "VENDOGNUS": {
+      "quantity": 64,
+      "sold": 42
+    },
+    "WUMA": {
+      "quantity": 99,
+      "sold": 24
+    }
+  },
+  "ALDO Solomon Pond Mall": {
+    "ABOEN": {
+      "quantity": 40,
+      "sold": 28
+    },
+    "ADERI": {
+      "quantity": 12,
+      "sold": 38
+    },
+    "ALALIWEN": {
+      "quantity": 61,
+      "sold": 23
+    },
+    "BEODA": {
+      "quantity": 87,
+      "sold": 1
+    },
+    "BOZZA": {
+      "quantity": 96,
+      "sold": 17
+    },
+    "BUTAUD": {
+      "quantity": 39,
+      "sold": 42
+    },
+    "CADAUDIA": {
+      "quantity": 18,
+      "sold": 42
+    },
+    "CADEVEN": {
+      "quantity": 97,
+      "sold": 38
+    },
+    "CAELAN": {
+      "quantity": 100,
+      "sold": 9
+    },
+    "ELOILLAN": {
+      "quantity": 91,
+      "sold": 33
+    },
+    "GREG": {
+      "quantity": 55,
+      "sold": 28
+    },
+    "GRELIDIEN": {
+      "quantity": 2,
+      "sold": 19
+    },
+    "MCTYRE": {
+      "quantity": 32,
+      "sold": 24
+    },
+    "MIRIRA": {
+      "quantity": 61,
+      "sold": 16
+    },
+    "RASIEN": {
+      "quantity": 1,
+      "sold": 47
+    },
+    "SCHOOLER": {
+      "quantity": 88,
+      "sold": 9
+    },
+    "SEVIDE": {
+      "quantity": 21,
+      "sold": 19
+    },
+    "SODANO": {
+      "quantity": 58,
+      "sold": 19
+    },
+    "VENDOGNUS": {
+      "quantity": 54,
+      "sold": 34
+    },
+    "WUMA": {
+      "quantity": 38,
+      "sold": 2
+    }
+  },
+  "ALDO Waterloo Premium Outlets": {
+    "ABOEN": {
+      "quantity": 80,
+      "sold": 1
+    },
+    "ADERI": {
+      "quantity": 92,
+      "sold": 4
+    },
+    "ALALIWEN": {
+      "quantity": 20,
+      "sold": 29
+    },
+    "BEODA": {
+      "quantity": 40,
+      "sold": 33
+    },
+    "BOZZA": {
+      "quantity": 40,
+      "sold": 21
+    },
+    "BUTAUD": {
+      "quantity": 86,
+      "sold": 44
+    },
+    "CADAUDIA": {
+      "quantity": 80,
+      "sold": 24
+    },
+    "CADEVEN": {
+      "quantity": 65,
+      "sold": 11
+    },
+    "CAELAN": {
+      "quantity": 86,
+      "sold": 2
+    },
+    "ELOILLAN": {
+      "quantity": 75,
+      "sold": 50
+    },
+    "GREG": {
+      "quantity": 3,
+      "sold": 19
+    },
+    "GRELIDIEN": {
+      "quantity": 91,
+      "sold": 36
+    },
+    "MCTYRE": {
+      "quantity": 6,
+      "sold": 22
+    },
+    "MIRIRA": {
+      "quantity": 48,
+      "sold": 45
+    },
+    "RASIEN": {
+      "quantity": 65,
+      "sold": 7
+    },
+    "SCHOOLER": {
+      "quantity": 21,
+      "sold": 15
+    },
+    "SEVIDE": {
+      "quantity": 17,
+      "sold": 7
+    },
+    "SODANO": {
+      "quantity": 21,
+      "sold": 44
+    },
+    "VENDOGNUS": {
+      "quantity": 11,
+      "sold": 50
+    },
+    "WUMA": {
+      "quantity": 44,
+      "sold": 13
+    }
+  }
+}

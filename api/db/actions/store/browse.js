@@ -1,10 +1,13 @@
-const stores = require('../../data/stores.json');
+const { getDatabase } = require('../../');
 
-const execute = dto => {
-  dto.setData('stores', stores);
+const execute = dto =>
+  getDatabase().then(db => {
+    const stores = Object.values(db.get('stores').value());
 
-  return Promise.resolve(dto);
-};
+    dto.setData('stores', stores);
+
+    return Promise.resolve(dto);
+  });
 
 module.exports = {
   execute,

@@ -3,7 +3,7 @@ const DTO = require('../../../libs/DTO');
 const createResolver = cb => (args, context) => {
   const dto = new DTO();
   dto.setRaw({ args, context });
-  dto.request.setPayload(args.payload);
+  dto.request.setPayload(args);
 
   return cb(dto).then(() => {
     if (dto.response.hasErrors()) {
