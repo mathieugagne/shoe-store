@@ -9,7 +9,8 @@
 
   "rules": {
     "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
-    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }]
+    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
+    "react/forbid-prop-types": ["error", { "forbid": ["any"] }]
   },
 
   "overrides": [

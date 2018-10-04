@@ -4,6 +4,16 @@
 
 You can access a small prototype here: https://www.figma.com/proto/YmEwHOQZFZVEQWo1edkUjrL8 The design reuse some element of the ALDO Website.
 
+# Styled components
+
+I've never really use styled-components. I've mostly used JSS in the last year, so I
+though it was time to try something new for me!
+
+With react-create-app v2 we can now use babel-macro. The team behind styled-component
+is currently implementing a macro. (https://github.com/styled-components/styled-components/pull/2032) It's not ready yet, but when it will be we should
+start using it because it add some nice features
+(https://www.styled-components.com/docs/basics#installation)
+
 ## Synopsis
 
 Aldo Shoes is having a huge flash sale online. You provide support to the inventory department. They want to react real-time to various inventory problems as they arise.
