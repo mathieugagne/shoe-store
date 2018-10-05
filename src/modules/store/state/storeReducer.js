@@ -1,3 +1,4 @@
+import url from 'url';
 import {
   STORE_BROWSE_REQUEST,
   STORE_BROWSE_SUCCESS,
@@ -26,7 +27,10 @@ const storeReducer = (state = initialState, action) => {
         items: action.payload.stores.reduce(
           (carry, store) => ({
             ...carry,
-            [store.id]: store,
+            [store.id]: {
+              ...store,
+              readUrl: url.resolve('/stores/', store.id),
+            },
           }),
           state.items,
         ),

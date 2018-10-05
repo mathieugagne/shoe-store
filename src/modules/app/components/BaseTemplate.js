@@ -14,7 +14,7 @@ const Root = styled.div`
 
 const Container = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1120px;
 `;
 
 function BaseTemplate(props) {
@@ -26,10 +26,10 @@ function BaseTemplate(props) {
       <Container>
         <Breadcrumb />
         <Row>
-          <Col sm={3}>
+          <Col sm={2}>
             <Navigation />
           </Col>
-          <Col sm={9}>{children}</Col>
+          <Col sm={10}>{children}</Col>
         </Row>
       </Container>
     </Root>

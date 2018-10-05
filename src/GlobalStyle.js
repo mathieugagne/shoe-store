@@ -6,7 +6,7 @@ export default createGlobalStyle`
     padding: 0;
     color: ${props => props.theme.text.color};
     font-family: ${props => props.theme.text.fontFamily};
-    font-size: ${props => props.theme.text.fontSize};
+    font-size: ${props => props.theme.text.fontSize}px;
   }
   a {
     color: ${props => props.theme.text.color};

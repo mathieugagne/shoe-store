@@ -6,7 +6,7 @@ import {
   shoeBrowseSuccess,
   shoeBrowseFailure,
 } from './shoeActions';
-import graphqlCall from '../../../libs/graphqlCall';
+import graphqlCall from '../../../libs/observables/graphqlCall';
 
 const shoeBrowse = action$ =>
   action$.pipe(

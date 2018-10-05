@@ -6,7 +6,7 @@ import {
   storeBrowseSuccess,
   storeBrowseFailure,
 } from './storeActions';
-import graphqlCall from '../../../libs/graphqlCall';
+import graphqlCall from '../../../libs/observables/graphqlCall';
 
 const storeBrowse = action$ =>
   action$.pipe(

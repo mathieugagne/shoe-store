@@ -15,3 +15,19 @@ export const INVENTORY_GLOBAL_FAILURE = 'INVENTORY_GLOBAL_FAILURE';
 export const inventoryGlobalFailure = () => ({
   type: INVENTORY_GLOBAL_FAILURE,
 });
+
+export const INVENTORY_CHANGE_LISTEN = 'INVENTORY_CHANGE_LISTEN';
+export const inventoryChangeListen = () => ({
+  type: INVENTORY_CHANGE_LISTEN,
+});
+
+export const INVENTORY_CHANGE_RECEIVED = 'INVENTORY_CHANGE_RECEIVED';
+export const inventoryChangeReceived = (store, model, inventory) => ({
+  type: INVENTORY_CHANGE_RECEIVED,
+  payload: { storeId: store, shoeId: model, quantity: inventory },
+});
+
+export const INVENTORY_CHANGE_FAILURE = 'INVENTORY_CHANGE_FAILURE';
+export const inventoryChangeFailure = () => ({
+  type: INVENTORY_CHANGE_FAILURE,
+});

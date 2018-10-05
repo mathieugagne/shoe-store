@@ -22,13 +22,31 @@ Do not forget to seed by typing this in the terminal
 npm run db:seed
 ```
 
-For the API to run you need to execute the http server, the websocket listener and the websocket emitter like this:
+For the API to run you need to execute the websocket emitter and than the api like this:
 
 ```
-npm run start:http
-npm run start:ws
 npm run start:aldo
+npm run start:api
 ```
+
+# Note
+
+Both the frontend and the backend are connecting with the websocket. Each connection start
+`inventory.rb` which randomly generate inventory changes, but since this script is running
+twice one time per connection, it means that the backend and the frontend are not receiving
+the same changes. So if you refresh the page the date won't have the same date, because the
+backend is saving something different from the frontend in the database. (if I properly
+understood how websocketd works)
+
+---
+
+---
+
+---
+
+---
+
+---
 
 ## Synopsis
 

@@ -2,6 +2,7 @@ import {
   INVENTORY_GLOBAL_REQUEST,
   INVENTORY_GLOBAL_SUCCESS,
   INVENTORY_GLOBAL_FAILURE,
+  INVENTORY_CHANGE_RECEIVED,
 } from './inventoryActions';
 
 const initialState = {
@@ -49,6 +50,30 @@ const inventoryReducer = (state = initialState, action) => {
         ...state,
         isGlobalLoading: false,
         hasGlobalLoadingError: true,
+      };
+
+    case INVENTORY_CHANGE_RECEIVED:
+      return {
+        ...state,
+        items: {
+          ...state.items,
+          [action.payload.storeId]: {
+            ...state.items[action.payload.storeId],
+            inventory: {
+              ...state.items[action.payload.storeId].inventory,
+              [action.payload.shoeId]: {
+                ...state.items[action.payload.storeId].inventory[
+                  action.payload.shoeId
+                ],
+                sold:
+                  state.items[action.payload.storeId].inventory[
+                    action.payload.shoeId
+                  ].sold + 1,
+                quantity: action.payload.quantity,
+              },
+            },
+          },
+        },
       };
     default:
       return state;
