@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { connect } from 'react-redux';
-import { inventoryGlobalRequest } from './modules/inventory/state/inventoryActions';
+import {
+  inventoryGlobalRequest,
+  inventoryChangeLogRequest,
+} from './modules/inventory/state/inventoryActions';
 import { shoeBrowseRequest } from './modules/shoe/state/shoeActions';
 import { storeBrowseRequest } from './modules/store/state/storeActions';
 
@@ -34,6 +37,7 @@ const mapDispatch = dispatch => ({
   fetchAllShoes: () => dispatch(shoeBrowseRequest()),
   fetchAllStores: () => dispatch(storeBrowseRequest()),
   fetchGlobalInventory: () => dispatch(inventoryGlobalRequest()),
+  fetchInventoryChangeLog: () => dispatch(inventoryChangeLogRequest()),
 });
 
 const mergeProps = (stateProps, dispatchProps) => ({
@@ -45,11 +49,14 @@ const mergeProps = (stateProps, dispatchProps) => ({
       isStoreAllLoaded,
       isGlobalInventoryLoading,
       isGlobalInventoryLoaded,
+      isChangeLogLoading,
+      isChangeLogLoaded,
     } = stateProps;
     const {
       fetchAllShoes,
       fetchAllStores,
       fetchGlobalInventory,
+      fetchInventoryChangeLog,
     } = dispatchProps;
 
     if (!(isShoeLoading || isShoeAllLoaded)) {
@@ -60,8 +67,12 @@ const mergeProps = (stateProps, dispatchProps) => ({
       fetchAllStores();
     }
 
-    if (!(isGlobalInventoryLoading || isGlobalInventoryLoaded)) {
+    if (!(isChangeLogLoading || isChangeLogLoaded)) {
       fetchGlobalInventory();
+    }
+
+    if (!(isGlobalInventoryLoading || isGlobalInventoryLoaded)) {
+      fetchInventoryChangeLog();
     }
   },
 });

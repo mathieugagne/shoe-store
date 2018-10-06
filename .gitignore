@@ -1,6 +1,6 @@
 # dependencies
 /node_modules
-/api/db/db.json
+/api/db/*db.json
 
 # testing
 /coverage

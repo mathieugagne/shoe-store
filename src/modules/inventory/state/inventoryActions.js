@@ -1,3 +1,9 @@
+export const INVENTORY_CHANGE_LOG_REMOVE_NEW_FLAG =
+  'INVENTORY_CHANGE_LOG_REMOVE_NEW_FLAG';
+export const inventoryChangeLogRemoveNewGlag = () => ({
+  type: INVENTORY_CHANGE_LOG_REMOVE_NEW_FLAG,
+});
+
 export const INVENTORY_GLOBAL_REQUEST = 'INVENTORY_GLOBAL_REQUEST';
 export const inventoryGlobalRequest = () => ({
   type: INVENTORY_GLOBAL_REQUEST,
@@ -16,6 +22,24 @@ export const inventoryGlobalFailure = () => ({
   type: INVENTORY_GLOBAL_FAILURE,
 });
 
+export const INVENTORY_CHANGE_LOG_REQUEST = 'INVENTORY_CHANGE_LOG_REQUEST';
+export const inventoryChangeLogRequest = () => ({
+  type: INVENTORY_CHANGE_LOG_REQUEST,
+});
+
+export const INVENTORY_CHANGE_LOG_SUCCESS = 'INVENTORY_CHANGE_LOG_SUCCESS';
+export const inventoryChangeLogSuccess = changeLog => ({
+  type: INVENTORY_CHANGE_LOG_SUCCESS,
+  payload: {
+    changeLog,
+  },
+});
+
+export const INVENTORY_CHANGE_LOG_FAILURE = 'INVENTORY_CHANGE_LOG_FAILURE';
+export const inventoryChangeLogFailure = () => ({
+  type: INVENTORY_CHANGE_LOG_FAILURE,
+});
+
 export const INVENTORY_CHANGE_LISTEN = 'INVENTORY_CHANGE_LISTEN';
 export const inventoryChangeListen = () => ({
   type: INVENTORY_CHANGE_LISTEN,
@@ -24,7 +48,7 @@ export const inventoryChangeListen = () => ({
 export const INVENTORY_CHANGE_RECEIVED = 'INVENTORY_CHANGE_RECEIVED';
 export const inventoryChangeReceived = (store, model, inventory) => ({
   type: INVENTORY_CHANGE_RECEIVED,
-  payload: { storeId: store, shoeId: model, quantity: inventory },
+  payload: { store, model, inventory },
 });
 
 export const INVENTORY_CHANGE_FAILURE = 'INVENTORY_CHANGE_FAILURE';

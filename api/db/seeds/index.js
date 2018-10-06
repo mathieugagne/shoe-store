@@ -9,7 +9,9 @@ console.log('Start seeding...');
 
 const dbPath = path.join(__dirname, '..', 'db.json');
 
-fs.unlinkSync(dbPath);
+if (fs.existsSync(dbPath)) {
+  fs.unlinkSync(dbPath);
+}
 
 getDatabase().then(db => {
   db.defaults({ inventory, inventoryLog: [], shoes, stores })

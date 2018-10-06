@@ -1,5 +1,6 @@
 const theme = {
   primary: '#3300AD',
+  primaryFaded: '#D6CCEF',
   text: {
     color: '#3A2E2C',
     fontSize: 16, // px

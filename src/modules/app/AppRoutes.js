@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Error404 from './pages/Error404';
-import Overview from './pages/Overview';
+import Overview from './pages/OverviewPage';
 
 function AppRoutes() {
   return (

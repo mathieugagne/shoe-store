@@ -7,9 +7,13 @@ export default createGlobalStyle`
     color: ${props => props.theme.text.color};
     font-family: ${props => props.theme.text.fontFamily};
     font-size: ${props => props.theme.text.fontSize}px;
+    overflow-y: scroll;
   }
   a {
     color: ${props => props.theme.text.color};
     text-decoration: none;
+    :hover {
+      text-decoration: underline;
+    }
   }
 `;

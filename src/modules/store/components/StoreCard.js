@@ -14,7 +14,7 @@ import {
 const Root = styled.div`
   background-color: ${props => props.theme.backgroundContrast};
   padding: ${props => props.theme.gutter}px;
-  font-size: 14px;
+  font-size: ${props => props.theme.text.fontSize}px;
 `;
 
 const CardTitle = styled(Link)`
@@ -26,7 +26,7 @@ const CardTitle = styled(Link)`
 `;
 
 const MetricTitle = styled.div`
-  font-size: 10px;
+  font-size: ${props => props.theme.text.fontSize - 4}px;
   padding-bottom: ${props => props.theme.gutter / 4}px;
 `;
 

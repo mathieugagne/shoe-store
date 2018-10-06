@@ -1,3 +1,4 @@
+const uuid = require('uuid/v4');
 const { getDatabase } = require('../../');
 
 const execute = dto =>
@@ -6,7 +7,7 @@ const execute = dto =>
 
     return db
       .get('inventoryLog')
-      .push({ store, model, inventory, createdAt: Date.now() })
+      .push({ id: uuid(), store, model, inventory, createdAt: Date.now() })
       .write()
       .then(() => dto);
   });

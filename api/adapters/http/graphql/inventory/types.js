@@ -11,6 +11,7 @@ module.exports = `
   }
 
   type InventoryLog {
+    id: String!
     store: String!
     model: String!
     inventory: Int!

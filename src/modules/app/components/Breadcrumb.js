@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import get from 'lodash/get';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -12,8 +13,18 @@ const List = styled.ol`
   padding: 0;
 `;
 
+const BackArrowLink = styled(Link).attrs({ children: '⮢' })`
+  font-size: 26px;
+  margin-left: ${props => props.theme.gutter}px;
+  margin-top: 6px;
+  :hover {
+    text-decoration: none;
+  }
+`;
+
 const Item = styled.li`
-  ::after {
+  display: flex;
+  :after {
     display: inline-block;
     content: '/';
     padding: 0 ${props => props.theme.gutter / 2}px;
@@ -32,11 +43,20 @@ const Item = styled.li`
 function Breadcrumb(props) {
   const { breadcrumb } = props;
 
+  const lastIndex = breadcrumb.length - 1;
+  const showBack = Boolean(get(breadcrumb, `[${lastIndex}].showBack`));
+  const backTo = get(breadcrumb, `[${lastIndex - 1}].to`);
+
   return (
     <nav>
       <List>
-        {breadcrumb.map(({ label, to }) => (
-          <Item key={label}>{to ? <Link to={to}>{label}</Link> : label}</Item>
+        {breadcrumb.map(({ label, to }, index) => (
+          <Item key={label}>
+            {to ? <Link to={to}>{label}</Link> : label}
+            {showBack &&
+              backTo &&
+              lastIndex === index && <BackArrowLink to={backTo} />}
+          </Item>
         ))}
       </List>
     </nav>
@@ -48,6 +68,7 @@ Breadcrumb.propTypes = {
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       to: PropTypes.string,
+      showBack: PropTypes.bool,
     }),
   ).isRequired,
 };
