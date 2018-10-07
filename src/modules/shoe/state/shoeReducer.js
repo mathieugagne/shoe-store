@@ -1,3 +1,4 @@
+import url from 'url';
 import {
   SHOE_BROWSE_REQUEST,
   SHOE_BROWSE_SUCCESS,
@@ -26,7 +27,10 @@ const shoeReducer = (state = initialState, action) => {
         items: action.payload.shoes.reduce(
           (carry, shoe) => ({
             ...carry,
-            [shoe.id]: shoe,
+            [shoe.id]: {
+              ...shoe,
+              readUrl: url.resolve('/shoes/', shoe.id),
+            },
           }),
           state.items,
         ),

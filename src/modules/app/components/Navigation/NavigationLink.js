@@ -8,10 +8,10 @@ const Link = styled(NavLink)`
 `;
 
 function NavigationLink(props) {
-  const { children, to, theme } = props;
+  const { children, to, theme, className } = props;
 
   return (
-    <Link to={to} activeStyle={{ color: theme.primary }}>
+    <Link to={to} activeStyle={{ color: theme.primary }} className={className}>
       {children}
     </Link>
   );
@@ -19,10 +19,12 @@ function NavigationLink(props) {
 
 NavigationLink.defaultProps = {
   children: null,
+  className: null,
 };
 
 NavigationLink.propTypes = {
   to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  className: PropTypes.string,
   children: PropTypes.node,
   theme: PropTypes.object.isRequired,
 };

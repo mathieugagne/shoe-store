@@ -12,12 +12,16 @@ import TableHeader from '../../app/components/TableHeader';
 import TableRow from '../../app/components/TableRow';
 import TableCell from '../../app/components/TableCell';
 import { inventoryChangeLogRemoveNewGlag } from '../state/inventoryActions';
+import StoreLink from '../../store/components/StoreLink';
+import ShoeLink from '../../shoe/components/ShoeLink';
 
 const NewChangeLogCountCell = styled(TableCell)`
   text-align: center;
-  background-color: ${props => props.theme.primaryFaded};
+  background-color: ${props => props.theme.primary};
   padding: 8px;
   font-size: ${props => props.theme.text.fontSize - 4}px;
+  color: #ffffff;
+  font-weight: 700;
   :hover {
     text-decoration: underline;
     cursor: pointer;
@@ -55,10 +59,13 @@ function InventoryChangeLogTable(props) {
       )}
       {(limit ? take(changeLog, limit) : changeLog).map(shoeInventory => (
         <TableRow key={shoeInventory.id}>
-          <TableCell>{shoeInventory.store}</TableCell>
-          <TableCell>{shoeInventory.model}</TableCell>
+          <TableCell>
+            <StoreLink storeId={shoeInventory.store} />
+          </TableCell>
+          <TableCell>
+            <ShoeLink shoeId={shoeInventory.model} />
+          </TableCell>
           <TableCell>{shoeInventory.inventory}</TableCell>
-          <TableCell />
         </TableRow>
       ))}
     </Table>

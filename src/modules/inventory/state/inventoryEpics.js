@@ -1,6 +1,6 @@
 import { of } from 'rxjs';
 import { webSocket } from 'rxjs/webSocket';
-import { catchError, map, mergeMap } from 'rxjs/operators';
+import { catchError, map, mergeMap, bufferTime } from 'rxjs/operators';
 import { combineEpics, ofType } from 'redux-observable';
 import {
   INVENTORY_GLOBAL_REQUEST,
@@ -14,6 +14,8 @@ import {
   inventoryChangeListen,
   inventoryChangeLogFailure,
   inventoryChangeLogSuccess,
+  INVENTORY_CHANGE_RECEIVED,
+  inventoryMonitoredNumberOfSales,
 } from './inventoryActions';
 import graphqlCall from '../../../libs/observables/graphqlCall';
 
@@ -79,9 +81,19 @@ const listenInventoryChange = action$ =>
     ),
   );
 
+const monitorNumberOfSalesPerTime = action$ =>
+  action$.pipe(
+    ofType(INVENTORY_CHANGE_RECEIVED),
+    bufferTime(5 * 1000),
+    map(buffer =>
+      inventoryMonitoredNumberOfSales(buffer.length, Number(Date.now())),
+    ),
+  );
+
 export default combineEpics(
   inventoryGlobal,
   inventoryChangeLog,
+  monitorNumberOfSalesPerTime,
   startListenInventoryChange,
   listenInventoryChange,
 );

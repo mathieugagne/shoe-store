@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavigationLink from './NavigationLink';
+import NotificationBullet from '../../../notification/components/NotificationBullet';
 
 const List = styled.ul`
   display: block;
@@ -16,6 +17,17 @@ const Item = styled.li`
   width: 100%;
 `;
 
+const NotificationLink = styled(NavigationLink)`
+  display: flex;
+  align-items: center;
+  :hover {
+    text-decoration: none;
+    span {
+      text-decoration: underline;
+    }
+  }
+`;
+
 function Navigation() {
   return (
     <List>
@@ -29,7 +41,10 @@ function Navigation() {
         <NavigationLink to="/shoes">Shoes</NavigationLink>
       </Item>
       <Item>
-        <NavigationLink to="/notifications">Notifications</NavigationLink>
+        <NotificationLink to="/notifications">
+          <span>Notifications</span>
+          <NotificationBullet />
+        </NotificationLink>
       </Item>
     </List>
   );

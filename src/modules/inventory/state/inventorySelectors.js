@@ -2,40 +2,63 @@ import maxBy from 'lodash/maxBy';
 import minBy from 'lodash/minBy';
 import sumBy from 'lodash/sumBy';
 import orderBy from 'lodash/orderBy';
+import takeRight from 'lodash/takeRight';
 import { createSelector } from 'reselect';
 import createCachedSelector from 're-reselect';
-import { storeIdSelector } from '../../store/state/storeSelectors';
+import {
+  storeIdSelector,
+  storeCountSelector,
+} from '../../store/state/storeSelectors';
+import { shoeIdSelector } from '../../shoe/state/shoeSelectors';
 import { querySelector, runQuery } from '../../app/state/appSelectors';
 
 export const inventoryItemsSelector = state => state.inventory.items;
+export const numberOfSalesMonitorSelector = state =>
+  state.inventory.numberOfSalesMonitor;
 export const inventoryChangeLogSelector = state => state.inventory.changeLog;
+
+export const numberOfSalesChartDataSelector = createCachedSelector(
+  numberOfSalesMonitorSelector,
+  (state, { take }) => take,
+  (monitor, take) =>
+    takeRight(monitor, take).map(({ id, sales, date }) => ({
+      id,
+      x: date,
+      y: sales,
+    })),
+)((state, { take }) => String(take));
 
 export const inventoryListSelector = createSelector(
   inventoryItemsSelector,
   items => Object.values(items),
 );
 
-export const globalShoeInventoryListSelector = createSelector(
+export const globalShoeInventorySelector = createSelector(
   inventoryItemsSelector,
-  items => {
-    const inventory = Object.values(items).reduce(
+  items =>
+    Object.values(items).reduce(
       (inventoryCarry, storeInventory) =>
         Object.values(storeInventory.inventory).reduce(
-          (carry, { shoeId, quantity }) => ({
+          (carry, { shoeId, quantity, sold }) => ({
             ...carry,
-            [shoeId]: carry[shoeId] ? carry[shoeId] + quantity : quantity,
+            [shoeId]: {
+              shoeId,
+              quantity: carry[shoeId]
+                ? carry[shoeId].quantity + quantity
+                : quantity,
+              sold: carry[shoeId] ? carry[shoeId].sold + sold : sold,
+            },
           }),
           inventoryCarry,
           {},
         ),
       {},
-    );
+    ),
+);
 
-    return Object.keys(inventory).map(shoeId => ({
-      shoeId,
-      quantity: inventory[shoeId],
-    }));
-  },
+export const globalShoeInventoryListSelector = createSelector(
+  globalShoeInventorySelector,
+  inventory => Object.values(inventory),
 );
 
 export const oldChangeLogSelector = createSelector(
@@ -127,3 +150,18 @@ export const storeTotalInventoryCountSelector = createCachedSelector(
     return sumBy(Object.values(storeInventory.inventory), 'quantity');
   },
 )(storeIdSelector);
+
+export const specificShoeAverageSoldPerStoreSelector = createCachedSelector(
+  globalShoeInventorySelector,
+  storeCountSelector,
+  shoeIdSelector,
+  (globalShoeInventory, storeCount, shoeId) => {
+    const shoeInventory = globalShoeInventory[shoeId];
+
+    if (!(shoeInventory && shoeInventory.sold)) {
+      return 0;
+    }
+
+    return shoeInventory.sold / storeCount;
+  },
+)(shoeIdSelector);

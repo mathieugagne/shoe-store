@@ -8,12 +8,27 @@ import {
   INVENTORY_CHANGE_LOG_SUCCESS,
   INVENTORY_CHANGE_LOG_REQUEST,
   INVENTORY_CHANGE_LOG_FAILURE,
+  INVENTORY_MONITORED_NUMBER_OF_SALES,
 } from './inventoryActions';
+
+const now = Number(Date.now());
 
 const initialState = {
   items: {},
   changeLog: [],
-  isGlobalLoading: false,
+  numberOfSalesMonitor: [
+    { id: uuid(), sales: NaN, date: now - 50 * 1000 },
+    { id: uuid(), sales: NaN, date: now - 45 * 1000 },
+    { id: uuid(), sales: NaN, date: now - 40 * 1000 },
+    { id: uuid(), sales: NaN, date: now - 35 * 1000 },
+    { id: uuid(), sales: NaN, date: now - 30 * 1000 },
+    { id: uuid(), sales: NaN, date: now - 25 * 1000 },
+    { id: uuid(), sales: NaN, date: now - 20 * 1000 },
+    { id: uuid(), sales: NaN, date: now - 15 * 1000 },
+    { id: uuid(), sales: NaN, date: now - 10 * 1000 },
+    { id: uuid(), sales: NaN, date: now - 5 * 1000 },
+    { id: uuid(), sales: NaN, date: now },
+  ],
   isGlobalLoaded: false,
   hasGlobalLoadingError: false,
   isChangeLogLoading: false,
@@ -82,6 +97,19 @@ const inventoryReducer = (state = initialState, action) => {
         ...state,
         isChangeLogLoading: false,
         hasChangeLogLoadingError: true,
+      };
+
+    case INVENTORY_MONITORED_NUMBER_OF_SALES:
+      return {
+        ...state,
+        numberOfSalesMonitor: [
+          ...state.numberOfSalesMonitor,
+          {
+            id: uuid(),
+            sales: action.payload.numberOfSalesMonitor,
+            date: action.payload.date,
+          },
+        ],
       };
 
     case INVENTORY_CHANGE_LOG_REMOVE_NEW_FLAG:

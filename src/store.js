@@ -17,6 +17,8 @@ const storeCompose =
 // eslint-disable-next-line import/prefer-default-export
 export const getStore = (forceCreationOfNewStore = false) => {
   if (!reduxStore || forceCreationOfNewStore) {
+    // To easily unit test our epics we could do something like this
+    // https://redux-observable.js.org/docs/recipes/InjectingDependenciesIntoEpics.html
     const epicMiddleware = createEpicMiddleware();
 
     reduxStore = createStore(

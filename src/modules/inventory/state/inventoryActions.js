@@ -55,3 +55,16 @@ export const INVENTORY_CHANGE_FAILURE = 'INVENTORY_CHANGE_FAILURE';
 export const inventoryChangeFailure = () => ({
   type: INVENTORY_CHANGE_FAILURE,
 });
+
+export const INVENTORY_MONITORED_NUMBER_OF_SALES =
+  'INVENTORY_MONITORED_NUMBER_OF_SALES';
+export const inventoryMonitoredNumberOfSales = (
+  numberOfSalesMonitor,
+  date,
+) => ({
+  type: INVENTORY_MONITORED_NUMBER_OF_SALES,
+  payload: {
+    numberOfSalesMonitor,
+    date,
+  },
+});

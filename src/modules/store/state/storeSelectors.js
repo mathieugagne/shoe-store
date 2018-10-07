@@ -7,6 +7,10 @@ export const storeItemsSelector = state => state.store.items;
 export const storeListSelector = createSelector(storeItemsSelector, items =>
   Object.values(items),
 );
+export const storeCountSelector = createSelector(
+  storeListSelector,
+  list => list.length,
+);
 
 export const storeSelector = createCachedSelector(
   storeItemsSelector,

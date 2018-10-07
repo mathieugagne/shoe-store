@@ -7,6 +7,7 @@ import Table from '../../app/components/Table';
 import TableHeader from '../../app/components/TableHeader';
 import TableRow from '../../app/components/TableRow';
 import TableCell from '../../app/components/TableCell';
+import StoreLink from '../../store/components/StoreLink';
 
 function StoreWithLowestInventoryTable(props) {
   const { inventory, limit } = props;
@@ -24,7 +25,9 @@ function StoreWithLowestInventoryTable(props) {
       {(limit ? take(inventory, limit) : inventory).map(
         ({ storeId, quantity }) => (
           <TableRow key={storeId}>
-            <TableCell>{storeId}</TableCell>
+            <TableCell>
+              <StoreLink storeId={storeId} />
+            </TableCell>
             <TableCell>{quantity}</TableCell>
           </TableRow>
         ),

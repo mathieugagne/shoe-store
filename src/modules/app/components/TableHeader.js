@@ -10,6 +10,8 @@ const Root = styled('th')`
   padding: ${props => props.theme.gutter}px;
   font-weight: 700;
   white-space: nowrap;
+  color: ${props =>
+    props.isActive ? props.theme.primary : props.theme.text.color};
   :hover {
     cursor: ${props => (props.onClick ? 'pointer' : 'inherit')};
   }
@@ -25,16 +27,16 @@ const Arrow = styled('div')`
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: ${props =>
-    props.direction === 'desc' ? `5px solid ${props.theme.text.color}` : '0'};
+    props.direction === 'desc' ? `5px solid ${props.theme.primary}` : '0'};
   border-top: ${props =>
-    props.direction === 'asc' ? `5px solid ${props.theme.text.color}` : '0'};
+    props.direction === 'asc' ? `5px solid ${props.theme.primary}` : '0'};
 `;
 
 function TableHeader(props) {
   const { children, direction, onClick } = props;
 
   return (
-    <Root onClick={onClick}>
+    <Root isActive={['asc', 'desc'].includes(direction)} onClick={onClick}>
       {children}
       {'      ' /* add space for the arrow */}
       <Arrow direction={direction} />
