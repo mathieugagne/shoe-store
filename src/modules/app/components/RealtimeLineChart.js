@@ -125,6 +125,10 @@ class RealtimeLineChart extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.chart.destroy();
+  }
+
   render() {
     return (
       <Root>
