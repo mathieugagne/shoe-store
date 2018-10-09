@@ -6,6 +6,7 @@ import injectBreadcrumb from '../../app/hocs/injectBreadcrumb';
 import StoreCard from '../components/StoreCard';
 import StoreInventoryTable from '../../inventory/components/StoreInventoryTable';
 import { appSetQuery } from '../../app/state/appActions';
+import { storeSelector } from '../state/storeSelectors';
 
 class StoreRead extends Component {
   componentDidMount() {
@@ -21,22 +22,32 @@ class StoreRead extends Component {
   }
 
   render() {
-    const { match, isLoading } = this.props;
+    const { isLoading, store } = this.props;
+
     if (isLoading) {
       return 'Loading...';
     }
+
+    if (!store) {
+      return 'Store not found';
+    }
+
     return (
       <>
-        <StoreCard storeId={match.params.storeId} />
-        <StoreInventoryTable storeId={match.params.storeId} />
+        <StoreCard storeId={store.id} />
+        <StoreInventoryTable storeId={store.id} />
       </>
     );
   }
 }
 
+StoreRead.defaultProps = {
+  store: null,
+};
+
 StoreRead.propTypes = {
   clearQuery: PropTypes.func.isRequired,
-  match: PropTypes.object.isRequired, // from router
+  store: PropTypes.object,
   isLoading: PropTypes.bool.isRequired,
 };
 
@@ -55,8 +66,9 @@ const breadcrumb = ({ match }) => [
   },
 ];
 
-const mapState = state => ({
+const mapState = (state, { match }) => ({
   isLoading: state.store.isLoading,
+  store: storeSelector(state, { storeId: match.params.storeId }),
 });
 
 const mapDispatch = dispatch => ({
@@ -64,9 +76,9 @@ const mapDispatch = dispatch => ({
 });
 
 export default compose(
+  injectBreadcrumb(breadcrumb),
   connect(
     mapState,
     mapDispatch,
   ),
-  injectBreadcrumb(breadcrumb),
 )(StoreRead);

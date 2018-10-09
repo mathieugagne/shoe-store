@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import compose from 'recompose/compose';
 import injectBreadcrumb from '../../app/hocs/injectBreadcrumb';
-import StoreInventoryTable from '../../inventory/components/StoreInventoryTable';
 import { appSetQuery } from '../../app/state/appActions';
 import ShoeCard from '../components/ShoeCard';
+import { shoeSelector } from '../state/shoeSelectors';
 
 class ShoeRead extends Component {
   componentDidMount() {
@@ -21,24 +21,26 @@ class ShoeRead extends Component {
   }
 
   render() {
-    const { match, isLoading } = this.props;
+    const { isLoading, shoe } = this.props;
 
     if (isLoading) {
       return 'Loading...';
     }
 
-    return (
-      <>
-        <ShoeCard shoeId={match.params.shoeId} />
-        <StoreInventoryTable storeId={match.params.shoeId} />
-      </>
-    );
+    if (!shoe) {
+      return 'Shoe not found';
+    }
+
+    return <ShoeCard shoeId={shoe.id} />;
   }
 }
+ShoeRead.defaultProps = {
+  shoe: null,
+};
 
 ShoeRead.propTypes = {
   clearQuery: PropTypes.func.isRequired,
-  match: PropTypes.object.isRequired, // from router
+  shoe: PropTypes.object,
   isLoading: PropTypes.bool.isRequired,
 };
 
@@ -57,8 +59,9 @@ const breadcrumb = ({ match }) => [
   },
 ];
 
-const mapState = state => ({
+const mapState = (state, { match }) => ({
   isLoading: state.store.isLoading,
+  shoe: shoeSelector(state, { shoeId: match.params.shoeId }),
 });
 
 const mapDispatch = dispatch => ({

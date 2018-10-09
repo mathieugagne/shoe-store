@@ -22,6 +22,10 @@ function ShoeBrowse(props) {
     return 'Loading...';
   }
 
+  if (!shoeList.length) {
+    return 'No shoe found';
+  }
+
   return (
     <Row>
       {shoeList.map(({ id }) => (

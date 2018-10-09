@@ -22,6 +22,10 @@ function StoreBrowse(props) {
     return 'Loading...';
   }
 
+  if (!storeList.length) {
+    return 'No store found';
+  }
+
   return (
     <Row>
       {storeList.map(({ id }) => (

@@ -13,7 +13,7 @@ const Root = styled.div`
   background-color: ${props => props.theme.primary};
   width: 100%;
   height: ${props => props.theme.dimensions.topBar.height}px;
-  z-index: 9999;
+  z-index: ${props => props.theme.depths.topBar};
 `;
 
 const LogoLink = styled(Link)`

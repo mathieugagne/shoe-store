@@ -1,6 +1,6 @@
 const theme = {
   primary: '#3300AD',
-  primaryFaded: '#D6CCEF',
+  primaryFaded: '#f2f0ff',
   text: {
     color: '#3A2E2C',
     fontSize: 16, // px
@@ -14,6 +14,10 @@ const theme = {
     },
   },
   gutter: 16, // px
+  depths: {
+    topBar: 9999,
+    notificationStack: 8999,
+  },
 };
 
 export default theme;

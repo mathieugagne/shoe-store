@@ -34,25 +34,26 @@ const notify = action$ =>
       } else if (inventory <= LOW_SHOE_STORE_INVENTORY_STARTS_AT) {
         title = 'Low inventory';
         const plural = inventory > 1 ? 's' : '';
-        content = `There is only ${inventory} pair${plural} of ${model} at ${store}.`;
+        content = `There is only ${inventory} pair${plural} of ${model} left at ${store}`;
         notificationType = NOTIFICATION_TYPE_LOW_INVENTORY;
       } else if (inventory >= HIGH_SHOE_STORE_INVENTORY_STARTS_AT) {
         title = 'High inventory';
-        content = `There is ${inventory} pairs of ${model} at ${store}.`;
+        content = `There is ${inventory} pairs of ${model} at ${store}`;
         notificationType = NOTIFICATION_TYPE_HIGH_INVENTORY;
       } else {
         return EMPTY;
       }
 
       return of(
-        notificationReceived(
-          uuid(),
-          notificationType,
+        notificationReceived({
+          id: uuid(),
+          type: notificationType,
           title,
           content,
-          false,
-          Date.now(),
-        ),
+          to: `/stores/${store}`,
+          isRead: false,
+          createdAt: Number(Date.now()),
+        }),
       );
     }),
   );

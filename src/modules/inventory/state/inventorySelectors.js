@@ -88,7 +88,7 @@ export const storeInventoryListSelector = createCachedSelector(
     (storeInventory &&
       storeInventory.inventory &&
       Object.values(storeInventory.inventory)) ||
-    null,
+    [],
 )(storeIdSelector);
 
 export const storeInventoryByQuerySelector = createCachedSelector(

@@ -9,7 +9,7 @@ export const querySelector = state => state.app.query;
 /* eslint-disable no-param-reassign */
 export const runQuery = (list, query) => {
   if (!list) {
-    return null;
+    return [];
   }
 
   if (!query) {

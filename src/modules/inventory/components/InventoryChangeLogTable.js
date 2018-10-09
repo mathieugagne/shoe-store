@@ -11,9 +11,10 @@ import Table from '../../app/components/Table';
 import TableHeader from '../../app/components/TableHeader';
 import TableRow from '../../app/components/TableRow';
 import TableCell from '../../app/components/TableCell';
-import { inventoryChangeLogRemoveNewGlag } from '../state/inventoryActions';
+import { inventoryChangeLogRemoveNewFlag } from '../state/inventoryActions';
 import StoreLink from '../../store/components/StoreLink';
 import ShoeLink from '../../shoe/components/ShoeLink';
+import Empty from '../../app/components/Empty';
 
 const NewChangeLogCountCell = styled(TableCell)`
   text-align: center;
@@ -35,8 +36,8 @@ const NewChangeLogCountRow = styled(TableRow)`
 function InventoryChangeLogTable(props) {
   const { changeLog, newChangeLogCount, limit, showNewChangeLog } = props;
 
-  if (!changeLog) {
-    return null;
+  if (!changeLog.length) {
+    return <Empty>No inventory change found</Empty>;
   }
 
   return (
@@ -73,12 +74,11 @@ function InventoryChangeLogTable(props) {
 }
 
 InventoryChangeLogTable.defaultProps = {
-  changeLog: null,
   limit: null,
 };
 
 InventoryChangeLogTable.propTypes = {
-  changeLog: PropTypes.array,
+  changeLog: PropTypes.array.isRequired,
   newChangeLogCount: PropTypes.number.isRequired,
   limit: PropTypes.number,
   showNewChangeLog: PropTypes.func.isRequired,
@@ -90,7 +90,7 @@ const mapState = state => ({
 });
 
 const mapDispatch = dispatch => ({
-  showNewChangeLog: () => dispatch(inventoryChangeLogRemoveNewGlag()),
+  showNewChangeLog: () => dispatch(inventoryChangeLogRemoveNewFlag()),
 });
 
 export default connect(

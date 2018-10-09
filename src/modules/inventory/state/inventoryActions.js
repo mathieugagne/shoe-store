@@ -1,6 +1,6 @@
 export const INVENTORY_CHANGE_LOG_REMOVE_NEW_FLAG =
   'INVENTORY_CHANGE_LOG_REMOVE_NEW_FLAG';
-export const inventoryChangeLogRemoveNewGlag = () => ({
+export const inventoryChangeLogRemoveNewFlag = () => ({
   type: INVENTORY_CHANGE_LOG_REMOVE_NEW_FLAG,
 });
 

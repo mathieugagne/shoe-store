@@ -16,6 +16,11 @@ export const notificationListSelector = createSelector(
   },
 );
 
+export const unreadNotificationListSelector = createSelector(
+  notificationListSelector,
+  list => list.filter(({ isRead, isInStack }) => isInStack && !isRead),
+);
+
 export const unreadNotificationCountSelector = createSelector(
   notificationItemsSelector,
   items => sumBy(Object.values(items), ({ isRead }) => (isRead ? 0 : 1)),

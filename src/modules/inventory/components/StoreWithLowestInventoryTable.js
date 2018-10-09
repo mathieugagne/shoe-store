@@ -8,12 +8,13 @@ import TableHeader from '../../app/components/TableHeader';
 import TableRow from '../../app/components/TableRow';
 import TableCell from '../../app/components/TableCell';
 import StoreLink from '../../store/components/StoreLink';
+import Empty from '../../app/components/Empty';
 
 function StoreWithLowestInventoryTable(props) {
   const { inventory, limit } = props;
 
-  if (!inventory) {
-    return null;
+  if (!inventory.length) {
+    return <Empty>No store found</Empty>;
   }
 
   return (

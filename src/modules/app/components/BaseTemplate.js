@@ -5,6 +5,7 @@ import { Row, Col } from 'react-flexbox-grid';
 import Breadcrumb from './Breadcrumb';
 import Navigation from './Navigation/Navigation';
 import TopBar from './TopBar';
+import NotificationStack from '../../notification/components/NotificationStack';
 
 const Root = styled.div`
   margin: ${props => props.theme.gutter}px;
@@ -23,6 +24,7 @@ function BaseTemplate(props) {
   return (
     <Root>
       <TopBar />
+      <NotificationStack />
       <Container>
         <Breadcrumb />
         <Row>

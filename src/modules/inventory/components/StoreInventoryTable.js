@@ -7,12 +7,13 @@ import TableHeader from '../../app/components/TableHeader';
 import TableRow from '../../app/components/TableRow';
 import TableCell from '../../app/components/TableCell';
 import ShoeLink from '../../shoe/components/ShoeLink';
+import Empty from '../../app/components/Empty';
 
 function StoreInventoryTable(props) {
   const { inventory } = props;
 
-  if (!inventory) {
-    return null;
+  if (!inventory.length) {
+    return <Empty>No store inventory found</Empty>;
   }
 
   return (
@@ -38,12 +39,8 @@ function StoreInventoryTable(props) {
   );
 }
 
-StoreInventoryTable.defaultProps = {
-  inventory: null,
-};
-
 StoreInventoryTable.propTypes = {
-  inventory: PropTypes.array,
+  inventory: PropTypes.array.isRequired,
 };
 
 const mapState = (state, { storeId }) => ({

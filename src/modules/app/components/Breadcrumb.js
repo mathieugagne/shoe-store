@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import get from 'lodash/get';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import backArrow from '../../../assets/breadcrumb-back-arrow.svg';
 
 const List = styled.ol`
   display: flex;
@@ -13,10 +14,13 @@ const List = styled.ol`
   padding: 0;
 `;
 
-const BackArrowLink = styled(Link).attrs({ children: '⮢' })`
+const BackArrowLink = styled(Link).attrs({
+  children: <img src={backArrow} alt="Back" />,
+})`
   font-size: 26px;
   margin-left: ${props => props.theme.gutter}px;
   margin-top: 6px;
+  width: 20px;
   :hover {
     text-decoration: none;
   }

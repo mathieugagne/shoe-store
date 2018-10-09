@@ -10,14 +10,13 @@ import Notification from '../components/Notification';
 function NotificationBrowse(props) {
   const { notificationList } = props;
 
-  return (
-    <>
-      Today
-      {take(notificationList, 50).map(({ id }) => (
-        <Notification key={id} notificationId={id} />
-      ))}
-    </>
-  );
+  if (!notificationList.length) {
+    return 'No notification';
+  }
+
+  return take(notificationList, 50).map(({ id }) => (
+    <Notification key={id} notificationId={id} />
+  ));
 }
 
 const breadcrumb = [
