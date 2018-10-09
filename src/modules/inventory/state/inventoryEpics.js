@@ -1,3 +1,4 @@
+import uuid from 'uuid/v4';
 import { of } from 'rxjs';
 import { webSocket } from 'rxjs/webSocket';
 import { catchError, map, mergeMap, bufferTime } from 'rxjs/operators';
@@ -74,7 +75,7 @@ const listenInventoryChange = action$ =>
       // TODO: move url to environment variable
       webSocket('ws://localhost:8080/').pipe(
         map(({ store, model, inventory }) =>
-          inventoryChangeReceived(store, model, inventory),
+          inventoryChangeReceived({ id: uuid(), store, model, inventory }),
         ),
         catchError(error => of(inventoryChangeFailure(error))),
       ),
@@ -86,7 +87,11 @@ const monitorNumberOfSalesPerTime = action$ =>
     ofType(INVENTORY_CHANGE_RECEIVED),
     bufferTime(5 * 1000),
     map(buffer =>
-      inventoryMonitoredNumberOfSales(buffer.length, Number(Date.now())),
+      inventoryMonitoredNumberOfSales(
+        uuid(),
+        buffer.length,
+        Number(Date.now()),
+      ),
     ),
   );
 

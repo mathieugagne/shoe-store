@@ -1,6 +1,6 @@
-const inventoryBrowse = require('../../../../domain/inventory/browse');
-const inventoryBrowseLog = require('../../../../domain/inventory/browseLog');
-const inventoryRead = require('../../../../domain/inventory/read');
+const inventoryBrowse = require('./browse');
+const inventoryBrowseLog = require('./browseLog');
+const inventoryRead = require('./read');
 const createResolver = require('../createResolver');
 
 module.exports = {

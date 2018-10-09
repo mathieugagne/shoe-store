@@ -20,8 +20,8 @@ import {
 const notify = action$ =>
   action$.pipe(
     ofType(INVENTORY_CHANGE_RECEIVED),
-    mergeMap(({ payload }) => {
-      const { store, model, inventory } = payload;
+    mergeMap(action => {
+      const { store, model, inventory } = action.payload.change;
 
       let notificationType;
       let title;

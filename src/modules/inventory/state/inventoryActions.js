@@ -46,9 +46,11 @@ export const inventoryChangeListen = () => ({
 });
 
 export const INVENTORY_CHANGE_RECEIVED = 'INVENTORY_CHANGE_RECEIVED';
-export const inventoryChangeReceived = (store, model, inventory) => ({
+export const inventoryChangeReceived = change => ({
   type: INVENTORY_CHANGE_RECEIVED,
-  payload: { store, model, inventory },
+  payload: {
+    change,
+  },
 });
 
 export const INVENTORY_CHANGE_FAILURE = 'INVENTORY_CHANGE_FAILURE';
@@ -59,11 +61,13 @@ export const inventoryChangeFailure = () => ({
 export const INVENTORY_MONITORED_NUMBER_OF_SALES =
   'INVENTORY_MONITORED_NUMBER_OF_SALES';
 export const inventoryMonitoredNumberOfSales = (
+  id,
   numberOfSalesMonitor,
   date,
 ) => ({
   type: INVENTORY_MONITORED_NUMBER_OF_SALES,
   payload: {
+    id,
     numberOfSalesMonitor,
     date,
   },

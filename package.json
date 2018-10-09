@@ -14,7 +14,6 @@
     "express-graphql": "^0.6.12",
     "graphql": "^14.0.2",
     "history": "^4.7.2",
-    "http-proxy-middleware": "^0.19.0",
     "lodash": "^4.17.11",
     "lowdb": "^1.0.0",
     "merge-graphql-schemas": "^1.5.7",
@@ -44,6 +43,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test"
   },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "<rootDir>/api/db/*db.json"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -57,6 +61,8 @@
   ],
   "devDependencies": {
     "cross-env": "^5.2.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -65,8 +71,12 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
+    "http-proxy-middleware": "^0.19.0",
     "husky": "^1.1.0",
+    "jest-dom": "^2.0.4",
     "lint-staged": "^7.3.0",
-    "prettier": "^1.14.3"
+    "prettier": "^1.14.3",
+    "react-test-renderer": "^16.5.2",
+    "react-testing-library": "^5.2.0"
   }
 }

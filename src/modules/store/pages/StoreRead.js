@@ -8,7 +8,7 @@ import StoreInventoryTable from '../../inventory/components/StoreInventoryTable'
 import { appSetQuery } from '../../app/state/appActions';
 import { storeSelector } from '../state/storeSelectors';
 
-class StoreRead extends Component {
+export class StoreRead extends Component {
   componentDidMount() {
     const { clearQuery } = this.props;
 

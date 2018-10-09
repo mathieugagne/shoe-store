@@ -8,6 +8,7 @@
   },
 
   "rules": {
+    "import/no-named-as-default": 0,
     "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
     "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
     "react/forbid-prop-types": ["error", { "forbid": ["any"] }]

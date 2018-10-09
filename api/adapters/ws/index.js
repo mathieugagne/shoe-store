@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 const createEventHandler = require('./createEventHandler');
-const inventoryUpdate = require('../../domain/inventory/update');
+const inventoryUpdate = require('./events/inventory/update');
 
 function start() {
   // TODO: move this url to an environment variable

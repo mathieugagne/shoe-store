@@ -105,7 +105,7 @@ const inventoryReducer = (state = initialState, action) => {
         numberOfSalesMonitor: [
           ...state.numberOfSalesMonitor,
           {
-            id: uuid(),
+            id: action.payload.id,
             sales: action.payload.numberOfSalesMonitor,
             date: action.payload.date,
           },
@@ -122,24 +122,24 @@ const inventoryReducer = (state = initialState, action) => {
       return {
         ...state,
         changeLog: [
-          { ...action.payload, id: uuid(), isNew: true },
+          { ...action.payload.change, isNew: true },
           ...state.changeLog,
         ],
         items: {
           ...state.items,
-          [action.payload.store]: {
-            ...state.items[action.payload.store],
+          [action.payload.change.store]: {
+            ...state.items[action.payload.change.store],
             inventory: {
-              ...state.items[action.payload.store].inventory,
-              [action.payload.model]: {
-                ...state.items[action.payload.store].inventory[
-                  action.payload.model
+              ...state.items[action.payload.change.store].inventory,
+              [action.payload.change.model]: {
+                ...state.items[action.payload.change.store].inventory[
+                  action.payload.change.model
                 ],
                 sold:
-                  state.items[action.payload.store].inventory[
-                    action.payload.model
+                  state.items[action.payload.change.store].inventory[
+                    action.payload.change.model
                   ].sold + 1,
-                quantity: action.payload.inventory,
+                quantity: action.payload.change.inventory,
               },
             },
           },

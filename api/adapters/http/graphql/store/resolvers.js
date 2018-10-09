@@ -1,4 +1,4 @@
-const storeBrowse = require('../../../../domain/store/browse');
+const storeBrowse = require('./browse');
 const createResolver = require('../createResolver');
 
 module.exports = {
