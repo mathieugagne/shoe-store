@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Row, Col as RawCol } from 'react-flexbox-grid';
 import compose from 'recompose/compose';
 import { connect } from 'react-redux';

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Row, Col } from 'react-flexbox-grid';
 import Breadcrumb from './Breadcrumb';
 import Navigation from './Navigation/Navigation';

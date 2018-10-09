@@ -9,10 +9,10 @@ You can access a small prototype here: https://www.figma.com/proto/YmEwHOQZFZVEQ
 I've never really use styled-components. I've mostly used JSS in the last year, so I
 though it was time to try something new for me!
 
-With react-create-app v2 we can now use babel-macro. The team behind styled-component
-is currently implementing a macro. (https://github.com/styled-components/styled-components/pull/2032) It's not ready yet, but when it will be we should
-start using it because it add some nice features
-(https://www.styled-components.com/docs/basics#installation)
+~~With react-create-app v2 we can now use babel-macro. The team behind styled-component
+is currently implementing a macro. (https://github.com/styled-components/styled-components/pull/2032)
+It's not ready yet, but when it will be we should start using it because it add some nice features
+(https://www.styled-components.com/docs/basics#installation)~~
 
 # API
 

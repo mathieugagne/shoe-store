@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Row, Col } from 'react-flexbox-grid';
 import { connect } from 'react-redux';
 import compose from 'recompose/compose';

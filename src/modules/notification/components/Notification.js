@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { connect } from 'react-redux';
 import { notificationSelector } from '../state/notificationSelectors';
 import omitProps from '../../../libs/omitProps';

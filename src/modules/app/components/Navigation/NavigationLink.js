@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled, { withTheme } from 'styled-components/macro';
 import { NavLink } from 'react-router-dom';
 
 const Link = styled(NavLink)`

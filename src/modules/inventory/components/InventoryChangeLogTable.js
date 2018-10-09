@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import take from 'lodash/take';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { connect } from 'react-redux';
 import {
   newChangeLogCountSelector,

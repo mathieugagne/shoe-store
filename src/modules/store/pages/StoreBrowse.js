@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import compose from 'recompose/compose';
 import { Row, Col as RawCol } from 'react-flexbox-grid';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import injectBreadcrumb from '../../app/hocs/injectBreadcrumb';
 import { storeListSelector } from '../state/storeSelectors';
 import StoreCard from '../components/StoreCard';

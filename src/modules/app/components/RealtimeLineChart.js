@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Chart from 'chart.js';
-import styled, { withTheme } from 'styled-components';
+import styled, { withTheme } from 'styled-components/macro';
 
 const Root = styled.div`
   position: relative;
