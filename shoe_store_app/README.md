@@ -9,7 +9,7 @@ Database initialization and seed
 
 the project is using SQLite and I am seeding the table with mock data
 
-*rake db:migrate
-*rake db:seed
+* rake db:migrate
+* rake db:seed
 
 The event machine is started in a new threat. 
