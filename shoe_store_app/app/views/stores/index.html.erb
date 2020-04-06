@@ -1,5 +1,6 @@
 
-<table>
+<div class="table-responsive">
+<table class="table">
 	<% @stores.each do |store| %>
 		<tr>
 			<th valign="bottom"><%= store.name %></th>
@@ -19,8 +20,6 @@
 				</td>
 			<% end %>		
 		</tr>
-		<tr>
-			<th> <hr> </th>
-		</tr>
 	<% end %>
 </table>
+</div>
