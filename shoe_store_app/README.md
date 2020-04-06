@@ -1,24 +1,15 @@
-# README
+Rails app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dependencies
+* ruby 2.5
+* rails 6.0
+* sqlite3
 
-Things you may want to cover:
+Database initialization and seed
 
-* Ruby version
+the project is using SQLite and I am seeding the table with mock data
 
-* System dependencies
+*rake db:migrate
+*rake db:seed
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The event machine is started in a new threat. 
