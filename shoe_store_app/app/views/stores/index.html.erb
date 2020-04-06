@@ -1,0 +1,26 @@
+
+<table>
+	<% @stores.each do |store| %>
+		<tr>
+			<th valign="bottom"><%= store.name %></th>
+			<% store.shoes.each do |shoe| %>
+				<td valign="top">
+					<%= shoe.model %>
+					</br>
+					<% if shoe.low_inventory %>
+						<span style="color:red;"><%= shoe.inventory %></span>
+						<br><span style="color:red;">Low inventory</span>
+					<% elsif shoe.high_inventory %>
+						<span style="color:green;"><%= shoe.inventory %></span>
+						<br><span style="color:green;">High inventory</span>
+					<% else shoe.high_inventory %>
+						<%= shoe.inventory %>
+					<% end %>
+				</td>
+			<% end %>		
+		</tr>
+		<tr>
+			<th> <hr> </th>
+		</tr>
+	<% end %>
+</table>
