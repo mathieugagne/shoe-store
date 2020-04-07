@@ -1,3 +1,9 @@
+module ClientValues
+	STORE = 'store'
+	MODEL = 'model'
+	INVENTORY = 'inventory'
+end
+
 Thread.new do
 	Rails.application.executor.wrap do
 		EM.run {
@@ -6,11 +12,10 @@ Thread.new do
 			ws.on :message do |event|
 				parsed_data = JSON.parse(event.data)
 
-				# To handle sql injection I would check the parsed_data for values agains the shop or shoes
-				# Since it was not mention I will move on
-				shoe = Shoe.joins(:store).where('stores.name' => parsed_data['store'], 'shoes.model' => parsed_data['model']).first
+				# Preventing sql injection
+				shoe = Shoe.joins(:store).where(['stores.name =? AND shoes.model = ?', parsed_data[ClientValues::STORE], parsed_data[ClientValues::MODEL]]).first
 				if shoe.present?
-					shoe.inventory = parsed_data['inventory']
+					shoe.inventory = parsed_data[ClientValues::INVENTORY]
 					shoe.save
 				end
 			end

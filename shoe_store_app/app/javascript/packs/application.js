@@ -9,11 +9,12 @@ require("@rails/activestorage").start()
 require("channels")
 
 import "bootstrap";
-import "../stylesheets/application" 
+import "../stylesheets/application"
+
  
 document.addEventListener("turbolinks:load", () => {
   $('[data-toggle="tooltip"]').tooltip()
-  $('[data-toggle="popover"]').popover()
+  $('[data-toggle="popover"]').popover({html:true})
 })
 
 

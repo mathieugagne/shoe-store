@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :stores, only: [:index] do
-    resources :shoes, only: [:index]
-  end
+  # resources :stores, only: [:index]
+  
+  get '/stores', to: 'stores#index'
+
+  get '/stores/shoes/:id/suggest_transfer', to: 'stores#suggest_transfer'
 end
