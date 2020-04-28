@@ -1,0 +1,3 @@
+project=shoe_store
+test=rspec
+template=erb
