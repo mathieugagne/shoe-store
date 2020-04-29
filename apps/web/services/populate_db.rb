@@ -2,7 +2,7 @@
 
 require 'json'
 require 'pstore'
-require 'hanami/logger'
+require_relative '../../../lib/shoe_store/entities/shoe_line'
 
 class PopulateDb
   class << self
@@ -13,36 +13,21 @@ class PopulateDb
     private
 
     def persist_stock(data)
-      store = PStore.new("data/#{key_store(data)}.pstore")
-      add_to_db(store, data)
-      return unless data['inventory'] <= 10
-
-      add_to_critical_stock(data)
+      ShoeLine.new(filename: key_store(data),
+                   data: data,
+                   low_stock: low_stock(data))
     end
 
-    def add_to_critical_stock(data)
-      Hanami::Logger.new.warn(low_stock(data)) unless Hanami.env?(:test)
-      store = PStore.new('data/critical_stock.pstore')
-      add_to_db(store, data)
-    end
-
-    def add_to_db(store, data)
-      store.transaction do
-        data_w_time = data.merge({ created_at: Time.now })
-        store[key_store(data).to_sym] ||= []
-        store[key_store(data).to_sym].push(data_w_time)
-      end
+    def low_stock(data)
+      data['inventory'].to_i <= 10
     end
 
     def key_store(data)
-      # eg input ALDO Centre Eaton
-      # eg output aldo_center_eaton
+      return 'critical_stock' if low_stock(data)
+
       data['store'].gsub(' ', '_')
                    .downcase
     end
 
-    def low_stock(data)
-      "#{data['store']}: #{data['inventory']} #{data['model']} left"
-    end
   end
 end

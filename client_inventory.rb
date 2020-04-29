@@ -19,7 +19,6 @@ class ClientInventory
 
     def handle_message(wsocket)
       wsocket.on :message do |event|
-        wsocket.send(event)
         PopulateDb.call(data: JSON.parse(event.data))
       end
     end

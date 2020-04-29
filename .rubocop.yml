@@ -5,8 +5,8 @@ AllCops:
     - 'config/**/*'
     - 'Rakefile'
     - 'Gemfile'
-    - 'spec/spec_helper.rb'
+    - 'spec/**/*'
     - 'apps/web/application.rb'
-    
+
 Style/Documentation:
   Enabled: false
