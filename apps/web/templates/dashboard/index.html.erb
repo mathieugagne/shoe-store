@@ -1,0 +1,14 @@
+<p>Hi Aldo, below you stock for <%= DateTime.now %></p>
+
+<% store.transaction(true) do %>
+  <% store.roots.each do |data_root_name| %>
+    <% store[data_root_name].each do |a| %>
+      <ul>
+        <li>model <%= a['model'] %> quantity: <%= a['inventory'] %></li>
+      </ul>
+    <% end %>
+  <% end %>
+<%end%>
+
+
+<p id='warning'></p>

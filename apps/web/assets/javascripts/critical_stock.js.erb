@@ -1,0 +1,9 @@
+var ws = new WebSocket('ws://localhost:8080/inventory');
+
+ws.onmessage = function(event) {
+  console.log(event)
+  let json = JSON.parse(event.data)
+  if (json['inventory'] <= 10) {
+    $( "#warning" ).append( "<p>"+ event.data +"</p>" );
+  }
+};

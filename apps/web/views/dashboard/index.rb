@@ -2,8 +2,10 @@
 
 module Web
   module Views
-    class ApplicationLayout
-      include Web::Layout
+    module Dashboard
+      class Index
+        include Web::View
+      end
     end
   end
 end

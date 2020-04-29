@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'Rakefile'
+    - 'Gemfile'
+    - 'spec/spec_helper.rb'
+    - 'apps/web/application.rb'
+    
+Style/Documentation:
+  Enabled: false
