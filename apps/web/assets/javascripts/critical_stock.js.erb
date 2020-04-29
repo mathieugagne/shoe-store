@@ -1,9 +1,24 @@
 var ws = new WebSocket('ws://localhost:8080/inventory');
 
 ws.onmessage = function(event) {
-  console.log(event)
-  let json = JSON.parse(event.data)
+  let json = JSON.parse(event.data);
+  const warningId = Math.random().toString(36).substring(2);
+  $("#warning").append(`<div id=${warningId} class=${stockLevel(json)}>${warningPayload(json)}</div>`).delay(1000).fadeIn();
+  $(`#${warningId}`).delay(15000).fadeOut(2000);
+};
+
+function warningPayload(json) {
+  const store = json['store'];
+  const model = json['model'];
+  const inventory = json['inventory'];
+  return `<strong>${store}</strong> : ${model} (${inventory})`;
+};
+
+function stockLevel(json) {
+  const inventory = json['inventory'];
   if (json['inventory'] <= 10) {
-    $( "#warning" ).append( "<p>"+ event.data +"</p>" );
-  }
+    return  `critical`;
+  } else {
+    return `safe`;
+  };
 };

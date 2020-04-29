@@ -18,7 +18,7 @@ class ShoeLine
     store = PStore.new("data/#{filename}.pstore")
 
     store.transaction do
-      data_w_time = data.merge({ created_at: Time.now })
+      data_w_time = data.merge({ 'created_at' => Time.now })
       store[filename.to_sym] ||= []
       store[filename.to_sym].push(data_w_time)
     end

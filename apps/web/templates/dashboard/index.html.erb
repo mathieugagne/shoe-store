@@ -1,14 +1,35 @@
-<p>Hi Aldo, below you stock for <%= DateTime.now %></p>
+<h1>Inventory MONITORING</h1>
 
-<% store.transaction(true) do %>
-  <% store.roots.each do |data_root_name| %>
-    <% store[data_root_name].each do |a| %>
-      <ul>
-        <li>model <%= a['model'] %> quantity: <%= a['inventory'] %></li>
-      </ul>
-    <% end %>
-  <% end %>
-<%end%>
+<div class='monitoring-container'>
+  <div class='livestream'>
+    <h2>Livestream</h2>
+
+    <p id='warning'></p>
+  </div>
+  <div class='reporting'>
+    <h2>Timeline inventory alert</h2>
 
 
-<p id='warning'></p>
+    <table>
+      <tr>
+        <th scope="col">Store</th>
+        <th scope="col">Model</th>
+        <th scope="col">Inventory</th>
+        <th scope="col">Time</th>
+      </tr>
+      <% store.transaction(true) do %>
+        <% store.roots.each do |data_root_name| %>
+        <% last_hundred = store[data_root_name].reverse.first(100 )%>
+          <% last_hundred.each do |a| %>
+            <tr>
+              <th scope="row"><%= a['store'] %></th>
+              <td><%= a['model'] %></td>
+              <td><%= a['inventory'] %></td>
+              <td><%= a['created_at'].strftime("%H:%M:%S") %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      <%end%>
+    </table>
+  </div>
+</div>
