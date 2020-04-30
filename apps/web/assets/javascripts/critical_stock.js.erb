@@ -15,8 +15,9 @@ function warningPayload(json) {
 };
 
 function stockLevel(json) {
+  const limit = $('.critical_number').text();
   const inventory = json['inventory'];
-  if (json['inventory'] <= 10) {
+  if (json['inventory'] <= limit) {
     return  `critical`;
   } else {
     return `safe`;

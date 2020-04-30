@@ -20,12 +20,20 @@ RSpec.describe ShoeLine do
   end
 
   let(:store) { PStore.new('data/test_rosemont_la_petite_patrie.pstore') }
+
   before do
     described_class.new(filename: 'test_rosemont_la_petite_patrie',
-                        data: json_data_safe_stock)
+                        data: json_data_low_stock,
+                        low_stock: false)
   end
 
   describe 'Create a store file' do
+    before do
+      described_class.new(filename: 'critical_stock',
+                          data: json_data_low_stock,
+                          low_stock: true)
+    end
+
     context 'for a critical stock' do
       it do
         path = 'data/critical_stock.pstore'

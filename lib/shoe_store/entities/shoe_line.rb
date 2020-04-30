@@ -3,11 +3,12 @@
 require 'hanami/logger'
 
 class ShoeLine
-  attr_reader :filename, :data
+  attr_reader :filename, :data, :low_stock
 
   def initialize(args)
     @filename = args[:filename]
     @data = args[:data]
+    @low_stock = args[:low_stock]
 
     add_to_db(filename, data)
   end
@@ -22,7 +23,7 @@ class ShoeLine
       store[filename.to_sym] ||= []
       store[filename.to_sym].push(data_w_time)
     end
-    low_stock_logs if low_stock?
+    low_stock_logs if low_stock
   end
 
   def low_stock_logs
@@ -31,9 +32,5 @@ class ShoeLine
 
   def low_stock_warn(data)
     "#{data['store']}: #{data['inventory']} #{data['model']} left"
-  end
-
-  def low_stock?
-    filename == 'critical_stock'
   end
 end

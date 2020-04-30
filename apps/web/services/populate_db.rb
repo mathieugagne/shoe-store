@@ -19,7 +19,7 @@ class PopulateDb
     end
 
     def low_stock(data)
-      data['inventory'].to_i <= 10
+      data['inventory'].to_i <= limit_from_settings.to_i
     end
 
     def key_store(data)
@@ -29,5 +29,13 @@ class PopulateDb
                    .downcase
     end
 
+    def limit_from_settings
+      settings = PStore.new('config/settings.pstore')
+      settings.transaction(true) do
+        settings.roots.each do |s|
+          return settings[s].last
+        end
+      end
+    end
   end
 end

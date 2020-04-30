@@ -1,5 +1,19 @@
 <h1>Inventory MONITORING</h1>
 
+<%=
+  form_for 'settings', '/settings' do
+    text_field :critical_limit
+    submit 'Create', id: 'submit'
+  end
+%>
+
+<% settings.transaction(true) do %>
+  <% settings.roots.each do |s| %>
+    <p class='critical_number'> <%= settings[s].last %></p>
+  <% end %>
+<% end %>
+
+
 <div class='monitoring-container'>
   <div class='livestream'>
     <h2>Livestream</h2>

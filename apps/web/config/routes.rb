@@ -6,3 +6,4 @@
 # Example:
 # get '/hello', to: ->(env) { [200, {}, ['Hello from Hanami!']] }
 get '/', to: 'dashboard#index'
+resources :settings, only: [:new, :create]
