@@ -13,7 +13,7 @@ class PopulateDb
     private
 
     def persist_stock(data)
-      ShoeLine.new(filename: key_store(data),
+      ShoeLine.new(filename: filename(data),
                    data: data,
                    low_stock: low_stock(data))
     end
@@ -22,7 +22,7 @@ class PopulateDb
       data['inventory'].to_i <= limit_from_settings.to_i
     end
 
-    def key_store(data)
+    def filename(data)
       return 'critical_stock' if low_stock(data)
 
       data['store'].gsub(' ', '_')
@@ -31,11 +31,7 @@ class PopulateDb
 
     def limit_from_settings
       settings = PStore.new('config/settings.pstore')
-      settings.transaction(true) do
-        settings.roots.each do |s|
-          return settings[s].last
-        end
-      end
+      settings.transaction(true) { settings['critical_limit'].last }
     end
   end
 end

@@ -1,5 +1,41 @@
-.critical {
+.critical_limit {
   color: red
+}
+
+.high_limit {
+  color: green
+}
+
+.settings-container {
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  border: 2px solid grey;
+  border-radius: 20px;
+}
+
+.values-container {
+  display: flex;
+  justify-content: center
+}
+
+.values {
+  margin: 10px;
+}
+
+.monitoring-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.reporting {
+  width: 400px;
+}
+
+.livestream {
+  width: 400px;
 }
 
 h1, h2, h4 {
@@ -40,17 +76,4 @@ table {
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
-}
-
-.monitoring-container {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  flex-wrap: wrap;
-}
-.reporting {
-  width: 400px;
-}
-.livestream {
-  width: 400px;
 }

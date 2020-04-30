@@ -8,6 +8,7 @@ module Web
       class Index
         include Web::Action
         expose :store, :settings
+
         def call(_params)
           @store = PStore.new('data/critical_stock.pstore')
           @settings = PStore.new('config/settings.pstore')

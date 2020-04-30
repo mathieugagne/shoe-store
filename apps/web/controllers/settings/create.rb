@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pstore'
 
 module Web
@@ -6,7 +8,7 @@ module Web
       class Create
         include Web::Action
 
-        def call(params)
+        def call(_params)
           store = PStore.new('config/settings.pstore')
           populate_settings(store)
           redirect_to '/'
@@ -16,8 +18,12 @@ module Web
 
         def populate_settings(store)
           store.transaction do
-            store['limit'] ||= []
-            store['limit'].push(params[:settings][:critical_limit])
+            params[:settings].each do |a|
+              next if a[1] == ''
+
+              store[a[0].to_s] ||= []
+              store[a[0].to_s].push(a[1])
+            end
           end
         end
       end
