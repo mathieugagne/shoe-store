@@ -1,61 +1,34 @@
-<h1>Inventory MONITORING</h1>
-
-
-<div class='settings-container'>
-  <p>Settings</p>
-  <div>
-
-  <%=
-    form_for 'settings', '/settings' do
-      number_field :high_limit, placeholder: 'High limit alert'
-      number_field :critical_limit, placeholder: 'Critical limit alert'
-      span 'Edit', id: 'edit'
-    end
-  %>
-  </div>
-  <div class='values-container'>
-  <% settings.transaction(true) do %>
-    <% settings.roots.each do |s| %>
-    <div class='values'>
-      <p class="<%= s %>"> <%= formate_label(s) %></p>
-      <p class="<%= s %>_value"> <%= formate_value(settings, s) %></p>
-    </div>
-    <% end %>
-  <% end %>
-  </div>
-</div>
-
-
 <div class='monitoring-container'>
-  <div class='livestream'>
-    <h2>Livestream</h2>
-
-    <p id='warning'></p>
-  </div>
   <div class='reporting'>
-    <h2>Timeline critical inventory alert</h2>
-
-
+    <h2>Critical alert by store</h2>
     <table>
       <tr>
         <th scope="col">Store</th>
-        <th scope="col">Model</th>
-        <th scope="col">Inventory</th>
-        <th scope="col">Time</th>
+        <th scope="col">Occurrence</th>
       </tr>
-      <% store.transaction(true) do %>
-        <% store.roots.each do |data_root_name| %>
-        <% last_hundred = store[data_root_name].reverse.first(100 )%>
-          <% last_hundred.each do |a| %>
-            <tr>
-              <th scope="row"><%= a['store'] %></th>
-              <td><%= a['model'] %></td>
-              <td><%= a['inventory'] %></td>
-              <td><%= a['created_at'].strftime("%H:%M:%S") %></td>
-            </tr>
-          <% end %>
-        <% end %>
+      <% ordered(store_occurence).each do |store| %>
+        <tr>
+          <td><%= store[0] %></td>
+          <td><%= store[1] %></td>
+        </tr>
+      <%end%>
+    </table>
+
+
+    <h2>Critical alert by model</h2>
+    <table>
+      <tr>
+        <th scope="col">Model</th>
+        <th scope="col">Occurrence</th>
+      </tr>
+      <% ordered(model_occurence).each do |store| %>
+        <tr>
+          <td><%= store[0] %></td>
+          <td><%= store[1] %></td>
+        </tr>
       <%end%>
     </table>
   </div>
+
+  <%= render partial: 'dashboard/timeline', locals: { store: store } %>
 </div>

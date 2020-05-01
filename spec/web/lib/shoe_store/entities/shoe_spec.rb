@@ -5,7 +5,7 @@ require_relative '../../../../../lib/shoe_store/entities/shoe_line'
 RSpec.describe ShoeLine do
   let(:json_data_low_stock) do
     {
-      'store' => 'test Rosemont la petite patrie',
+      'store' => 'ALDO Crossgates Mall',
       'model' => 'ALALIWEN',
       'inventory' => 0
     }
@@ -13,16 +13,16 @@ RSpec.describe ShoeLine do
 
   let(:json_data_safe_stock) do
     {
-      'store' => 'test Rosemont la petite patrie',
+      'store' => 'ALDO Crossgates Mall',
       'model' => 'MIGO',
       'inventory' => 20
     }
   end
 
-  let(:store) { PStore.new('data/test_rosemont_la_petite_patrie.pstore') }
+  let(:store) { PStore.new('data/aldo_crossgates_mall.pstore') }
 
   before do
-    described_class.new(filename: 'test_rosemont_la_petite_patrie',
+    described_class.new(filename: 'aldo_crossgates_mall',
                         data: json_data_low_stock,
                         low_stock: false)
   end
@@ -43,7 +43,7 @@ RSpec.describe ShoeLine do
 
     context 'for a safe stock' do
       it do
-        path = 'data/test_rosemont_la_petite_patrie.pstore'
+        path = 'data/aldo_crossgates_mall.pstore'
         expect(File).to exist(path)
       end
     end
@@ -51,6 +51,6 @@ RSpec.describe ShoeLine do
 
   it 'With the correct store key' do
     pstore_keys = store.transaction { store.roots }
-    expect(pstore_keys).to eq [:test_rosemont_la_petite_patrie]
+    expect(pstore_keys).to eq [:aldo_crossgates_mall]
   end
 end

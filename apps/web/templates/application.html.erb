@@ -5,6 +5,12 @@
     <%= favicon %>
   </head>
   <body>
+    <h1>ALDO Monitoring</h1>
+
+    <div class='menu'>
+      <%= link_to 'Livestream', '/' %>
+      <%= link_to 'Alert overview', '/alerts' %>
+    </div>
     <%= yield %>
   </body>
   <%= javascript 'jquery' %>

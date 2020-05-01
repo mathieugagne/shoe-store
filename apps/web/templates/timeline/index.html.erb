@@ -1,0 +1,31 @@
+<div class='livestream-container'>
+  <div class='settings-container'>
+    <p>Settings</p>
+    <div>
+
+    <%=
+      form_for 'settings', '/settings' do
+        number_field :high_limit, placeholder: 'High limit alert'
+        number_field :critical_limit, placeholder: 'Critical limit alert'
+        span 'Edit', id: 'edit'
+      end
+    %>
+    </div>
+    <div class='values-container'>
+    <% settings.transaction(true) do %>
+      <% settings.roots.each do |s| %>
+      <div class='values'>
+        <p class="<%= s %>"> <%= formate_label(s) %></p>
+        <p class="<%= s %>_value"> <%= formate_value(settings, s) %></p>
+      </div>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+
+  <div class='livestream'>
+    <h2>Livestream</h2>
+
+    <p id='warning'></p>
+  </div>
+</div>

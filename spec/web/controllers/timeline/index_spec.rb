@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-RSpec.describe Web::Controllers::Dashboard::Index, type: :action do
+RSpec.describe Web::Controllers::Timeline::Index, type: :action do
   let(:action) { described_class.new }
   let(:params) { Hash[] }
 

@@ -4,7 +4,6 @@ require 'faye/websocket'
 require 'eventmachine'
 require 'hanami/logger'
 require_relative './apps/web/services/populate_db.rb'
-require_relative './apps/web/services/clear_db.rb'
 require_relative './apps/web/services/rescue_team.rb'
 
 class ClientInventory
@@ -34,7 +33,6 @@ class ClientInventory
     def handle_disconnect(wsocket)
       wsocket.on :close do |_event|
         Hanami::Logger.new.info('disconnect, reconnecting in 2 seconds')
-        ClearDb.call
         EventMachine::Timer.new(2) do
           start_loop
         end

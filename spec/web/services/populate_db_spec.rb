@@ -5,7 +5,7 @@ require_relative '../../../apps/web/services/populate_db'
 describe PopulateDb do
   let(:json_data_low_stock) do
     {
-      'store' => 'test Rosemont la petite patrie',
+      'store' => 'ALDO Pheasant Lane Mall',
       'model' => 'ALALIWEN',
       'inventory' => 0
     }
@@ -13,7 +13,7 @@ describe PopulateDb do
 
   let(:json_data_safe_stock) do
     {
-      'store' => 'test Rosemont la petite patrie',
+      'store' => 'ALDO Pheasant Lane Mall',
       'model' => 'MIGO',
       'inventory' => 20
     }
@@ -34,7 +34,7 @@ describe PopulateDb do
       it do
         expect(ShoeLine).to receive(:new)
           .with(data: json_data_safe_stock,
-                filename: 'test_rosemont_la_petite_patrie',
+                filename: 'aldo_pheasant_lane_mall',
                 low_stock: false)
 
         described_class.call(data: json_data_safe_stock)

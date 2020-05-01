@@ -27,7 +27,7 @@ Hanami::Utils.require!("#{__dir__}/support")
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.after(:suite) do
-    FileUtils.remove_dir('data/test_rosemont_la_petite_patrie.pstore')
+    FileUtils.remove_dir('data/aldo_crossgates_mall.pstore')
   end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

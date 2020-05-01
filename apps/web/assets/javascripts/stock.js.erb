@@ -4,13 +4,21 @@ ws.onmessage = function(event) {
   displayStockInformation();
 };
 
+ws.onclose = function(event) {
+  unableToConnectMessage()
+};
+
+ws.onclose = function(event) {
+  unableToConnectMessage()
+};
+
 function displayStockInformation() {
   let json = JSON.parse(event.data);
   const warningId = Math.random().toString(36).substring(2);
   $("#warning").append(`<div id=${warningId} class=${stockLevel(json)}>${stockInformation(json)}</div>`)
                .delay(1000)
                .fadeIn();
-  $(`#${warningId}`).delay(8000).fadeOut(2000);
+  $(`#${warningId}`).delay(10000).fadeOut(5000);
 }
 
 function stockInformation(json) {
@@ -33,3 +41,7 @@ function stockLevel(json) {
     return `safe`;
   };
 };
+
+function unableToConnectMessage() {
+  alert('Sorry, something wrong happens, unable to fetch inventory.');
+}

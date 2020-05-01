@@ -5,5 +5,7 @@
 #
 # Example:
 # get '/hello', to: ->(env) { [200, {}, ['Hello from Hanami!']] }
-get '/', to: 'dashboard#index'
+get '/', to: 'timeline#index'
+get '/alerts', to: 'dashboard#index'
+get '/timeline', to: 'timeline#index'
 resources :settings, only: %i[create]

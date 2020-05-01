@@ -1,0 +1,26 @@
+<div class='reporting'>
+  <h2>Timeline critical inventory alert</h2>
+  <h4>(last 100)</h4>
+
+  <table>
+    <tr>
+      <th scope="col">Store</th>
+      <th scope="col">Model</th>
+      <th scope="col">Inventory</th>
+      <th scope="col">Time</th>
+    </tr>
+    <% store.transaction(true) do %>
+      <% store.roots.each do |data_root_name| %>
+      <% last_hundred = store[data_root_name].reverse.first(100 )%>
+        <% last_hundred.each do |a| %>
+          <tr>
+            <th scope="row"><%= a['store'] %></th>
+            <td><%= a['model'] %></td>
+            <td><%= a['inventory'] %></td>
+            <td><%= a['created_at'].strftime("%H:%M:%S") %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    <%end%>
+  </table>
+</div>

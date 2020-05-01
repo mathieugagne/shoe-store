@@ -6,13 +6,8 @@ module Web
       class Index
         include Web::View
 
-        def formate_label(key)
-          key.split('_').map(&:capitalize).join(' ')
-        end
-
-        def formate_value(settings, key)
-          value = settings[key].last
-          value == '' ? '-' : value
+        def ordered(data)
+          data.sort_by { |_key, value| value }.reverse
         end
       end
     end
