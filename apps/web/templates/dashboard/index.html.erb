@@ -7,9 +7,9 @@
 
   <%=
     form_for 'settings', '/settings' do
-      number_field :high_limit, placeholder: 'Set high stock alert'
-      number_field :critical_limit, placeholder: 'Set low stock alert'
-      submit 'Create', id: 'submit'
+      number_field :high_limit, placeholder: 'High limit alert'
+      number_field :critical_limit, placeholder: 'Critical limit alert'
+      span 'Edit', id: 'edit'
     end
   %>
   </div>

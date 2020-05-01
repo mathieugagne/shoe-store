@@ -11,7 +11,6 @@ module Web
         def call(_params)
           store = PStore.new('config/settings.pstore')
           populate_settings(store)
-          redirect_to '/'
         end
 
         private

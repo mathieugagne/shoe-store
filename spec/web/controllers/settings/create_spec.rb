@@ -8,10 +8,6 @@ RSpec.describe Web::Controllers::Settings::Create, type: :action do
   before do
     @response = action.call(params)
   end
-  it 'is redirected' do
-    expect(response[1]['location']).to eq '/'
-    expect(response[0]).to eq 302
-  end
 
   it 'populate low_stock_settings.pstore' do
     last_setting = store.transaction(true) { store['critical_limit'].last }

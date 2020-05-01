@@ -38,6 +38,16 @@
   width: 400px;
 }
 
+#edit {
+  font-size: 10px;
+  border: 1px solid;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
 h1, h2, h4 {
   text-align: center;
 }
