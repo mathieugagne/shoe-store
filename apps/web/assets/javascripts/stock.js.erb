@@ -10,7 +10,7 @@ function displayStockInformation() {
   $("#warning").append(`<div id=${warningId} class=${stockLevel(json)}>${stockInformation(json)}</div>`)
                .delay(1000)
                .fadeIn();
-  $(`#${warningId}`).delay(15000).fadeOut(2000);
+  $(`#${warningId}`).delay(8000).fadeOut(2000);
 }
 
 function stockInformation(json) {

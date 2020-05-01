@@ -5,6 +5,7 @@ require 'eventmachine'
 require 'hanami/logger'
 require_relative './apps/web/services/populate_db.rb'
 require_relative './apps/web/services/clear_db.rb'
+require_relative './apps/web/services/rescue_team.rb'
 
 class ClientInventory
   class << self
@@ -13,6 +14,7 @@ class ClientInventory
       handle_connected(wsocket)
       handle_disconnect(wsocket)
       handle_message(wsocket)
+      handle_error(wsocket)
     end
 
     private
@@ -37,6 +39,14 @@ class ClientInventory
           start_loop
         end
         wsocket = nil
+      end
+    end
+
+    def handle_error(wsocket)
+      wsocket.on :error do |error|
+        RescueTeam.call(url: error.current_target.url,
+                        message: error.message,
+                        created_at: DateTime.now)
       end
     end
 

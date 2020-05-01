@@ -3,11 +3,11 @@
 source 'https://rubygems.org'
 
 gem 'hanami', '~> 1.3'
-gem 'hanami-model', '~> 1.3'
 gem 'rake'
 
 gem 'jquery-hanami'
 gem 'sqlite3'
+gem 'bunny'
 
 group :development do
   # Code reloading
@@ -23,6 +23,7 @@ end
 group :test do
   gem 'capybara'
   gem 'rspec'
+  gem 'bunny-mock'
 end
 
 group :production do
