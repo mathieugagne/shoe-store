@@ -12,10 +12,6 @@ module Web
           data.sort_by { |_key, value| value }.reverse
         end
 
-        def lowest_first(data)
-          data.sort_by { |_key, value| value }
-        end
-
         def column_name(title)
           SALES_TITLE.include?(title) ? 'Number of sales' : 'Stock remaining'
         end

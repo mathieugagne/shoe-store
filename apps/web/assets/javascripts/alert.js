@@ -11,7 +11,7 @@ function incrementTable(json, type) {
 
   const val = $(`.${dasherize_class}`).text()
    if (val == '') {
-     return  $(`#${type}_alert tr:last`).after(`<tr><td>${item}</td><td class="${dasherize_class}">${value}</td><tr>`);
+     return  $(`#${type}_alert tr:last`).after(`<tr><td>${item}</td><td class="${dasherize_class}">1</td><tr>`);
    };
    $(`.${dasherize_class}`).text(parseInt(val) + 1)
 };

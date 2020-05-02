@@ -18,9 +18,12 @@ $('document').ready(function() {
 function updateValues(low, high) {
   if (low !== '') {
     $('.critical_limit_value').text(low);
+    $('.critical_limit_settings').text(low);
+
   };
   if (high !== '') {
     $('.high_limit_value').text(high);
+    $('.high_limit_settings').text(low);
   };
 };
 
