@@ -2,7 +2,7 @@
 
 class OccurrenceCalculator
   class << self
-    def call(data: data)
+    def call(data:)
       ordered_occurence(data)
     end
 

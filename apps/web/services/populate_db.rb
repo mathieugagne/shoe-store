@@ -23,10 +23,7 @@ class PopulateDb
     end
 
     def filename(data)
-      return 'critical_stock' if low_stock(data)
-
-      data['store'].gsub(' ', '_')
-                   .downcase
+      low_stock(data) ? 'critical_stock' : 'data'
     end
 
     def limit_from_settings

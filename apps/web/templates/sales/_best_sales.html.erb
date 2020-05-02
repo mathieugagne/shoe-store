@@ -1,0 +1,16 @@
+<div>
+  <table>
+    <h3>Best sales per <%= type %></h3>
+
+    <tr>
+      <th scope="col"><%= type %></th>
+      <th scope="col">Remaining stock</th>
+    </tr>
+    <% best_sales(data).each do |line| %>
+      <tr>
+        <th scope="row"><%= line[0] %></th>
+        <td><%= line[1] %></td>
+      </tr>
+    <%end%>
+  </table>
+</div>

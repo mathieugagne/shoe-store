@@ -32,11 +32,7 @@ class ClientInventory
 
     def handle_disconnect(wsocket)
       wsocket.on :close do |_event|
-        Hanami::Logger.new.info('disconnect, reconnecting in 2 seconds')
-        EventMachine::Timer.new(2) do
-          start_loop
-        end
-        wsocket = nil
+        retry_connection
       end
     end
 
@@ -45,6 +41,13 @@ class ClientInventory
         RescueTeam.call(url: error.current_target.url,
                         message: error.message,
                         created_at: DateTime.now)
+      end
+    end
+
+    def retry_connection
+      Hanami::Logger.new.info('disconnect, reconnecting in 2 seconds')
+      EventMachine::Timer.new(2) do
+        start_loop
       end
     end
 

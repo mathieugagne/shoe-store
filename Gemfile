@@ -23,7 +23,6 @@ end
 group :test do
   gem 'capybara'
   gem 'rspec'
-  gem 'bunny-mock'
 end
 
 group :production do

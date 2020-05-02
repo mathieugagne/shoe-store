@@ -34,7 +34,7 @@ describe PopulateDb do
       it do
         expect(ShoeLine).to receive(:new)
           .with(data: json_data_safe_stock,
-                filename: 'aldo_pheasant_lane_mall',
+                filename: 'data',
                 low_stock: false)
 
         described_class.call(data: json_data_safe_stock)

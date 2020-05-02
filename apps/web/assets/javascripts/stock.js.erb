@@ -1,17 +1,3 @@
-var ws = new WebSocket('ws://localhost:8080/inventory');
-
-ws.onmessage = function(event) {
-  displayStockInformation();
-};
-
-ws.onclose = function(event) {
-  unableToConnectMessage()
-};
-
-ws.onclose = function(event) {
-  unableToConnectMessage()
-};
-
 function displayStockInformation() {
   let json = JSON.parse(event.data);
   const warningId = Math.random().toString(36).substring(2);
@@ -43,5 +29,5 @@ function stockLevel(json) {
 };
 
 function unableToConnectMessage() {
-  alert('Sorry, something wrong happens, unable to fetch inventory.');
+  alert('Sorry, something wrong happens, unable to fetch inventory. Please contact the dev team.');
 }

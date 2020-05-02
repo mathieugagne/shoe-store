@@ -1,0 +1,15 @@
+<h2 class="title">Sales overview</h2>
+
+<div class='sales-container'>
+  <div class='store-sales'>
+    <%= render partial: 'sales/best_sales', locals: { type: 'Store', data: store_sales} %>
+    <%= render partial: 'sales/worst_sales', locals: { type: 'Store', data: store_sales} %>
+  </div>
+
+
+  <div class='model-sales'>
+    <%= render partial: 'sales/worst_sales', locals: { type: 'Model', data: model_sales} %>
+
+    <%= render partial: 'sales/best_sales', locals: { type: 'Model', data: model_sales} %>
+  </div>
+</div>

@@ -10,10 +10,11 @@
     <div class='menu'>
       <%= link_to 'Livestream', '/' %>
       <%= link_to 'Alert overview', '/alerts' %>
+      <%= link_to 'Sales overview', '/sales' %>
     </div>
     <%= yield %>
   </body>
   <%= javascript 'jquery' %>
-  <%= javascript 'stock', 'settings' %>
+  <%= javascript 'stock', 'livestream' ,'settings' %>
   <%= stylesheet 'app' %>
 </html>
