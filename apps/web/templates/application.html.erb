@@ -7,6 +7,18 @@
   <body>
     <h1>ALDO Monitoring</h1>
 
+    <div class='hidden'>
+      <% settings = PStore.new('config/settings.pstore')%>
+      <% settings.transaction(true) do %>
+        <% settings.roots.each do |s| %>
+        <div class='values'>
+          <p class="<%= s %>_value"> <%= settings[s].last %></p>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+
+
     <div class='menu'>
       <%= link_to 'Livestream', '/' %>
       <%= link_to 'Alert overview', '/alerts' %>
@@ -15,6 +27,6 @@
     <%= yield %>
   </body>
   <%= javascript 'jquery' %>
-  <%= javascript 'stock', 'livestream' ,'settings' %>
+  <%= javascript 'stock', 'alert', 'sales', 'livestream' ,'settings' %>
   <%= stylesheet 'app' %>
 </html>

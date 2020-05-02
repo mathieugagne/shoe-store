@@ -1,11 +1,23 @@
+const critical_limit = $('.critical_limit_value').text();
+const high_limit = $('.high_limit_value').text();
+
 function displayStockInformation() {
   let json = JSON.parse(event.data);
   const warningId = Math.random().toString(36).substring(2);
   $("#warning").append(`<div id=${warningId} class=${stockLevel(json)}>${stockInformation(json)}</div>`)
                .delay(1000)
                .fadeIn();
+  if (json['inventory'] <= critical_limit) {
+    updateTable(json)
+  };
+
+  updateNumberOfSales(json, 'model', 'sales_per_model')
+  updateNumberOfSales(json, 'store', 'sales_per_store')
+  updateStockRemaining(json, 'store', 'stock_per_store')
+  updateStockRemaining(json, 'model', 'stock_per_model')
+
   $(`#${warningId}`).delay(10000).fadeOut(5000);
-}
+};
 
 function stockInformation(json) {
   const store = json['store'];
@@ -15,9 +27,6 @@ function stockInformation(json) {
 };
 
 function stockLevel(json) {
-  const critical_limit = $('.critical_limit_value').text();
-  const high_limit = $('.high_limit_value').text();
-
   const inventory = json['inventory'];
   if (json['inventory'] <= critical_limit) {
     return  `critical_limit`;

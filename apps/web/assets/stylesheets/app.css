@@ -63,10 +63,6 @@ td {
     text-align: center;
 }
 
-tr:nth-child(even) {
-    background-color: #eee;
-}
-
 th[scope="col"] {
     background-color: #696969;
     color: #fff;
@@ -112,4 +108,16 @@ table {
   font-size: 24px;
   text-align: center;
   width: 50px;
+}
+
+.store-col {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+#model_alert {
+  margin: auto;
 }

@@ -1,22 +1,25 @@
 <div class='monitoring-container'>
   <div class='reporting'>
     <h2>Critical alert by store</h2>
-    <table>
+    <table id='store_alert'>
       <tr>
-        <th scope="col">Store</th>
+        <th class='store-col' scope="col">Store</th>
         <th scope="col">Occurrence</th>
-      </tr>
+      </tr
       <% ordered(store_occurence).each do |store| %>
+
         <tr>
           <td><%= store[0] %></td>
-          <td><%= store[1] %></td>
+          <td class="<%= dasherize(store[0])%>"><%= store[1] %></td>
+
         </tr>
       <%end%>
+
     </table>
 
 
     <h2>Critical alert by model</h2>
-    <table>
+    <table id='model_alert'>
       <tr>
         <th scope="col">Model</th>
         <th scope="col">Occurrence</th>
@@ -24,7 +27,7 @@
       <% ordered(model_occurence).each do |store| %>
         <tr>
           <td><%= store[0] %></td>
-          <td><%= store[1] %></td>
+          <td class="<%= dasherize(store[0])%>"><%= store[1] %></td>
         </tr>
       <%end%>
     </table>

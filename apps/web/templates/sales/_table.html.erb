@@ -1,5 +1,5 @@
 <div>
-  <table>
+  <table id="<%=  dasherize(title) %>_table">
     <h3><%= title %></h3>
 
     <tr>
@@ -9,7 +9,7 @@
     <% highest_first(data).each do |line| %>
       <tr>
         <th scope="row"><%= line[0] %></th>
-        <td><%= line[1] %></td>
+        <td class="<%= dasherize(line[0]) %>_<%= dasherize(title)%>"><%= line[1] %></td>
       </tr>
     <%end%>
   </table>

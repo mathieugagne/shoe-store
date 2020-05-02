@@ -1,36 +1,25 @@
 <h2 class="title">Sales overview</h2>
 
 <div class='sales-container'>
-  <div class='model-sales'>
-    <p class='legend'>Number of sales</p>
-
-    <%= render partial: 'sales/high_level', locals: { type: 'Model',
-                                                       data: number_of_sales_by_model,
-                                                       title: 'Best sales'} %>
-    <%= render partial: 'sales/high_level', locals: { type: 'Store',
-                                                       data: number_of_sales_by_store,
-                                                      title: 'Biggest seller'} %>
-  </div>
-
   <div class='store-sales'>
-    <p class='legend'>Stock remaining per store</p>
+    <p class='legend'>Store overview</p>
 
-    <%= render partial: 'sales/low_level', locals: { type: 'Store',
-                                                      data: store_inventory,
-                                                      title: 'Best inventory management'  } %>
-    <%= render partial: 'sales/high_level', locals: { type: 'Store',
-                                                       data: store_inventory,
-                                                       title: 'Worst inventory management'  } %>
+    <%= render partial: 'sales/table', locals: { type: 'Store',
+                                                     data: store_inventory,
+                                                     title: 'Stock per store'  } %>
+   <%= render partial: 'sales/table', locals: { type: 'Store',
+                                                     data: number_of_sales_by_store,
+                                                     title: 'Sales per store'} %>
   </div>
 
   <div class='model-sales'>
-    <p class='legend'>Stock remaining per model</p>
+    <p class='legend'>Model overview</p>
 
-    <%= render partial: 'sales/low_level', locals: { type: 'Model',
+    <%= render partial: 'sales/table', locals: { type: 'Model',
                                                       data: model_inventory,
-                                                      title: 'Need a restocking'  } %>
-    <%= render partial: 'sales/high_level', locals: { type: 'Model',
-                                                       data: model_inventory,
-                                                       title: 'Need marketing action'  } %>
+                                                      title: 'Stock per model'  } %>
+    <%= render partial: 'sales/table', locals: { type: 'Model',
+                                                      data: number_of_sales_by_model,
+                                                      title: 'Sales per model'} %>
   </div>
 </div>
