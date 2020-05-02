@@ -37,6 +37,7 @@ class ClientInventory
     end
 
     def handle_error(wsocket)
+      # start rabbit mq to enqueue error message
       wsocket.on :error do |error|
         RescueTeam.call(url: error.current_target.url,
                         message: error.message,
