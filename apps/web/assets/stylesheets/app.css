@@ -104,3 +104,12 @@ table {
   margin: auto;
   margin-bottom: 20px;
 }
+
+.legend {
+  display: flex;
+  align-items: center;
+  color: grey;
+  font-size: 24px;
+  text-align: center;
+  width: 50px;
+}

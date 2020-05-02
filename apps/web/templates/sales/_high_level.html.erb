@@ -1,12 +1,12 @@
 <div>
   <table>
-    <h3>Worst sales per <%= type %></h3>
+    <h3><%= title %></h3>
 
     <tr>
       <th scope="col"><%= type %></th>
-      <th scope="col">Remaining stock</th>
+      <th scope="col"><%= column_name(title) %></th>
     </tr>
-    <% worst_sales(data).each do |line| %>
+    <% highest_first(data).each do |line| %>
       <tr>
         <th scope="row"><%= line[0] %></th>
         <td><%= line[1] %></td>

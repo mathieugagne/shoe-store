@@ -9,9 +9,9 @@
       <th scope="col">Inventory</th>
       <th scope="col">Time</th>
     </tr>
-    <% store.transaction(true) do %>
-      <% store.roots.each do |data_root_name| %>
-      <% last_hundred = store[data_root_name].reverse.first(100 )%>
+    <% timeline.transaction(true) do %>
+      <% timeline.roots.each do |data_root_name| %>
+      <% last_hundred = timeline[data_root_name].reverse.first(100 )%>
         <% last_hundred.each do |a| %>
           <tr>
             <th scope="row"><%= a['store'] %></th>

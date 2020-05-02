@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SalesCalculator
+class InventoryCalculator
   class << self
     def call(type:, filename: 'data/data.pstore')
       targeted_data = select_couple_inventory(type, filename)

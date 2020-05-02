@@ -1,15 +1,36 @@
 <h2 class="title">Sales overview</h2>
 
 <div class='sales-container'>
-  <div class='store-sales'>
-    <%= render partial: 'sales/best_sales', locals: { type: 'Store', data: store_sales} %>
-    <%= render partial: 'sales/worst_sales', locals: { type: 'Store', data: store_sales} %>
+  <div class='model-sales'>
+    <p class='legend'>Number of sales</p>
+
+    <%= render partial: 'sales/high_level', locals: { type: 'Model',
+                                                       data: number_of_sales_by_model,
+                                                       title: 'Best sales'} %>
+    <%= render partial: 'sales/high_level', locals: { type: 'Store',
+                                                       data: number_of_sales_by_store,
+                                                      title: 'Biggest seller'} %>
   </div>
 
+  <div class='store-sales'>
+    <p class='legend'>Stock remaining per store</p>
+
+    <%= render partial: 'sales/low_level', locals: { type: 'Store',
+                                                      data: store_inventory,
+                                                      title: 'Best inventory management'  } %>
+    <%= render partial: 'sales/high_level', locals: { type: 'Store',
+                                                       data: store_inventory,
+                                                       title: 'Worst inventory management'  } %>
+  </div>
 
   <div class='model-sales'>
-    <%= render partial: 'sales/worst_sales', locals: { type: 'Model', data: model_sales} %>
+    <p class='legend'>Stock remaining per model</p>
 
-    <%= render partial: 'sales/best_sales', locals: { type: 'Model', data: model_sales} %>
+    <%= render partial: 'sales/low_level', locals: { type: 'Model',
+                                                      data: model_inventory,
+                                                      title: 'Need a restocking'  } %>
+    <%= render partial: 'sales/high_level', locals: { type: 'Model',
+                                                       data: model_inventory,
+                                                       title: 'Need marketing action'  } %>
   </div>
 </div>

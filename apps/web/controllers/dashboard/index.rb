@@ -8,18 +8,23 @@ module Web
     module Dashboard
       class Index
         include Web::Action
-        expose :store, :store_occurence, :model_occurence
+        expose :timeline, :store_occurence, :model_occurence
 
         def call(_params)
-          @store = PStore.new('data/critical_stock.pstore')
-          @store_occurence = OccurrenceCalculator.call(data: select('store'))
-          @model_occurence = OccurrenceCalculator.call(data: select('model'))
+          @timeline = PStore.new('data/critical_stock.pstore')
+          @store_occurence = OccurrenceCalculator.call(
+            data: select('store', 'critical_stock')
+          )
+          @model_occurence = OccurrenceCalculator.call(
+            data: select('model', 'data')
+          )
         end
 
         private
 
-        def select(key)
-          data = store.transaction(true) { store[:critical_stock] }
+        def select(key, filename)
+          store = PStore.new("data/#{filename}.pstore")
+          data = store.transaction(true) { store[filename.to_sym] }
           data.map do |a|
             a.slice(key).values
           end.flatten

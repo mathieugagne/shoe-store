@@ -7,7 +7,13 @@ class RescueTeam
     def call(args)
       Publisher.call('incident.inventory', args)
     rescue StandardError => e
-      Hanami::Logger.new.error("Error: #{e.message}, please start websocket and/or RabbitMq")
+      Hanami::Logger.new.error(error_message(e))
+    end
+
+    private
+
+    def error_message(error)
+      "Error: #{error.message}, please start websocket and/or RabbitMq"
     end
   end
 end
