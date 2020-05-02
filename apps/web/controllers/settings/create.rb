@@ -17,11 +17,11 @@ module Web
 
         def populate_settings(store)
           store.transaction do
-            params[:settings].each do |a|
-              next if a[1] == ''
+            params[:settings].each do |setting|
+              next if setting[1] == ''
 
-              store[a[0].to_s] ||= []
-              store[a[0].to_s].push(a[1])
+              store[setting[0].to_s] ||= []
+              store[setting[0].to_s].push(setting[1])
             end
           end
         end

@@ -2,12 +2,14 @@
 
 require 'pstore'
 require_relative '../../services/occurrence_calculator'
+require_relative '../data_filter'
 
 module Web
   module Controllers
     module Dashboard
       class Index
         include Web::Action
+        include DataFilter
         expose :timeline, :store_occurence, :model_occurence
 
         def call(_params)
@@ -18,16 +20,6 @@ module Web
           @model_occurence = OccurrenceCalculator.call(
             data: select('model', 'data')
           )
-        end
-
-        private
-
-        def select(key, filename)
-          store = PStore.new("data/#{filename}.pstore")
-          data = store.transaction(true) { store[filename.to_sym] }
-          data.map do |a|
-            a.slice(key).values
-          end.flatten
         end
       end
     end

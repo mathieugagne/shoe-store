@@ -8,4 +8,4 @@
 get '/', to: 'timeline#index'
 get '/alerts', to: 'dashboard#index'
 get '/sales', to: 'sales#index'
-post '/settings', to: 'setting#create'
+resources :settings, only: %i[create]

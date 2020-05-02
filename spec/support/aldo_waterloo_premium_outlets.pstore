@@ -1,4 +1,4 @@
-{:"aldo_waterloo_premium_outlets[={	I"
+{:"aldo_waterloo_premium_outlets[O{	I"
 store:ETI""ALDO Waterloo Premium Outlets;TI"
 model;TI"SCHOOLER;TI"inventory;TiRI"created_at;TIu:	Time5Ä´¡^:offseti :	zoneI"	CEST;F{	I"
 store;TI""ALDO Waterloo Premium Outlets;TI"
@@ -123,4 +123,42 @@ model;TI"MCTYRE;TI"inventory;TifI"created_at;TIu;5Ä‡®¢ô;i ;	I
 store;TI""ALDO Waterloo Premium Outlets;TI"
 model;TI"SEVIDE;TI"inventory;TifI"created_at;TIu;5Äô¥≤ô;i ;	I"	CEST;F{	I"
 store;TI""ALDO Waterloo Premium Outlets;TI"
-model;TI"MIRIRA;TI"inventory;Ti:I"created_at;TIu;5Ä∂ÎÚô;i ;	I"	CEST;F
+model;TI"MIRIRA;TI"inventory;Ti:I"created_at;TIu;5Ä∂ÎÚô;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"MIRIRA;TI"inventory;TiI"created_at;TIu;HÄ‘ Q≥;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"	WUMA;TI"inventory;Ti'I"created_at;TIu;HÄı‰Å≥;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"VENDOGNUS;TI"inventory;Ti4I"created_at;TIu;HÄ»tr¥;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"VENDOGNUS;TI"inventory;Ti@I"created_at;TIu;HÄƒø‚¥;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"ALALIWEN;TI"inventory;Ti;I"created_at;TIu;HÄgLÉµ;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"CAELAN;TI"inventory;Ti6I"created_at;TIu;HÄŸZìµ;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"BUTAUD;TI"inventory;Ti)I"created_at;TIu;HÄ»ˇC∂;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"CADAUDIA;TI"inventory;Ti;I"created_at;TIu;HÄ@~∑;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"SEVIDE;TI"inventory;TiEI"created_at;TIu;HÄN¥4∑;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"MIRIRA;TI"inventory;Ti@I"created_at;TIu;HÄõD∑;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"	WUMA;TI"inventory;Ti<I"created_at;TIu;HÄ∂t∑;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"RASIEN;TI"inventory;Ti3I"created_at;TIu;HÄ(Œ§∑;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"
+ADERI;TI"inventory;TiKI"created_at;TIu;HÄ˝‹¥∑;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"CAELAN;TI"inventory;TiCI"created_at;TIu;HÄJ¯∏;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"MCTYRE;TI"inventory;Ti:I"created_at;TIu;HÄÂı$∏;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"
+ABOEN;TI"inventory;Ti3I"created_at;TIu;HÄ‹Z•∏;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"ELOILLAN;TI"inventory;TiI"created_at;TIu;HÄ’é’∏;i ;	I"	CEST;F{	I"
+store;TI""ALDO Waterloo Premium Outlets;TI"
+model;TI"BUTAUD;TI"inventory;Ti'I"created_at;TIu;HÄ4Õπ;i ;	I"	CEST;F

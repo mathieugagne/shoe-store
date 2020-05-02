@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
 require_relative '../../services/inventory_calculator'
+require_relative '../data_filter'
 
 module Web
   module Controllers
     module Sales
       class Index
         include Web::Action
+        include DataFilter
         expose :model_inventory, :store_inventory, :number_of_sales_by_store,
                :number_of_sales_by_model
 
@@ -19,16 +21,6 @@ module Web
           @number_of_sales_by_model = OccurrenceCalculator.call(
             data: select('model', 'data')
           )
-        end
-
-        private
-
-        def select(key, filename)
-          store = PStore.new("data/#{filename}.pstore")
-          data = store.transaction(true) { store[filename.to_sym] }
-          data.map do |a|
-            a.slice(key).values
-          end.flatten
         end
       end
     end

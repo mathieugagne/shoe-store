@@ -23,7 +23,7 @@ RSpec.describe ShoeLine do
 
   before do
     described_class.new(filename: 'aldo_crossgates_mall',
-                        data: json_data_low_stock,
+                        data: json_data_safe_stock,
                         low_stock: false)
   end
 

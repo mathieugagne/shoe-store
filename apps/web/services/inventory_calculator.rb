@@ -13,6 +13,8 @@ class InventoryCalculator
     def select_couple_inventory(type, filename)
       store = PStore.new(filename)
       store.transaction do
+        return [] if store[:data].nil?
+
         store[:data].map do |a|
           [a.slice(type).values[0], a.slice('inventory').values[0]]
         end
