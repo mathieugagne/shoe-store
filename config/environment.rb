@@ -19,7 +19,6 @@ Hanami.configure do
     #    adapter :sql, 'postgresql://localhost/shoe_store_development'
     #    adapter :sql, 'mysql://localhost/shoe_store_development'
     #
-    adapter :sql, ENV.fetch('DATABASE_URL')
 
     ##
     # Migrations

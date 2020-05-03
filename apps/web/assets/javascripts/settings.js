@@ -23,7 +23,7 @@ function updateValues(low, high) {
   };
   if (high !== '') {
     $('.high_limit_value').text(high);
-    $('.high_limit_settings').text(low);
+    $('.high_limit_settings').text(high);
   };
 };
 

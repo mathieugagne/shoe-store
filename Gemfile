@@ -6,7 +6,6 @@ gem 'hanami', '~> 1.3'
 gem 'rake'
 
 gem 'jquery-hanami'
-gem 'sqlite3'
 gem 'bunny'
 
 group :development do

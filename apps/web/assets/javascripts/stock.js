@@ -1,7 +1,6 @@
-const critical_limit = $('.critical_limit_value').text();
-const high_limit = $('.high_limit_value').text();
 
 function displayStockInformation() {
+  const critical_limit = $('.critical_limit_value').text();
   let json = JSON.parse(event.data);
   const warningId = Math.random().toString(36).substring(2);
     displayLine('warning', warningId, json, '')
@@ -32,7 +31,10 @@ function stockInformation(json) {
 };
 
 function stockLevel(json) {
+  const critical_limit = $('.critical_limit_value').text();
+  const high_limit = $('.high_limit_value').text();
   const inventory = json['inventory'];
+  
   if (json['inventory'] <= critical_limit) {
     return  `critical_limit`;
   } else if (json['inventory'] >= high_limit) {
