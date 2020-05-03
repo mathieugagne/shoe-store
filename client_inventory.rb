@@ -5,6 +5,7 @@ require 'eventmachine'
 require 'hanami/logger'
 require_relative './apps/web/services/populate_db.rb'
 require_relative './apps/web/services/rescue_team.rb'
+require_relative './apps/web/services/clear_db.rb'
 
 class ClientInventory
   class << self
@@ -32,6 +33,7 @@ class ClientInventory
 
     def handle_disconnect(wsocket)
       wsocket.on :close do |_event|
+        ClearDb.call
         retry_connection
       end
     end

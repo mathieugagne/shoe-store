@@ -1,5 +1,50 @@
 # Shoe Store
 
+## Inventory monitoring (Clément)
+
+My goal with this minimalist monitoring tool was to help the inventory team and in the same time build a lightweight application. How did I do this ?
+
+### For the inventory team
+
+I've built a straightforward tool to help the inventory team to have an overview of the sales. I've put the focus on the main critical points and only that.
+In this way the inventory team can:
+
+- Check the inventory in realtime via a livestream.
+- They can adjust the critical limit (low stock level) and also the comfort zone (high stock level) based on the activity.
+- Using the alert they can identify the stores that have issues in managing their stock and the product that are often under the critical limit.
+- Monitore the timeline
+- Have the sales overview with 3 subcategories
+  * Number of sales, per store and per model
+  * Stock remaining per store
+  * Stock remaining per model
+
+### For the technical team
+
+If their is an issue with the client => serveur connection  a notification will be sent to the dev team via an AMQP (RabbitMQ). Of course we need to connect our `consumer` to go further.
+
+### Technical choices
+
+I have tried a lot of new things, it was a good opportunity to walk away from my day to day Rails/PG. As mentionned above, I wanted a lightweight application. That is why I've decided to use the Hanami/PStore couple. To be honest I felt a bit limited with these tools. It's a good reminder that Rails is an awesome and well documented framework.
+
+Main tools:
+* Hanami
+* PStore
+* JQuery
+* Faye
+* Rspec
+
+### Run the project
+
+1. `bundle exec hanami server`
+2. `websocketd --port=8080 ruby inventory.rb`
+    *This command allows you to see change in realtime but without persistence*
+3. `ruby client-inventory.rb`
+    *This add the persistence*
+4. for the fun we can run `/usr/local/opt/rabbitmq/sbin/rabbitmq-server`
+to start a Rabbit and simulate an error.
+5. you can run the test suite with `bundle exec rspec`.
+
+
 ## Synopsis
 
 Aldo Shoes is having a huge flash sale online. You provide support to the inventory department. They want to react real-time to various inventory problems as they arise.
