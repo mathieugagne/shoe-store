@@ -13,6 +13,7 @@ function displayStockInformation() {
   updateNumberOfSales(json, 'store', 'sales_per_store')
   updateStockRemaining(json, 'store', 'stock_per_store')
   updateStockRemaining(json, 'model', 'stock_per_model')
+  updateStockRemainingPerStore(json)
 
   $(`#${warningId}`).delay(10000).fadeOut(2000);
 };
@@ -34,7 +35,7 @@ function stockLevel(json) {
   const critical_limit = $('.critical_limit_value').text();
   const high_limit = $('.high_limit_value').text();
   const inventory = json['inventory'];
-  
+
   if (json['inventory'] <= critical_limit) {
     return  `critical_limit`;
   } else if (json['inventory'] >= high_limit) {
@@ -46,4 +47,8 @@ function stockLevel(json) {
 
 function unableToConnectMessage() {
   alert('Sorry, something wrong happens, unable to fetch inventory. Please contact the dev team.');
+}
+
+function dasherize(value) {
+  return value.replace(/\s/g, "_").toLowerCase()
 }

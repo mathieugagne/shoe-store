@@ -8,4 +8,5 @@
 get '/', to: 'timeline#index'
 get '/alerts', to: 'dashboard#index'
 get '/sales', to: 'sales#index'
+get '/stores', to: 'stores#index'
 resources :settings, only: %i[create]
