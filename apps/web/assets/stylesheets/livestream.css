@@ -1,0 +1,46 @@
+.critical_limit {
+  color: red
+}
+
+.high_limit {
+  color: green
+}
+
+.settings-container {
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  border: 2px solid grey;
+  border-radius: 20px;
+}
+
+.values-container {
+  display: flex;
+  justify-content: center
+}
+
+.values {
+  margin: 10px;
+}
+
+.monitoring-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.livestream {
+  width: 400px;
+  margin: auto;
+}
+
+#edit {
+  font-size: 10px;
+  border: 1px solid;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}

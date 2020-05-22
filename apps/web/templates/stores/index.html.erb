@@ -1,0 +1,50 @@
+<p id='bfm'></p>
+
+<h2 class="title">Stores details</h2>
+
+<div class='stores'>
+  <% stores.each do |store| %>
+  <table id="store-reporting_<%= formate_class(store[0],'')%>" class='store-reporting'>
+    <thead>
+      <tr>
+        <th colspan="2"><%= store[0]%></th>
+      </tr>
+    </thead>
+    <thead>
+      <tr>
+        <th colspan="2">
+          <div class='highlight'>
+            <div>
+              <p class='high-stock'>Highest stock</p>
+              <div class="high-value-data<%= formate_class(store[0],'')%>">
+                <span><%= high_stock(store).keys.join %></span>
+                <span class="high-value<%= formate_class(store[0],'')%>"><%= high_stock(store).values.join %></span>
+              </div>
+            </div>
+
+            <div>
+              <p class='low-stock'>Lowest stock</p>
+              <div class="low-value-data<%= formate_class(store[0],'')%>">
+                <span><%= low_stock(store).keys.join %></span>
+                <span class="low-value<%= formate_class(store[0],'')%>"><%= low_stock(store).values.join %></span>
+              </div>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="col">Model</th>
+        <th scope="col">Inventory</th>
+      </tr>
+      <% store[1].each do |a| %>
+        <tr id="couple_<%= formate_class(store[0], a.keys.join)%>">
+          <th scope="row"><%= a.keys.join %></th>
+          <td id="<%= formate_class(store[0], a.keys.join)%>"><%= a.values.join %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>
+</div>

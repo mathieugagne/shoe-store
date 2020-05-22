@@ -1,0 +1,23 @@
+.stores {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.store-reporting {
+  min-width:  400px;
+  margin-bottom: 30px;
+}
+
+.high-stock {
+  color: green;
+}
+
+.low-stock {
+  color: red;
+}
+
+.highlight {
+  display: flex;
+  justify-content: space-around;
+}

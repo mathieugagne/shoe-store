@@ -1,0 +1,39 @@
+<p id='bfm'></p>
+
+<div class='monitoring-container'>
+  <div class='reporting'>
+    <h2>Critical alert by store</h2>
+    <table id='store_alert'>
+      <tr>
+        <th class='store-col' scope="col">Store</th>
+        <th scope="col">Occurrence</th>
+      </tr
+      <% ordered(store_occurence).each do |store| %>
+
+        <tr>
+          <td><%= store[0] %></td>
+          <td class="<%= dasherize(store[0])%>"><%= store[1] %></td>
+
+        </tr>
+      <%end%>
+
+    </table>
+
+
+    <h2>Critical alert by model</h2>
+    <table id='model_alert'>
+      <tr>
+        <th scope="col">Model</th>
+        <th scope="col">Occurrence</th>
+      </tr>
+      <% ordered(model_occurence).each do |store| %>
+        <tr>
+          <td><%= store[0] %></td>
+          <td class="<%= dasherize(store[0])%>"><%= store[1] %></td>
+        </tr>
+      <%end%>
+    </table>
+  </div>
+
+  <%= render partial: 'dashboard/timeline', locals: { timeline: timeline } %>
+</div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web</title>
+    <%= favicon %>
+  </head>
+  <body>
+    <h1>ALDO Monitoring</h1>
+
+    <div class='hidden'>
+      <% settings = PStore.new('config/settings.pstore')%>
+      <% settings.transaction(true) do %>
+        <% settings.roots.each do |s| %>
+        <div class='values'>
+          <p class="<%= s %>_value"> <%= settings[s].last %></p>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+
+
+    <div class='menu'>
+      <%= link_to 'Livestream', '/' %>
+      <%= link_to 'Alert overview', '/alerts' %>
+      <%= link_to 'Sales overview', '/sales' %>
+      <%= link_to 'Stores details', '/stores' %>
+    </div>
+    <%= yield %>
+  </body>
+  <%= javascript 'jquery' %>
+  <%= javascript 'stock', 'alert', 'sales','store', 'livestream' ,'settings' %>
+  <%= stylesheet 'livestream', 'sales', 'alert', 'stores', 'app' %>
+</html>
