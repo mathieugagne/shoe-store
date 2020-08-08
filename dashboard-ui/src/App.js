@@ -1,11 +1,8 @@
 import React, {useReducer, useEffect} from 'react';
 
-const sampleAlert = JSON.parse(`{
-  "store": "ALDO Centre Eaton",
-  "model": "ADERI",
-  "inventory": 100
-}`);
 const stores = ['ALDO Centre Eaton', 'ALDO Destiny USA Mall', 'ALDO Pheasant Lane Mall', 'ALDO Holyoke Mall', 'ALDO Maine Mall', 'ALDO Crossgates Mall', 'ALDO Burlington Mall', 'ALDO Solomon Pond Mall', 'ALDO Auburn Mall', 'ALDO Waterloo Premium Outlets']
+
+const websocket = new WebSocket('ws://localhost:4000');
 
 function inventoryUpdater(state, alert) {
   const inventoryItem = state.filter((invItem) => {
@@ -23,13 +20,21 @@ function inventoryUpdater(state, alert) {
 }
 
 function App() {
-  const [inventory, pushInventory] = useReducer(inventoryUpdater, [sampleAlert]);
+  const [inventory, pushInventory] = useReducer(inventoryUpdater, []);
 
   useEffect(() => {
-    pushInventory({store: 'ALDO Centre Eaton', model: 'ADERI', inventory: 50});
-    pushInventory({store: 'ALDO Centre Eaton', model: 'MIRIRA', inventory: 50});
+    websocket.onopen = () => console.log('Websocket opened');
+    websocket.onclose = () => console.log('Websocket closed');
 
-    console.log(inventory);
+    websocket.onmessage = (event) => {
+      const inventoryAlert = JSON.parse(event.data);
+
+      pushInventory(inventoryAlert);
+    };
+
+    return () => {
+      websocket.close();
+    }
   }, [])
 
   return (
