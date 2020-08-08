@@ -1,14 +1,36 @@
-import React from 'react';
+import React, {useReducer, useEffect} from 'react';
 
-const sampleAlert = {
-  'store': 'ALDO Ste-Catherine',
-  'model': 'ADERI',
-  'inventory': 100
-};
+const sampleAlert = JSON.parse(`{
+  "store": "ALDO Centre Eaton",
+  "model": "ADERI",
+  "inventory": 100
+}`);
+const stores = ['ALDO Centre Eaton', 'ALDO Destiny USA Mall', 'ALDO Pheasant Lane Mall', 'ALDO Holyoke Mall', 'ALDO Maine Mall', 'ALDO Crossgates Mall', 'ALDO Burlington Mall', 'ALDO Solomon Pond Mall', 'ALDO Auburn Mall', 'ALDO Waterloo Premium Outlets']
+
+function inventoryUpdater(state, alert) {
+  const inventoryItem = state.filter((invItem) => {
+    return (invItem.store === alert.store && invItem.model === alert.model)
+  })[0];
+
+  if (inventoryItem) {
+    inventoryItem.inventory = alert.inventory;
+
+    return [...state];
+  }
+  else {
+    return [...state, alert];
+  }
+}
 
 function App() {
-  let inventory = [ sampleAlert ];
-  const stores = ['ALDO Ste-Catherine'];
+  const [inventory, pushInventory] = useReducer(inventoryUpdater, [sampleAlert]);
+
+  useEffect(() => {
+    pushInventory({store: 'ALDO Centre Eaton', model: 'ADERI', inventory: 50});
+    pushInventory({store: 'ALDO Centre Eaton', model: 'MIRIRA', inventory: 50});
+
+    console.log(inventory);
+  }, [])
 
   return (
     <>
