@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 
+export function hasLowStock(quantity) {
+  return quantity <= 10;
+}
+
 function Product({model, inventory, calculateStockIssues}) {
-  let hasIssue = inventory <= 10;
+  let hasIssue = hasLowStock(inventory);
 
   useEffect(() => {
     calculateStockIssues();

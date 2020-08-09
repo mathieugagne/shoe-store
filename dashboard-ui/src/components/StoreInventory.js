@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Product from './Product';
+import Product, { hasLowStock } from './Product';
 
 function StoreInventory({store, storeItems}) {
   const [stockIssues, setStockIssues] = useState(0);
 
   const calculateStockIssues = () => {
     let issues = storeItems.reduce((acc, product) => {
-      if(product.inventory <= 10) {
+      if(hasLowStock(product.inventory)) {
         return acc = acc + 1;
       }
       return acc
