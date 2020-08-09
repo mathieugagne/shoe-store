@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Product from './Product';
 
 function StoreInventory({store, storeItems}) {
+  const [stockIssues, setStockIssues] = useState(0);
+
+  const calculateStockIssues = () => {
+    let issues = storeItems.reduce((acc, product) => {
+      if(product.inventory <= 10) {
+        return acc = acc + 1;
+      }
+      return acc
+    }, 0);
+
+    setStockIssues(issues);
+  }
+
   return (
     <div id={store}>
-      <header>{store}</header>
+      <header>{store} - Stock Issues: {stockIssues}</header>
       <ul>
-        { storeItems.map((item) => {
+        { storeItems.map((product) => {
             return (
-              <Product model={item.model} inventory={item.inventory} />
+              <Product
+                model={product.model}
+                inventory={product.inventory}
+                calculateStockIssues = {calculateStockIssues} />
             );
         })}
       </ul>
