@@ -45,18 +45,7 @@ function App() {
     { stores.map((store) => {
       const storeItems = inventory.filter((inventoryItem) => { return (inventoryItem.store === store)});
 
-      return (
-        <div id={store}>
-          <header>{store}</header>
-          <ul>
-            { storeItems.map((item) => {
-                return (
-                  <li id={item.model }>{item.model} - {item.inventory}</li>
-                );
-            })}
-          </ul>
-        </div>
-        );
+      return (<StoreInventory store={store} storeItems={storeItems} />);
     }) }
     </>
   );
