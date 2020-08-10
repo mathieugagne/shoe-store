@@ -1,0 +1,53 @@
+.c-dashboard {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.c-store {
+  margin: 7px;
+  padding: 8px;
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.c-store-header {
+  font-size: 1.5em;
+}
+
+.c-store-description {
+  padding: 10px 5px 5px 10px;
+  display: block;
+  text-align: left;
+}
+
+.c-store-cards {
+  padding: 3px 8px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+}
+
+.c-product {
+  margin: 3px;
+  padding: 8px;
+  background-color: #c9e9e4;
+  color: #347f73;
+  flex: 1 1;
+  transition: all 0.8s ease-in-out;
+  border-radius: 8px;
+}
+
+.c-product--low-stock {
+  background-color: #a42b49;
+  color: #f5d9e0;
+  transition: all 0.2s ease-in-out;
+}
+
+.c-product-count {
+  font-size: 1.5rem;
+  text-align: center;
+}

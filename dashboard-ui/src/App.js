@@ -1,5 +1,6 @@
 import React, {useReducer, useEffect} from 'react';
 import StoreInventory from './components/StoreInventory';
+import './App.css'
 
 const stores = ['ALDO Centre Eaton', 'ALDO Destiny USA Mall', 'ALDO Pheasant Lane Mall', 'ALDO Holyoke Mall', 'ALDO Maine Mall', 'ALDO Crossgates Mall', 'ALDO Burlington Mall', 'ALDO Solomon Pond Mall', 'ALDO Auburn Mall', 'ALDO Waterloo Premium Outlets']
 
@@ -41,13 +42,13 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div className="c-dashboard">
     { stores.map((store) => {
       const storeItems = inventory.filter((inventoryItem) => { return (inventoryItem.store === store)});
 
       return (<StoreInventory store={store} storeItems={storeItems} />);
     }) }
-    </>
+    </div>
   );
 }
 

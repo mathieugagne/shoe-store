@@ -16,9 +16,10 @@ function StoreInventory({store, storeItems}) {
   }
 
   return (
-    <div id={store}>
-      <header>{store} - Stock Issues: {stockIssues}</header>
-      <ul>
+    <div id={store} className="c-store">
+      <header className="c-store-header">{store}</header>
+      <span className="c-store-description">Models with low stock: {stockIssues}</span>
+      <div className="c-store-cards">
         { storeItems.map((product) => {
             return (
               <Product
@@ -27,7 +28,7 @@ function StoreInventory({store, storeItems}) {
                 calculateStockIssues = {calculateStockIssues} />
             );
         })}
-      </ul>
+      </div>
     </div>
   );
 }

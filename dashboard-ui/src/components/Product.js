@@ -10,8 +10,12 @@ function Product({model, inventory, calculateStockIssues}) {
   useEffect(() => {
     calculateStockIssues();
   }, [hasIssue]);
+
   return (
-    <li id={model}>{model} - {inventory} - LowStock: {hasIssue.toString()}</li>
+    <div id={model} className={ hasIssue ? 'c-product c-product--low-stock' : 'c-product' }>
+      <header>{model}</header>
+      <span className="c-product-count">{inventory}</span>
+    </div>
   );
 }
 
