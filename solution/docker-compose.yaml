@@ -1,0 +1,34 @@
+version: "3.7"
+services:
+  api:
+    build:
+      context: ./api
+    ports:
+      - "3000:3000"
+      - "8080:8080"
+    environment:
+      - DB_PORT=5432
+      - DB_PASSWORD=pass
+      - DB_HOST=db
+      - APP_PORT=3000
+      - DB_USER=postgres
+      - DB_NAME=aldostore
+    depends_on:
+      - "db"
+
+  db:
+    image: postgres:12-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=aldostore
+    ports:
+      - "5432:5432"
+
+  ui:
+    build:
+        context: ./ui
+    ports:
+      - "3001:3001"
+    depends_on:
+      - "api"
